@@ -554,13 +554,13 @@ const Homepage = () => {
     <div className='w-screen h-max overflow-x-hidden'>
         <Navbar />
 
-        <div id='home' className='relative z-[4444444] w-screen h-[62vh] md:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-700 overflow-hidden flex flex-col justify-center md:rounded-br-[200px]'>
-            <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] md:flex hidden' data-aos="fade-up-left" data-aos-duration="1000" src={People2} alt="seorang traveler" />
-            <img src={Jawa} className='absolute scale-[9] md:scale-[2] top-12 left-0 opacity-[1] z-[-1]' alt='Jawa' />
+        <div id='home' className='relative z-[4444444] w-screen h-[64vh] md:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-700 overflow-hidden flex flex-col justify-center md:rounded-br-[200px]'>
+            <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] md:flex hidden' data-aos="fade-up-left" data-aos-duration="1000" src={People2} alt="Seorang penjelajah" />
+            <img src={Jawa} className='absolute scale-[9] md:scale-[2] top-12 left-0 md:flex hidden opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
             
             <div className='relative w-[100vw] md:w-[80vw] p-4 md:p-12 mt-[-40px] text-left'>
-                <h1 className='font-bold text-[34px] md:text-[60px] mb-4 text-white w-full'>Eksplorasi Nusantara <br /> dalam Perjalanan <br /> Gastronomi 🗺️</h1>
+                <h1 className='font-bold text-[36px] md:text-[60px] mb-4 text-white w-full'>Eksplorasi Nusantara <br /> dalam Perjalanan <br /> Gastronomi 🗺️</h1>
                 <p className='text-normal w-full text-slate-100 text-[16px] leading-loose'>Perluasa Wawasan Kamu Tentang Kekayaan Bumi Nusantara</p>
                 <a href="#start">
                     <div className='outline-0 border-slate-300 flex items-center py-4 px-10 md:px-10 cursor-pointer hover:brightness-[90%] active:scale-[0.98] overflow-hidden rounded-full mt-8 bg-white w-max md:text-[16px] text-[14px] text-blue-600'>
@@ -575,7 +575,7 @@ const Homepage = () => {
         </div>
 
         <div id='start' className='relative w-screen h-max pt-12 md:pt-14 md:p-12 p-4'>
-            <img src={Kalimantan} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
+            <img src={Kalimantan} className='absolute scale-[1.6] top-0 right-0 opacity-[0.1] md:opacity-[0.2] z-[-1]' alt='Kalimatan' />
             <div className='rounded-full md:text-[16px] text-[12px] text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kategori - Wisata, Rempah dan Kuliner</div>
             <h2 className='font-bold flex items-center text-[20px] md:text-[36px]'><span className='md:flex mr-2 hidden'>🏔️</span> <span className='relative top-1 ml-3'>Ragam Kekayaan Nusantara</span></h2>
             <div className='w-full md:flex justify-between items-center mt-12'>
@@ -584,7 +584,7 @@ const Homepage = () => {
                         <CardSkeletonType />    
                     ):
                     JenisKekayaanAlam?.map((data, index) => (
-                        <div key={index} className='w-[100%] md:w-[30%] md:mb-0 mb-6 h-[450px] md:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
+                        <div key={index} className='w-[100%] md:w-[30%] md:mb-0 mb-6 h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
                             <div className='relative w-full overflow-hidden h-[65%]'>
                                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                 <p>{data?.label}</p> 
@@ -609,8 +609,8 @@ const Homepage = () => {
         <div className='relative w-screen h-max px-6 md:px-12 pt-6 md:pt-12 pb-6'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Jumlah Turis Tahun Lalu (2023)</div>
-            <div className='relative w-full md:flex z-[33] justify-between bg-blue-600 h-max md:h-[600px] rounded-[16px] items-center mt-8'>
-                <div className='relative w-full md:w-1/2 h-1/2 md:h-full text-white flex p-6 md:p-14 flex-col justify-between text-left'>
+            <div className='relative w-full md:flex z-[33] justify-between bg-blue-600 h-max md:h-[600px] rounded-[16px] items-center border border-slate-300 mt-8'>
+                <div className='relative w-full md:w-1/2 h-1/2 md:h-full text-white flex p-6 md:p-14 flex-col justify-between text-left md:overflow-visible overflow-hidden'>
                     <div className='relative md:border-l-[2px] h-max md:h-[30%] md:pl-12 mb-4 mt-4 flex justify-center flex-col md:border-l-white'>
                         <h2 className='font-[600] text-[50px] md:text-[74px] mb-2'>11, 67 <span className='text-[50px] md:text-[74px]'>Juta</span></h2>
                         <p className='tex-slate-500 leading-loose'>Wisataman Mancanegara</p>
@@ -621,7 +621,7 @@ const Homepage = () => {
                     </div>
                     <p className='w-max mt-12 hidden md:flex items-center bg-white rounded-full px-4 py-2 text-blue-600'><b className='mr-2'>Australia, China, Singapura, Malaysia,</b> (mayoritas) </p>
                 </div>
-                <div className='w-full md:w-1/2 h-1/2 md:h-full flex bg-white justify-center border-dashed md:border-y-[2px] md:border-r-[2px] md:border-y-blue-500 border-r-blue-500 items-center'>
+                <div className='w-full md:w-1/2 h-1/2 md:h-full flex border border-slate-300 bg-white justify-center border-dashed md:border-y-[2px] md:rounded-none rounded-[16px] md:border-r-[2px] md:border-y-blue-500 border-r-blue-500 items-center'>
                     <img src={People1} alt="people" className='w-auto h-full md:scale-[1.2] relative top-16' />
                 </div>
             </div>
@@ -831,7 +831,7 @@ const Homepage = () => {
             }
         </div>
 
-        <div id='contact' className='relative w-screen h-max md:pt-0 pt-16 p-4 md:p-12'>
+        <div id='contact' className='relative w-screen h-max md:pt-0 pt-16 p-4 md:p-12 md:block hidden'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white md:mb-4 bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
             <h2 className='font-bold flex items-center text-[20px] md:mt-0 mt-6 md:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
@@ -958,7 +958,7 @@ const Homepage = () => {
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Geospasial - Rempah Nusantara</div>
             <div className='w-full flex items-center justify-between'>
                 <h2 className='font-bold hidden md:flex items-center text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Rempah Nusantara</span></h2>
-                <div className="relative w-full md:w-[45%] flex mr-5 items-center">
+                <div className="relative w-full md:w-[45%] flex md:mr-5 items-center">
                     <div className="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg className="w-4 h-4 text-gray-500 dark:text-gray-400md:top-0 relative top-3 md:top-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>

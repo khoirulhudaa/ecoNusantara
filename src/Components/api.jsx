@@ -399,17 +399,17 @@ const Api = () => {
                         <FaCopy />
                     </div>
                 </div>
-                <div className={`fixed top-0 ${activeAPI ? 'left-[0%]' : 'left-[-100%] duration-300'} ease-in-out duration-300 w-max rounded-tr-[20px] shadow-lg h-screen z-[99999999] bg-white text-blue-700 flex items-center justify-center`}>
-                <div className='relative w-full h-screen overflow-y-auto pb-10 rounded-[12px]'>
+                <div className={`fixed top-0 ${activeAPI ? 'left-[0%]' : 'left-[-100%] duration-300'} ease-in-out duration-300 w-full md:w-max md:rounded-tr-[20px] shadow-lg h-screen z-[99999999] bg-white text-blue-700 flex items-center justify-center`}>
+                <div className='relative w-full h-screen overflow-y-auto pb-10 md:rounded-[12px]'>
                     <code>
                         <div className='relative mx-auto mt-8 w-[88%] flex items-center'>
-                            <div className='w-max bg-slate-400 px-5 py-2 w-max h-max ml-2 text-[14px] rounded-lg text-white'>{selectAPI ?? ''}</div>
-                            <div className='w-max bg-blue-500 px-5 py-2 w-max h-max ml-2 text-[14px] rounded-lg text-white'>Response</div>
-                            <div className='w-max bg-green-500 px-5 py-2 w-max h-max ml-2 text-[14px] rounded-lg text-white'>200</div>
+                            <div className='w-max bg-slate-400 px-5 py-2  h-max ml-2 text-[14px] rounded-lg text-white'>{selectAPI ?? ''}</div>
+                            <div className='w-max bg-blue-500 px-5 py-2 md:flex hidden h-max ml-2 text-[14px] rounded-lg text-white'>Response</div>
+                            <div className='w-max bg-green-500 px-5 py-2  h-max ml-2 text-[14px] rounded-lg text-white'>200</div>
                             <div onClick={() => setActiveAPI(false)} className='ml-auto bg-red-500 flex items-center justify-center cursor-pointer hover:brightness-[90%] active:scale-[0.98] w-[40px] h-[40px] ml-2 text-[14px] rounded-lg text-white'><FaTimes /></div>
                         </div>
-                        <div className='w-[42vw] mx-auto pt-10'>
-                            <pre className='w-[90%] mx-auto p-6 rounded-[20px] border border-blue-200 h-max'>
+                        <div className='w-full md:w-[42vw] mx-auto pt-10'>
+                            <pre className='w-[90%] mx-auto p-6 rounded-[20px] border border-blue-200 text-[11px] md:text-[16px] h-max'>
                                 {
                                 selectAPI === 'pemandu' ? (
                                     JSON.stringify(yourJsonObjectPemandu, null, 2)

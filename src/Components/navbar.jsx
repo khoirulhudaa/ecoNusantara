@@ -6,28 +6,28 @@ const Navbar = () => {
   const [activeSidebar, setActiveSidebar] = useState(false)
 
   return (
-    <div className='relative w-screen h-[80px] bg-blue-700 text-white px-4 md:px-12 flex items-center'>
+    <div className='relative w-screen h-[80px] bg-blue-700 text-white px-4 md:px-12 flex items-center border-0'>
         
         {/* Sidebar */}
         <div className={`w-full h-screen z-[2222222222] fixed ${activeSidebar ? 'left-0' : 'left-[-100%]'} duration-200 top-0 bg-white p-6`}>
           <div onClick={() => setActiveSidebar(!activeSidebar)} className='relative top-1 ml-auto right-3 cursor-pointer active:scale-[0.98] flex items-center justify-center w-[50px] h-[50px] p-2 bg-red-500 text-white rounded-[10px]'>
             <FaTimes />
           </div>
-          <ul className='w-max text-[17px] mt-4'>
+          <ul className='w-full text-[17px] mt-10'>
               <a href="#home">
-                <li className='text-black mb-7 border-b border-b-slate-300 pb-6'>Beranda</li>
+                <li className='text-black border-t border-t-slate-300 py-8'>Beranda</li>
               </a>
               <a href="#tour">
-                <li className='text-black mb-7 border-b border-b-slate-300 pb-6'>Wisata Alam</li>
+                <li className='text-black border-t border-t-slate-300 py-8'>Wisata Alam</li>
               </a>
               <a href="#spice">
-                <li className='text-black mb-7 border-b border-b-slate-300 pb-6'>Rempah-rempah</li>
+                <li className='text-black border-t border-t-slate-300 py-8'>Rempah-rempah</li>
               </a>
               <a href="#culinary">
-                <li className='text-black mb-7 border-b border-b-slate-300 pb-6'>Kuliner</li>
+                <li className='text-black border-t border-t-slate-300 py-8'>Kuliner</li>
               </a>
               <a href="#article">
-                <li className='text-black mb-12'>Artikel Nusantara 2024</li>
+                <li className='text-black mb-12 border-y border-y-slate-300 py-8'>Artikel Nusantara 2024</li>
               </a>
           </ul>
         </div>
