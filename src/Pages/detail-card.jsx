@@ -78,7 +78,7 @@ const selectedImages = Images[0][detail?.nama].map((image, index) => {
             <div className={`absolute ${detail?.type === 'Kuliner' || detail?.type === 'Rempah' ? 'text-slate-800' : 'text-white' } z-[22223] w-full flex items-center justify-between py-7 pr-12`}>
             <a href={'/'}>
                 <div className='w-max h-[44px] rounded-tr-full rounded-br-full pl-4 md:pl-12 pr-4 bg-white'>
-                    <h2 className={`text-[24px] md:text-[28px] font-bold ${detail?.type === 'Wisata' ? 'text-blue-600' : 'text-black'}`}>ecoNusantara 🗺️</h2>
+                    <h2 className={`text-[24px] md:top-0 relative top-1 md:text-[28px] font-bold ${detail?.type === 'Wisata' ? 'text-blue-600' : 'text-black'}`}>ecoNusantara 🗺️</h2>
                 </div>
             </a>
             <div className='w-max hidden md:flex items-center'>

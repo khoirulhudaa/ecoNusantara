@@ -70,6 +70,7 @@ const Homepage = () => {
     const [currentPositionCulinary, setCurrentPositionCulinary] = useState(null);
     const [activeRangeCustomIcon, setActiveRangeCustomIcon] = useState(false);
     const [loading, setLoading] = useState(false);
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
    
     useEffect(() => {
         AOS.init();
@@ -89,6 +90,20 @@ const Homepage = () => {
             setLoading(false)
         })()
     }, [])
+
+	useEffect(() => {
+		const handleResize = () => {
+			setScreenWidth(window.innerWidth);
+		};
+
+		window.addEventListener("resize", handleResize);
+
+		return () => {
+			window.removeEventListener("resize", handleResize);
+		};
+	}, []);
+
+    const isDesktop = screenWidth >= 420;
 
     const recognition = new window.webkitSpeechRecognition();
     const recognitionSpice = new window.webkitSpeechRecognition();
@@ -679,19 +694,19 @@ const Homepage = () => {
 
             {
                 loading ? (
-                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[528px] mt-12'>
+                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] md:h-[528px] mt-12'>
                         <div className='absolute top-4 right-4 items-center flex'>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
                         </div>
                         <div className='absolute bottom-4 left-4 items-center flex'>
                             <div className='rounded-full bg-slate-300 px-12 py-5 animate-pulse'></div>
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-max mt-12'>
+                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] md:h-max mt-12'>
                     
                     {/* Range Sidebar */}
                     <div className={`absolute z-[3333] w-[31vw] h-screen ${activeRange ? 'left-[0%]' : 'left-[-100%] duration-300'} top-[0px] bg-white shadow-lg p-4 duration-200`}>
@@ -782,7 +797,7 @@ const Homepage = () => {
                         </div>
                     </div>
                 </div>
-                    <MapContainer center={center} zoom={zoom} style={{ height: "80vh", width: "100%" }}>
+                    <MapContainer center={isDesktop ? center : [-20.5555, 120.5525]} zoom={isDesktop ? zoom : 3} style={{ height: "80vh", width: "100%" }}>
                         <MapEventsHandler />
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -970,19 +985,19 @@ const Homepage = () => {
             </div>
             {
                  loading ? (
-                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[528px] mt-12'>
+                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] md:h-[528px] mt-12'>
                         <div className='absolute top-4 right-4 items-center flex'>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
                         </div>
                         <div className='absolute bottom-4 left-4 items-center flex'>
                             <div className='rounded-full bg-slate-300 px-12 py-5 animate-pulse'></div>
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-max mt-12'>
+                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] md:h-max mt-12'>
                         
                         <div className="w-max z-[444] flex items-center h-[68px] py-[14px] pl-4 rounded-bl-[32px] absolute top-0 right-2">
                             <div className={`w-max ${activeClick ? 'hidden' : 'flex'} items-center top-4 mr-3`}>
@@ -1000,7 +1015,7 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-                        <MapContainer center={center} zoom={zoom} style={{ height: "80vh", width: "100%" }}>
+                        <MapContainer center={isDesktop ? center : [-20.5555, 120.5525]} zoom={isDesktop ? zoom : 3} style={{ height: "80vh", width: "100%" }}>
                             <MapEventsHandlerSpice />
                             <TileLayer
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -1129,19 +1144,19 @@ const Homepage = () => {
             </div>
             {
                  loading ? (
-                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-full md:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[528px] mt-12'>
+                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[90vw] md:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] md:h-[528px] mt-12'>
                         <div className='absolute top-4 right-4 items-center flex'>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
-                            <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
+                            <div className='rounded-full bg-slate-300 px-7 md:px-12 py-5 ml-4 animate-pulse'></div>
                         </div>
                         <div className='absolute bottom-4 left-4 items-center flex'>
                             <div className='rounded-full bg-slate-300 px-12 py-5 animate-pulse'></div>
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-full md:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-max mt-12'>
+                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-full md:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] md:h-max mt-12'>
                         
                         <div className="w-max z-[444] flex items-center h-[68px] py-[14px] pl-4 rounded-bl-[32px] absolute top-0 right-2">
                             <div className={`w-max ${activeClick ? 'hidden' : 'flex'} items-center top-4 mr-3`}>
@@ -1159,7 +1174,7 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-                        <MapContainer center={center} zoom={zoom} style={{ height: "80vh", width: "100%" }}>
+                        <MapContainer center={isDesktop ? center : [-20.5555, 120.5525]} zoom={isDesktop ? zoom : 3} style={{ height: "80vh", width: "100%" }}>
                             <MapEventsHandlerCulinary />
                             <TileLayer
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

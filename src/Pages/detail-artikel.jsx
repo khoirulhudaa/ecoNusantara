@@ -30,7 +30,7 @@ const DetailArtikel = () => {
       <div className='w-screen overflow-x-hidden h-max'>
         <div className='absolute text-white z-[22223] w-full flex items-center justify-between py-7 px-4 md:px-12'>
           <a href={'/'}>
-            <h2 className='text-[24px] md:text-[30px] font-bold'>ecoNusantara 🗺️</h2>
+            <h2 className='text-[24px] md:top-0 relative top-1 md:text-[30px] font-bold'>ecoNusantara 🗺️</h2>
           </a>
           <div className='w-max hidden md:flex items-center'>
             <ul className='flex items-center text-white'>
