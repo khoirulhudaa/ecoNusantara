@@ -313,8 +313,8 @@ const Api = () => {
         
         <h2 className='text-[26px] mb-8 md:mb-0 md:text-[36px] text-white font-normal text-center'>API ecoNusantara 2024 💻</h2>
         <p className='text-slate-200 md:block hidden mt-4 mb-10 text-center'>Dapatkan Data Geospasial Kabupaten Cirebon Secara Terbukan, Gratis dan Mudah.</p>    
-        <div className='relative w-full z-[444] px-4 md:px-12 pt-6 md:pt-[80px] pb-6 md:pb-20 flex mx-auto rounded-[16px] bg-white border-[2px] min-h-[680px] border-blue-500 border-dashed'>
-            <div className='w-full md:w-1/2 h-[500px] flex justify-between flex-col'>
+        <div className='relative w-full z-[444] px-4 md:px-12 pt-6 md:pt-[80px] pb-6 md:pb-20 flex mx-auto rounded-[16px] bg-white border-[2px] h-max md:min-h-[680px] border-blue-500 border-dashed'>
+            <div className='w-full md:w-1/2 h-max md:h-[500px] flex justify-between flex-col'>
                 <label htmlFor="api-dinas" className='font-[500] md:flex items-center'>
                     Data Sebaran Wisata  
                     <div className="w-max mt-3 md:mt-0 md:ml-auto flex items-center">

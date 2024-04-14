@@ -28,7 +28,7 @@ const Articles = () => {
   }
 
   return (
-    <div className={`relative w-screen h-max ${location.pathname.includes('/detail-main-article') ? 'px-12 pb-12 pt-0' : 'p-12'}`}>
+    <div id='article' className={`relative w-screen h-max ${location.pathname.includes('/detail-main-article') ? 'px-4 md:px-12 pb-12 pt-0' : 'p-4 md:p-12'}`}>
         <img src={Kalimantan} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
         {
             location.pathname.includes('/detail-main-article') ? (
@@ -36,7 +36,7 @@ const Articles = () => {
             ):
             <>
                 <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Informasi Menarik Untuk Kamu</div>
-                <h2 className='font-bold flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>Artikel Seputar Nusantara</span></h2>
+                <h2 className='font-bold hidden md:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>Artikel Seputar Nusantara</span></h2>
             </>
         }
         <div className='w-full flex z-[33] flex-col justify-between items-center mt-8'>
@@ -45,7 +45,7 @@ const Articles = () => {
                     articles?.map((data, index) => (
                         <div key={index} className='w-full min-h-[180px] my-3 border border-blue-600 border-dashed rounded-[12px] bg-white shadow-lg p-5'>
                             <div className='w-full h-[50%] flex items-center justify-between overflow-hidden text-left rounded-[8px]'>
-                                <h3 onClick={() => handleClick(data)} className='text-[20px] cursor-pointer hover:text-blue-600 active:scale-[0.99] underline font-[500]'>
+                                <h3 onClick={() => handleClick(data)} className='text-[16px] md:text-[20px] cursor-pointer hover:text-blue-600 active:scale-[0.99] underline font-[500]'>
                                     {data?.name_article}
                                 </h3>
                                 <div className='rounded-[10px] text-[12px] w-max h-max px-4 py-2 hidden md:flex items-center justify-center bg-green-600 text-white mr-4'>
@@ -64,7 +64,7 @@ const Articles = () => {
                                 </div>
                             </div>
                             <hr className='mt-4' />
-                            <p className='text-slate-500 mt-4'>
+                            <p className='text-slate-500 mt-4 text-[14px] md:text-[16px]'>
                                 {data?.description}
                             </p>
                             <div className="w-full flex items-center">

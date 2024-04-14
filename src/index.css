@@ -26,3 +26,61 @@ html {
   background-color: rgb(161, 170, 255);
   border-radius: 10111px;
 }
+
+#btn-ecoNusantara {
+  position: relative;
+  overflow: hidden;
+}
+
+#btn-ecoNusantara::before {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-color: rgb(59, 128, 255);
+  transition: transform 0.6s;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+#btn-ecoNusantara:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#btn-ecoNusantara:active {
+  transition: 0.5s;
+}
+
+#btn-ecoNusantara1 {
+  position: relative;
+  overflow: hidden;
+}
+
+#btn-ecoNusantara1::before {
+  position: absolute;
+  content: '';
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-color: rgb(59, 128, 255);
+  transition: transform 0.6s;
+  display: block;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+#btn-ecoNusantara1:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#btn-ecoNusantara1:active {
+  transition: 0.5s;
+}

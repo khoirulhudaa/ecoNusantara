@@ -64,3 +64,59 @@
     background-color: rgb(0, 71, 202);
 }
 
+
+table {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+}
+
+thead {
+    border-radius: 12px;
+}
+
+tr, td, th {
+    padding: 12px;
+    border: 1px solid black;
+}
+
+tr:hover {
+    transition: 0.2s;
+    background-color: rgb(241, 241, 241);
+}
+
+@media screen and (max-width: 400px) {
+    .custom-content h1 {
+        font-size: 28px;
+        color: rgb(82, 82, 82);
+        font-weight: 600;
+    }
+
+    .custom-content h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: rgb(82, 82, 82);
+    }
+
+    .custom-content h3 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: rgb(82, 82, 82);
+    }
+
+    .custom-content ul > li {
+        font-size: 12px;
+        border-radius: 6px;
+        padding: 14px 14px;
+        margin: 4px 2px;
+    }
+    
+    .custom-content ol > li {
+        font-size: 12px;
+        padding: 14px 14px;
+        border-radius: 6px;
+        margin: 4px 2px;
+        background-color: rgb(5, 90, 248);
+    }
+}

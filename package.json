@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
+    "aos": "^2.3.4",
     "axios": "^1.6.8",
     "copy-to-clipboard": "^3.3.3",
     "dom-to-image": "^2.6.0",
