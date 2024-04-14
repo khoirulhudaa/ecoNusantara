@@ -10,7 +10,7 @@ const Footer = () => {
             <p className='font-normal text-slate-200 leading-loose text-[14px]'>Website informasi Nusantara seputar wisata, rempah dan kulinar nya yang beraneka ragam.</p>
         </div>
         <div className='w-full md:w-[70%] h-full justify-end fmd:lex items-center'>
-          <div className='w-full md:w-full md:-full z-[33]'>
+          <div className='w-full md:mt-0 mt-8 md:pt-0 pt-8 md:border-0 border-t-white border-t md:w-full md:-full z-[33]'>
             <ul>
               <a href="#home">
                 <li className='cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-8'>Beranda</li>

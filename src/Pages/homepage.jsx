@@ -539,13 +539,13 @@ const Homepage = () => {
     <div className='w-screen h-max overflow-x-hidden'>
         <Navbar />
 
-        <div id='home' className='relative z-[4444444] w-screen h-[74vh] md:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-700 overflow-hidden flex flex-col justify-center md:rounded-br-[200px]'>
+        <div id='home' className='relative z-[4444444] w-screen h-[62vh] md:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-700 overflow-hidden flex flex-col justify-center md:rounded-br-[200px]'>
             <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] md:flex hidden' data-aos="fade-up-left" data-aos-duration="1000" src={People2} alt="seorang traveler" />
             <img src={Jawa} className='absolute scale-[9] md:scale-[2] top-12 left-0 opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
             
             <div className='relative w-[100vw] md:w-[80vw] p-4 md:p-12 mt-[-40px] text-left'>
-                <h1 className='font-bold text-[30px] md:text-[60px] mb-4 text-white w-full'>Eksplorasi Nusantara <br /> dalam Perjalanan <br /> Gastronomi 🗺️</h1>
+                <h1 className='font-bold text-[34px] md:text-[60px] mb-4 text-white w-full'>Eksplorasi Nusantara <br /> dalam Perjalanan <br /> Gastronomi 🗺️</h1>
                 <p className='text-normal w-full text-slate-100 text-[16px] leading-loose'>Perluasa Wawasan Kamu Tentang Kekayaan Bumi Nusantara</p>
                 <a href="#start">
                     <div className='outline-0 border-slate-300 flex items-center py-4 px-10 md:px-10 cursor-pointer hover:brightness-[90%] active:scale-[0.98] overflow-hidden rounded-full mt-8 bg-white w-max md:text-[16px] text-[14px] text-blue-600'>
@@ -562,14 +562,14 @@ const Homepage = () => {
         <div id='start' className='relative w-screen h-max pt-12 md:pt-14 md:p-12 p-4'>
             <img src={Kalimantan} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
             <div className='rounded-full md:text-[16px] text-[12px] text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kategori - Wisata, Rempah dan Kuliner</div>
-            <h2 className='font-bold hidden md:flex items-center text-[24px] md:text-[36px]'>🏔️ <span className='relative top-1 ml-3'>Ragam Kekayaan Nusantara</span></h2>
+            <h2 className='font-bold flex items-center text-[20px] md:text-[36px]'><span className='md:flex mr-2 hidden'>🏔️</span> <span className='relative top-1 ml-3'>Ragam Kekayaan Nusantara</span></h2>
             <div className='w-full md:flex justify-between items-center mt-12'>
                 {
                     loading ? (
                         <CardSkeletonType />    
                     ):
                     JenisKekayaanAlam?.map((data, index) => (
-                        <div key={index} className='w-[100%] md:w-[30%] md:mb-0 mb-6 h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
+                        <div key={index} className='w-[100%] md:w-[30%] md:mb-0 mb-6 h-[450px] md:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
                             <div className='relative w-full overflow-hidden h-[65%]'>
                                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                 <p>{data?.label}</p> 
@@ -578,8 +578,8 @@ const Homepage = () => {
                             </div>
                             <div className='w-full flex flex-col justify-between h-[35%] pt-2'>
                                 <div className='w-full h-[70%] p-4'>
-                                    <h2 className='font-bold text-[22px] mb-2'>{data?.nama}</h2>
-                                    <p className='leading-loose text-slate-500 text-[14px]'>{data?.deskripsi}</p>
+                                    <h2 className='font-bold text-[18px] md:text-[22px] mb-2'>{data?.nama}</h2>
+                                    <p className='leading-loose text-slate-500 text-[12px] md:text-[14px]'>{data?.deskripsi}</p>
                                 </div>
                                 <div id='btn-ecoNusantara1' onClick={() => handleClickDetail(data)} className='w-full flex items-center text-center justify-center py-5 bg-blue-600 text-white cursor-pointer hover:brightness-[90%] duration-300'>
                                     Lihat Selengkapnya
@@ -615,7 +615,7 @@ const Homepage = () => {
         <div id='tour' className='relative w-screen h-max pt-16 pl-6 md:pl-12 pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
-            <h2 className='font-bold hidden md:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>Rekomendasi Wisata Nusantara</span></h2>
+            <h2 className='font-bold flex items-center text-[20px] md:text-[36px]'><span className='md:flex hidden mr-2'>🏔️</span> <span className='relative top-1 ml-3'>Rekomendasi Wisata Nusantara</span></h2>
             <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
                 <div className='w-max flex justify-between items-center mt-12'>
                     {   
@@ -647,7 +647,7 @@ const Homepage = () => {
         </div>
 
         <div id='map' className='relative w-screen h-max p-4 md:p-12'>
-            <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Kalimatan' />
+            <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.1] md:opacity-[0.2] z-[-1]' alt='Kalimatan' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Geospasial - 5 Pulau Nusantara</div>
             <div className='w-full md:flex items-center justify-between'>
                 <h2 className='font-bold hidden md:flex items-center text-[24px] md:text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Wisata Nusantara</span></h2>
@@ -775,7 +775,7 @@ const Homepage = () => {
 
                 </div>
                 </div>
-                <div className='absolute right-2 pl-5 md:pl-7 bottom-4 w-full flex items-center justify-between'>
+                <div className='absolute right-2 pl-4 md:pl-7 bottom-4 w-full flex items-center justify-between'>
                     <div className='w-max flex items-center'>
                         <div className={`z-[552] ml-0 w-max h-max px-4 py-2 flex items-center justify-center text-center bg-white rounded-full text-[16px] border border-slate-700 bottom-4`}>
                         {currentPosition ? `${currentPosition[0].toFixed(6)}  |  ${currentPosition[1].toFixed(6)}` : '0, 0'}
@@ -819,7 +819,7 @@ const Homepage = () => {
         <div id='contact' className='relative w-screen h-max md:pt-0 pt-16 p-4 md:p-12'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white md:mb-4 bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
-            <h2 className='font-bold hidden md:flex items-center text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
+            <h2 className='font-bold flex items-center text-[20px] md:mt-0 mt-6 md:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
             <div className='w-full flex items-center overflow-x-auto'>
                 <div className='w-max flex items-center pb-3'>
                     {
@@ -864,7 +864,7 @@ const Homepage = () => {
                 <div className='relative w-full h-max md:h-full overflow-hidden text-white flex p-6 md:p-14 flex-col justify-between text-left'>
                     <img src={Jawa} className='absolute scale-[3] bottom-[20%] left-[30%] opacity-[0.3] z-[-1]' alt='Sumatera' />
                     <h2 className='text-[32px] md:text-[50px] w-[96%] md:w-1/2'>Lebih dari <b>100+</b> Jenis Rempah, Nusantara</h2>
-                    <div className='w-[100%] md:w-1/2 md:mt-0 mt-6 flex flex-wrap'>
+                    <div className='w-[100%] md:w-1/2 md:mt-0 mt-6 hidden md:flex flex-wrap'>
                         <div className='w-max h-max rounded-full px-5 md:px-7 py-2 md:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 md:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Kunyit</p>
                         </div>
@@ -1030,12 +1030,12 @@ const Homepage = () => {
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kulineran Nusantara</div>
             <div className='relative w-full md:flex z-[33] justify-between bg-blue-600 md:pb-0 pb-6 h-max md:h-[600px] rounded-[16px] items-center mt-8'>
                 <div className='relative right-0 w-full h-full md:hidden flex items-center'>
-                    <img src={FoodBg} alt="people" className='scale-[0.95] right-[-30px] relative top-12 md:mb-0 mb-6 md:bottom-5 rotate-[20deg]' />
+                    <img src={FoodBg} alt="people" className='scale-[0.95] right-[-30px] relative top-10 md:top-12 md:mb-0 mb-6 md:bottom-5 rotate-[20deg]' />
                 </div>
                 <div className='relative w-full h-max md:h-full overflow-hidden text-white flex p-4 md:p-14 flex-col justify-between text-left'>
-                    <img src={Jawa} className='absolute scale-[3] bottom-[20%] left-[30%] opacity-[0.3] z-[-1]' alt='Sumatera' />
+                    <img src={Jawa} className='absolute scale-[3] md:bottom-[20%] left-[30%] opacity-[0.3] z-[-1]' alt='Sumatera' />
                     <h2 className='text-[32px] md:text-[50px] w-[90%] md:w-1/2'>JunkFood? Makanan Khas <b>Daerah</b> Aja! 🍲</h2>
-                    <div className='w-fll md:w-1/2 flex flex-wrap mt-6'>
+                    <div className='w-fll md:w-1/2 hidden md:flex flex-wrap mt-6'>
                         <div className='w-max h-max rounded-full px-5 md:px-7 py-2 md:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 md:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Nasi Goreng</p>
                         </div>
@@ -1129,7 +1129,7 @@ const Homepage = () => {
             </div>
             {
                  loading ? (
-                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[528px] mt-12'>
+                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-full md:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[528px] mt-12'>
                         <div className='absolute top-4 right-4 items-center flex'>
                             <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
                             <div className='rounded-full bg-slate-300 px-12 py-5 ml-4 animate-pulse'></div>
@@ -1141,7 +1141,7 @@ const Homepage = () => {
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-max mt-12'>
+                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-full md:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-max mt-12'>
                         
                         <div className="w-max z-[444] flex items-center h-[68px] py-[14px] pl-4 rounded-bl-[32px] absolute top-0 right-2">
                             <div className={`w-max ${activeClick ? 'hidden' : 'flex'} items-center top-4 mr-3`}>
@@ -1152,7 +1152,7 @@ const Homepage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='absolute right-2 pl-5 md:pl-7 bottom-4 w-full flex items-center justify-between'>
+                    <div className='absolute right-2 pl-4 md:pl-7 bottom-4 w-full flex items-center justify-between'>
                         <div className='w-max flex items-center'>
                             <div className={`z-[552] ml-0 w-max h-max px-4 py-2 flex items-center justify-center text-center bg-white rounded-full text-[16px] border border-slate-700 bottom-4`}>
                             {currentPositionCulinary ? `${currentPositionCulinary[0].toFixed(6)}  |  ${currentPositionCulinary[1].toFixed(6)}` : '0, 0'}

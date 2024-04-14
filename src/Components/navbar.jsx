@@ -34,7 +34,7 @@ const Navbar = () => {
         {/* End Sidebar */}
         
         <div className='w-max md:w-[20%] text-blue-600 rounded-lg flex items-center h-full'>
-            <h2 className='font-[500] text-[22px] text-white'>EcoNusantara 🗺️</h2>
+            <h2 className='font-[500] text-[24px] md:text-[22px] text-white'>EcoNusantara 🗺️</h2>
         </div>
 
         {/* toggle */}
