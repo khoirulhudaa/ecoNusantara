@@ -4,6 +4,7 @@ const Homepage = lazy(() => import('../Pages/homepage'))
 const DetailArtikel = lazy(() => import('../Pages/detail-artikel'))
 const DetailCard = lazy(() => import('../Pages/detail-card'))
 const DetailMainArticle = lazy(() => import('../Pages/detail-main-article'))
+const DetailEvent = lazy(() => import('../Pages/detail-event'))
 
 const Routers = [
     {
@@ -24,6 +25,11 @@ const Routers = [
     {
         path: '/detail-main-article/:id',
         component: DetailMainArticle,
+        exact: false
+    },
+    {
+        path: '/detail-event/:id',
+        component: DetailEvent,
         exact: false
     },
 ]

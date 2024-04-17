@@ -4,6 +4,7 @@ const initialState = {
     information: {},
     detail: {},
     detailArticle: {},
+    event: null
 }
 
 const informationSlide = createSlice({
@@ -22,6 +23,12 @@ const informationSlide = createSlice({
         clearDetail: (state) => {
             state.detail = {}
         },
+        getEvent: (state, action) => {
+            state.event = action.payload;
+        },
+        clearEvent: (state) => {
+            state.event = {}
+        },
         getDetailArticle: (state, action) => {
             state.detailArticle = action.payload;
         },
@@ -31,6 +38,6 @@ const informationSlide = createSlice({
     }
 })
 
-export const { getInformation, clearInformation, getDetailArticle, clearDetailArticle, getDetail, clearDetail } = informationSlide.actions;
+export const { getInformation, clearInformation, getEvent, clearEvent, getDetailArticle, clearDetailArticle, getDetail, clearDetail } = informationSlide.actions;
 export default informationSlide.reducer;
 

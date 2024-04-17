@@ -2,10 +2,7 @@ import React from 'react'
 
 const CardSkeletonArticle = () => {
   return (
-    <div className='w-screen px-12 mx-auto flex flex-col mt-8 pb-4'>
-        <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Informasi Menarik Untuk Kamu</div>
-        <h2 className='font-bold flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>Artikel Seputar Nusantara</span></h2>
-        
+    <section className='w-screen px-4 md:px-12 mx-auto flex flex-col mt-8 pb-4'>
         <div className='w-full h-[240px] mt-10 border border-blue-600 border-dashed rounded-[12px] bg-white shadow-lg p-5'>
             <div className='w-full h-[50%] flex items-center justify-between overflow-hidden text-left rounded-[8px]'>
                 <h3 className='text-[20px] relative bottom-5 bg-slate-300 animate-pulse rounded-full h-[30px] w-[80%] cursor-pointer hover:text-blue-600 active:scale-[0.99] underline font-[500]'>
@@ -75,7 +72,7 @@ const CardSkeletonArticle = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 

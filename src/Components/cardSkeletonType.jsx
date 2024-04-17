@@ -2,7 +2,7 @@ import React from 'react'
 
 const CardSkeletonType = () => {
   return (
-    <div className='w-full md:flex justify-between items-center mx-auto'>
+    <section className='w-full md:flex justify-between items-center mx-auto'>
         <div className='w-[100%] md:mb-0 mb-6 md:w-[30%] h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
             <div className='relative w-full overflow-hidden h-[65%]'>
                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-slate-300 animate-pulse px-12 py-4 w-max h-max'>
@@ -51,7 +51,7 @@ const CardSkeletonType = () => {
                 </div>
             </div>
         </div> 
-    </div>
+    </section>
   )
 }
 

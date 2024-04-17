@@ -72,6 +72,10 @@ import Gudeg1 from './gudeg1.jpeg'
 import Gudeg2 from './gudeg2.jpeg'
 import Madura1 from './madura1.jpeg'
 import Madura2 from './madura2.jpeg'
+import BLueFlower from './blueFlower.svg'
+import YellowFlower from './yellowFlower.svg'
+import GrayFlower from './grayFlower.svg'
+import Event from './event.jpeg'
 
 
 export {
@@ -148,4 +152,8 @@ export {
     Madura2,
     Bakso1,
     Bakso2,
+    BLueFlower,
+    YellowFlower,
+    GrayFlower,
+    Event
 }

@@ -1,3 +1,5 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { saveAs } from 'file-saver';
 import { icon } from 'leaflet';
 import markerIconUrl from 'leaflet/dist/images/marker-icon.png';
@@ -24,9 +26,8 @@ import Kuliner from '../Data/kuliner';
 import Rempah from '../Data/rempah';
 import Wisata from '../Data/wisata.json';
 import API from '../Services/service';
-import { clearInformation, getDetail, getInformation } from '../Store/informationSlice';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { clearInformation, getDetail, getEvent, getInformation } from '../Store/informationSlice';
+import CardSkeletonEvent from '../Components/cardSkeletonEvent';
 
 const Homepage = () => {
 
@@ -38,6 +39,7 @@ const Homepage = () => {
     const [allContact, setAllContact] = useState([])
     const [allCulinary, setAllCulinary] = useState([])
     const [allSpice, setAllSpice] = useState([])
+    const [allEvent, setAllEvent] = useState([])
     const [center] = useState([-1.5555, 117.5525]);
     const [zoom] = useState(5);
 
@@ -87,9 +89,14 @@ const Homepage = () => {
             
             const resultSpice = await API.getAllSpice()
             setAllSpice(resultSpice.data.data)
+            
+            const resultEvent = await API.getEvet()
+            console.log('event:',resultEvent)
+            setAllEvent(resultEvent.data.data)
             setLoading(false)
         })()
     }, [])
+
 
 	useEffect(() => {
 		const handleResize = () => {
@@ -550,11 +557,16 @@ const Homepage = () => {
         });
     }
 
+    const handleEvent = (data) => {
+        dispatch(getEvent(data))
+        navigate(`/detail-event/${data?.event_id}`)
+    }
+
   return (
     <div className='w-screen h-max overflow-x-hidden'>
         <Navbar />
 
-        <div id='home' className='relative z-[4444444] w-screen h-[64vh] md:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-700 overflow-hidden flex flex-col justify-center md:rounded-br-[200px]'>
+        <section id='home' className='relative z-[4444444] w-screen h-[64vh] md:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-700 overflow-hidden flex flex-col justify-center md:rounded-br-[200px]'>
             <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] md:flex hidden' data-aos="fade-up-left" data-aos-duration="1000" src={People2} alt="Seorang penjelajah" />
             <img src={Jawa} className='absolute scale-[9] md:scale-[2] top-12 left-0 md:flex hidden opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
@@ -572,9 +584,9 @@ const Homepage = () => {
             </div>
             <div className='md:flex hidden md:w-[500px] md:flex hidden md:h-[500px] right-[200px] bottom-[-100px] rounded-full opacity-[0.7] border border-slate-100 absolute'>
             </div>
-        </div>
+        </section>
 
-        <div id='start' className='relative w-screen h-max pt-12 md:pt-14 md:p-12 p-4'>
+        <section id='start' className='relative w-screen h-max pt-12 md:pt-14 md:p-12 p-4'>
             <img src={Kalimantan} className='absolute scale-[1.6] top-0 right-0 opacity-[0.1] md:opacity-[0.2] z-[-1]' alt='Kalimatan' />
             <div className='rounded-full md:text-[16px] text-[12px] text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kategori - Wisata, Rempah dan Kuliner</div>
             <h2 className='font-bold flex items-center text-[20px] md:text-[36px]'><span className='md:flex mr-2 hidden'>🏔️</span> <span className='relative top-1 ml-3'>Ragam Kekayaan Nusantara</span></h2>
@@ -604,9 +616,9 @@ const Homepage = () => {
                     ))
                 }
             </div>
-        </div>
+        </section>
 
-        <div className='relative w-screen h-max px-6 md:px-12 pt-6 md:pt-12 pb-6'>
+        <section className='relative w-screen h-max px-6 md:px-12 pt-6 md:pt-12 pb-6'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Jumlah Turis Tahun Lalu (2023)</div>
             <div className='relative w-full md:flex z-[33] justify-between bg-blue-600 h-max md:h-[600px] rounded-[16px] items-center border border-slate-300 mt-8'>
@@ -625,9 +637,9 @@ const Homepage = () => {
                     <img src={People1} alt="people" className='w-auto h-full md:scale-[1.2] relative top-16' />
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id='tour' className='relative w-screen h-max pt-16 pl-6 md:pl-12 pb-12'>
+        <section id='tour' className='relative w-screen h-max pt-16 pl-6 md:pl-12 pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
             <h2 className='font-bold flex items-center text-[20px] md:text-[36px]'><span className='md:flex hidden mr-2'>🏔️</span> <span className='relative top-1 ml-3'>Rekomendasi Wisata Nusantara</span></h2>
@@ -659,9 +671,9 @@ const Homepage = () => {
                     }
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id='map' className='relative w-screen h-max p-4 md:p-12'>
+        <section id='map' className='relative w-screen h-max p-4 md:p-12'>
             <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.1] md:opacity-[0.2] z-[-1]' alt='Kalimatan' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Geospasial - 5 Pulau Nusantara</div>
             <div className='w-full md:flex items-center justify-between'>
@@ -829,9 +841,9 @@ const Homepage = () => {
                     </MapContainer>
                     </div>
             }
-        </div>
+        </section>
 
-        <div id='contact' className='relative w-screen h-max md:pt-0 pt-16 p-4 md:p-12 md:block hidden'>
+        <section id='contact' className='relative w-screen h-max md:pt-0 pt-16 p-4 md:p-12 md:block hidden'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white md:mb-4 bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
             <h2 className='font-bold flex items-center text-[20px] md:mt-0 mt-6 md:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
@@ -867,9 +879,9 @@ const Homepage = () => {
                     }
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div className='relative w-screen h-max p-4 md:px-12 pt-12 pb-6'>
+        <section className='relative w-screen h-max p-4 md:px-12 pt-12 pb-6'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kekayaan Rempah Nusantara</div>
             <div className='relative w-full md:flex z-[33] justify-between md:pb-0 pb-4 bg-blue-600 h-max md:h-[600px] rounded-[16px] items-center mt-8'>
@@ -917,7 +929,7 @@ const Homepage = () => {
                     <img src={RempahBg} alt="people" className='scale-[1.1] relative bottom-1' />
                 </div>
             </div>
-        </div>
+        </section>
 
         <div id='spice' className='relative w-screen h-max pt-12 md:pt-16 pl-4 md:pl-12 pb-8 md:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
@@ -953,7 +965,7 @@ const Homepage = () => {
             </div>
         </div>
 
-        <div className='relative w-screen h-max p-4 md:p-12 md:mt-0 mt-4'>
+        <section className='relative w-screen h-max p-4 md:p-12 md:mt-0 mt-4'>
             <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Geospasial - Rempah Nusantara</div>
             <div className='w-full flex items-center justify-between'>
@@ -1038,9 +1050,9 @@ const Homepage = () => {
                         </MapContainer>
                     </div>
             }
-        </div>
+        </section>
 
-        <div className='relative w-screen h-max px-4 md:px-12 pt-12 pb-6'>
+        <section className='relative w-screen h-max px-4 md:px-12 pt-12 pb-6'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kulineran Nusantara</div>
             <div className='relative w-full md:flex z-[33] justify-between bg-blue-600 md:pb-0 pb-6 h-max md:h-[600px] rounded-[16px] items-center mt-8'>
@@ -1082,9 +1094,9 @@ const Homepage = () => {
                     <img src={FoodBg} alt="people" className='scale-[0.95] right-[-30px] relative bottom-5 rotate-[20deg]' />
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id='culinary' className='relative w-screen h-max pt-14 md:pt-16 pl-6 md:pl-12 pb-12'>
+        <section id='culinary' className='relative w-screen h-max pt-14 md:pt-16 pl-6 md:pl-12 pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kuliner Lokal Nusantara</div>
             <div className='w-full overflow-x-auto mt-10'>
@@ -1110,7 +1122,7 @@ const Homepage = () => {
                    }
                 </div>
             </div>
-        </div>
+        </section>
 
         <div className='relative w-screen h-max p-6 md:p-12'>
             <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
@@ -1210,6 +1222,30 @@ const Homepage = () => {
                 <Articles />
         }
 
+        {/* Events */}
+        {
+            loading ? (
+                <CardSkeletonEvent />
+            ):
+                <section className='relative w-screen h-max text-left pt-12 md:pt-14 md:p-12 px-4 md:px-12'>
+                    <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
+                    <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>Kegiatan - Kita Nusantara</div>
+                    <h2 className='font-bold hidden md:flex items-center text-[24px] md:text-[36px]'>📌 <span className='relative top-1 ml-3'>Acara Nusantara {new Date().getFullYear()}</span></h2>
+                    <div className='relative w-full min-h-[220px] md:h-[600px] border-dashed border-[2px] border-blue-400 overflow-hidden rounded-[16px] mt-12'>
+                        <div className='absolute z-[999999] left-5 md:left-12 bottom-5 md:bottom-12 h-max w-max text-white'>
+                            <h2 className='text-[16px] overflow-hidden overflow-ellipsis whitespace-nowrap w-[80vw] md:text-[36px] font-[500] mb-2'>{allEvent[0]?.name_event}</h2>
+                            <p className='w-[80%] md:w-[80%] md:text-[16px] text-[12px] overflow-hidden overflow-ellipsis whitespace-nowrap'>{allEvent[0]?.description}</p>
+                            <hr className='mt-5' />
+                            <p onClick={() => handleEvent(allEvent[0])} className='flex items-center w-max mt-5 text-blue-200 underline cursor-pointer hover:brightness-[90%] active:scale-[0.98]'>
+                                Lihat Selengkapnya <span className='ml-2'>👉</span>
+                            </p>
+                        </div>  
+                        <div className='w-full h-full bg-slate-800 bg-opacity-[0.7] absolute z-[444]'></div>
+                        <img src={allEvent[0]?.thumbnail} alt="event-image" className='w-full' />
+                    </div>
+                </section>
+        }
+        
         {/* Footer */}
         <Footer />
 

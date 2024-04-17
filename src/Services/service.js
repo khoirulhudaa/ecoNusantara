@@ -36,7 +36,18 @@ const API = {
     // Contact Data 
     getAllSpice: () => {
         return api.get('/spice')
-    }
+    },
+
+    // Get Event
+    getEvet: () => {
+        return api.get('/event')
+    },
+
+    // Post email
+    sendEmail: (body) => {
+        return api.post('/email', body)
+    },
+
 }
 
 export default API;

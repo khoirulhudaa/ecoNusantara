@@ -2,7 +2,7 @@ import React from 'react'
 
 const CardSkeleton = () => {
   return (
-    <div className='w-max flex items-center'>
+    <section className='w-max flex items-center'>
         <div className='w-[87vw] md:w-[340px] h-[440px] mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
             <div className='relative w-full overflow-hidden h-[50%] bg-slate-300 animate-pulse duration-300'>
                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-slate-200 text-slate-500 border px-12 py-5 w-max h-max text-[14px] flex items-center justify-center'>
@@ -73,7 +73,7 @@ const CardSkeleton = () => {
                 </div>
             </div>
         </div> 
-    </div>
+    </section>
   )
 }
 
