@@ -305,27 +305,27 @@ const Api = () => {
 
 
   return (
-    <section id='API' className='relative overflow-hidden w-screen bg-blue-700 h-max pt-14 md:pt-20 pb-16 md:pb-28 my-12 px-4 md:px-16'>
+    <section id='API' className='relative overflow-hidden w-screen bg-blue-700 h-max pt-14 lg:pt-20 pb-16 lg:pb-28 my-12 px-4 lg:px-16'>
         <input value="https://be-geospasial.vercel.app/v2/api/contact" className='absolute opacity-0' disabled type="text" ref={textRefMain} />
         <input value="https://be-geospasial.vercel.app/v2/api/tour" className='absolute opacity-0' disabled type="text" ref={textRef} />
         <input value="https://be-geospasial.vercel.app/v2/api/spice" className='absolute opacity-0' disabled type="text" ref={textRef2} />
         <input value="https://be-geospasial.vercel.app/v2/api/culinary" className='absolute opacity-0' disabled type="text" ref={textRef3} />
         
-        <h2 className='text-[26px] mb-8 md:mb-0 md:text-[36px] text-white font-normal text-center'>API ecoNusantara 2024 💻</h2>
-        <p className='text-slate-200 md:block hidden mt-4 mb-10 text-center'>Dapatkan Data Geospasial Kabupaten Cirebon Secara Terbukan, Gratis dan Mudah.</p>    
-        <div className='relative w-full z-[444] px-4 md:px-12 pt-6 md:pt-[80px] pb-6 md:pb-20 flex mx-auto rounded-[16px] bg-white border-[2px] h-max md:min-h-[680px] border-blue-500 border-dashed'>
-            <div className='w-full md:w-1/2 h-max md:h-[500px] flex justify-between flex-col'>
-                <label htmlFor="api-dinas" className='font-[500] md:flex items-center'>
+        <h2 className='text-[22px] mb-8 lg:mb-0 lg:text-[36px] text-white font-normal text-center'>API ecoNusantara 2024 💻</h2>
+        <p className='text-slate-200 lg:block hidden mt-4 mb-10 text-center'>Dapatkan Data Geospasial Kabupaten Cirebon Secara Terbukan, Gratis dan Mudah.</p>    
+        <div className='relative w-full z-[444] px-4 lg:px-12 pt-6 lg:pt-[80px] pb-6 lg:pb-20 flex mx-auto rounded-[16px] bg-white border-[2px] h-max lg:min-h-[680px] border-blue-500 border-dashed'>
+            <div className='w-full lg:w-1/2 h-max lg:h-[500px] flex justify-between flex-col'>
+                <label htmlFor="api-dinas" className='font-[500] lg:flex items-center'>
                     Data Sebaran Wisata  
-                    <div className="w-max mt-3 md:mt-0 md:ml-auto flex items-center">
+                    <div className="w-max mt-3 lg:mt-0 lg:ml-auto flex items-center">
                         <div className='w-max bg-green-400 mr-4 px-3 py-2 w-max h-max text-[10px] rounded-md text-white'>
                             (GET)
                         </div>
-                        <p onClick={() => {setSelectAPI('pemandu'), setActiveAPI(true)}} className='text-blue-600 md:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
+                        <p onClick={() => {setSelectAPI('pemandu'), setActiveAPI(true)}} className='text-blue-600 lg:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
                             Lihat Respon
                         </p>    
                     </div>
-                    <p onClick={() => {setSelectAPI('pemandu'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer md:flex hidden active:scale-[0.98] hover:text-blue-800'>
+                    <p onClick={() => {setSelectAPI('pemandu'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer lg:flex hidden active:scale-[0.98] hover:text-blue-800'>
                         Lihat Respon
                     </p>
                 </label>
@@ -335,17 +335,17 @@ const Api = () => {
                         <FaCopy />
                     </div>
                 </div>
-                <label htmlFor="api-dinas" className='font-[500] md:flex items-center'>
+                <label htmlFor="api-dinas" className='font-[500] lg:flex items-center'>
                     Data Sebaran Wisata  
-                    <div className="w-max mt-3 md:mt-0 md:ml-auto flex items-center">
+                    <div className="w-max mt-3 lg:mt-0 lg:ml-auto flex items-center">
                         <div className='w-max bg-green-400 mr-4 px-3 py-2 w-max h-max text-[10px] rounded-md text-white'>
                             (GET)
                         </div>
-                        <p onClick={() => {setSelectAPI('wisata'), setActiveAPI(true)}} className='text-blue-600 md:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
+                        <p onClick={() => {setSelectAPI('wisata'), setActiveAPI(true)}} className='text-blue-600 lg:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
                             Lihat Respon
                         </p>    
                     </div>
-                    <p onClick={() => {setSelectAPI('wisata'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer md:flex hidden active:scale-[0.98] hover:text-blue-800'>
+                    <p onClick={() => {setSelectAPI('wisata'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer lg:flex hidden active:scale-[0.98] hover:text-blue-800'>
                         Lihat Respon
                     </p>
                 </label>
@@ -355,17 +355,17 @@ const Api = () => {
                         <FaCopy />
                     </div>
                 </div>
-                <label htmlFor="api-dinas" className='font-[500] md:flex items-center'>
+                <label htmlFor="api-dinas" className='font-[500] lg:flex items-center'>
                     Data Sebaran Rempah 
-                    <div className="w-max mt-3 md:mt-0 md:ml-auto flex items-center">
+                    <div className="w-max mt-3 lg:mt-0 lg:ml-auto flex items-center">
                         <div className='w-max bg-green-400 mr-4 px-3 py-2 w-max h-max text-[10px] rounded-md text-white'>
                             (GET)
                         </div>
-                        <p onClick={() => {setSelectAPI('rempah'), setActiveAPI(true)}} className='text-blue-600 md:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
+                        <p onClick={() => {setSelectAPI('rempah'), setActiveAPI(true)}} className='text-blue-600 lg:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
                             Lihat Respon
                         </p>    
                     </div>
-                    <p onClick={() => {setSelectAPI('rempah'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer md:flex hidden active:scale-[0.98] hover:text-blue-800'>
+                    <p onClick={() => {setSelectAPI('rempah'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer lg:flex hidden active:scale-[0.98] hover:text-blue-800'>
                         Lihat Respon
                     </p>
                 </label>
@@ -377,17 +377,17 @@ const Api = () => {
                         <FaCopy />
                     </div>
                 </div>
-                <label htmlFor="api-dinas" className='font-[500] md:flex items-center'>
+                <label htmlFor="api-dinas" className='font-[500] lg:flex items-center'>
                     Data Sebaran Kuliner 
-                    <div className="w-max mt-3 md:mt-0 md:ml-auto flex items-center">
+                    <div className="w-max mt-3 lg:mt-0 lg:ml-auto flex items-center">
                         <div className='w-max bg-green-400 mr-4 px-3 py-2 w-max h-max text-[10px] rounded-md text-white'>
                             (GET)
                         </div>
-                        <p onClick={() => {setSelectAPI('kuliner'), setActiveAPI(true)}} className='text-blue-600 md:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
+                        <p onClick={() => {setSelectAPI('kuliner'), setActiveAPI(true)}} className='text-blue-600 lg:hidden cursor-pointer active:scale-[0.98] hover:text-blue-800'>
                             Lihat Respon
                         </p>    
                     </div>
-                    <p onClick={() => {setSelectAPI('kuliner'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer md:flex hidden active:scale-[0.98] hover:text-blue-800'>
+                    <p onClick={() => {setSelectAPI('kuliner'), setActiveAPI(true)}} className='text-blue-600 cursor-pointer lg:flex hidden active:scale-[0.98] hover:text-blue-800'>
                         Lihat Respon
                     </p>
                 </label>
@@ -399,17 +399,17 @@ const Api = () => {
                         <FaCopy />
                     </div>
                 </div>
-                <div className={`fixed top-0 ${activeAPI ? 'left-[0%]' : 'left-[-100%] duration-300'} ease-in-out duration-300 w-full md:w-max md:rounded-tr-[20px] shadow-lg h-screen z-[99999999] bg-white text-blue-700 flex items-center justify-center`}>
-                <div className='relative w-full h-screen overflow-y-auto pb-10 md:rounded-[12px]'>
+                <div className={`fixed top-0 ${activeAPI ? 'left-[0%]' : 'left-[-100%] duration-300'} ease-in-out duration-300 w-full lg:w-max lg:rounded-tr-[20px] shadow-lg h-screen z-[99999999] bg-white text-blue-700 flex items-center justify-center`}>
+                <div className='relative w-full h-screen overflow-y-auto pb-10 lg:rounded-[12px]'>
                     <code>
                         <div className='relative mx-auto mt-8 w-[88%] flex items-center'>
                             <div className='w-max bg-slate-400 px-5 py-2  h-max ml-2 text-[14px] rounded-lg text-white'>{selectAPI ?? ''}</div>
-                            <div className='w-max bg-blue-500 px-5 py-2 md:flex hidden h-max ml-2 text-[14px] rounded-lg text-white'>Response</div>
+                            <div className='w-max bg-blue-500 px-5 py-2 lg:flex hidden h-max ml-2 text-[14px] rounded-lg text-white'>Response</div>
                             <div className='w-max bg-green-500 px-5 py-2  h-max ml-2 text-[14px] rounded-lg text-white'>200</div>
                             <div onClick={() => setActiveAPI(false)} className='ml-auto bg-red-500 flex items-center justify-center cursor-pointer hover:brightness-[90%] active:scale-[0.98] w-[40px] h-[40px] ml-2 text-[14px] rounded-lg text-white'><FaTimes /></div>
                         </div>
-                        <div className='w-full md:w-[42vw] mx-auto pt-10'>
-                            <pre className='w-[90%] mx-auto p-6 rounded-[20px] border border-blue-200 text-[11px] md:text-[16px] h-max'>
+                        <div className='w-full lg:w-[42vw] mx-auto pt-10'>
+                            <pre className='w-[90%] mx-auto p-6 rounded-[20px] border border-blue-200 text-[11px] lg:text-[16px] h-max'>
                                 {
                                 selectAPI === 'pemandu' ? (
                                     JSON.stringify(yourJsonObjectPemandu, null, 2)
@@ -426,7 +426,7 @@ const Api = () => {
                     </div>
                 </div>
             </div>
-            <div className='relative w-1/2 h-[500px] hidden md:flex flex-col justify-center items-center overflow-hidden'>
+            <div className='relative w-1/2 h-[500px] hidden lg:flex flex-col justify-center items-center overflow-hidden'>
                 <img src={Kalimantan} alt="ilustration developer" title='Image by freepik' className='w-[100%] right-[-30px] top-2 relative' />
             </div>
         </div>

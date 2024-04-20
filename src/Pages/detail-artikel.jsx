@@ -28,11 +28,11 @@ const DetailArtikel = () => {
     <div className='w-screen h-max oveflow-x-hidden'>
 
       <div className='w-screen overflow-x-hidden h-max'>
-        <div className='absolute text-white z-[22223] w-full flex items-center justify-between py-7 px-4 md:px-12'>
+        <div className='absolute text-white z-[22223] w-full flex items-center justify-between py-7 px-4 lg:px-12'>
           <a href={'/'}>
-            <h2 className='text-[22px] md:top-0 relative top-1 md:text-[30px] font-bold'>ecoNusantara 🗺️</h2>
+            <h2 className='text-[22px] lg:top-0 relative top-1 lg:text-[30px] font-bold'>ecoNusantara 🗺️</h2>
           </a>
-          <div className='w-max hidden md:flex items-center'>
+          <div className='w-max hidden lg:flex items-center'>
             <ul className='flex items-center text-white'>
                <Link to={'/'}>
                 <li className='ml-10 cursor-pointer hover:brightness-[90%]'>Beranda</li>
@@ -48,18 +48,18 @@ const DetailArtikel = () => {
         </div>
         <div className='relative w-full h-[70vh] overflow-hidden'>
           <div className='w-full flex items-center justify-between'>
-            <div class="absolute left-0 h-max z-[99999] bottom-32 md:bottom-10 px-12 py-3 rounded-tr-full rounded-br-full w-max text-slate-900 bg-white border border-gray-100">
+            <div class="absolute left-0 h-max z-[99999] bottom-32 lg:bottom-10 px-12 py-3 rounded-tr-full rounded-br-full w-max text-slate-900 bg-white border border-gray-100">
               {detail?.nama}
             </div>
-            <div class="absolute h-max z-[99999] right-4 md:right-12 bottom-10 px-12 py-3 rounded-full w-max bg-gray-400 text-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
+            <div class="absolute h-max z-[99999] right-4 lg:right-12 bottom-10 px-12 py-3 rounded-full w-max bg-gray-400 text-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100">
               EcoNusantara
             </div>
           </div>
           <div className='absolute left-0 top-0 z-[2222] w-screen h-full bg-black bg-opacity-[0.2]'></div>
-          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-full h-auto relative ${detail?.gambar === '/src/Assets/citarasa.jpeg' ? 'md:bottom-[109%]' : 'bottom-[0px]'}`} />
+          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-full h-auto relative ${detail?.gambar === '/src/Assets/citarasa.jpeg' ? 'lg:bottom-[109%]' : 'bottom-[0px]'}`} />
         </div>
 
-        <div id='informasi' className='w-full p-4 md:p-12'>
+        <div id='informasi' className='w-full p-4 lg:p-12'>
           <div className='w-max flex text-[20px] items-center'>
             <Link to={'/'}>
               <small className='text-blue-700 cursor-pointer underlined'>Beranda</small>
@@ -68,18 +68,18 @@ const DetailArtikel = () => {
             <small>{detail?.nama}</small>
           </div>
 
-          <h2 className='md:my-12 my-6 text-[32px] md:text-[64px] text-slate-800 font-bold'>{detail?.nama}</h2>
-          <div className='leading-loose text-slate-600 md:mt-6 w-full'>
-            <p className='mb-6 w-[95%] md:text-[16px] text-[14px]'>ndonesia, dengan kekayaan alamnya yang luar biasa, merupakan surga bagi para pencinta wisata alam. Dari hutan hujan tropis yang tebal hingga gunung-gunung megah, pantai-pantai berpasir putih, dan lautan yang menakjubkan, Indonesia menawarkan berbagai destinasi wisata alam yang tak tertandingi.</p>
-            <p className='mb-6 w-[95%] md:text-[16px] text-[14px]'>Pulau Bali menawarkan kombinasi indah antara keindahan pantai yang memukau seperti Pantai Kuta dan Pantai Nusa Dua, serta lereng gunung yang subur di daerah Ubud. Sementara itu, Pulau Jawa menampilkan keajaiban alam seperti Gunung Bromo dengan padang pasir dan kawahnya yang menakjubkan.</p>
-            <p className='mb-6 w-[95%] md:text-[16px] text-[14px]'>Jangan lupakan pula Taman Nasional Komodo yang menjadi rumah bagi hewan langka komodo serta keindahan bawah lautnya yang memesona. Keindahan alam Indonesia juga tercermin dalam Taman Nasional Raja Ampat, dengan pulau-pulau kecil, karang-karang, dan kehidupan bawah laut yang tak tertandingi. Dari Sabang hingga Merauke, setiap sudut Indonesia adalah pesta visual alam yang akan menghipnotis siapa pun yang berkunjung.</p>
+          <h2 className='lg:my-12 my-6 text-[32px] lg:text-[64px] text-slate-800 font-bold'>{detail?.nama}</h2>
+          <div className='leading-loose text-slate-600 lg:mt-6 w-full'>
+            <p className='mb-6 w-[95%] lg:text-[16px] text-[14px]'>ndonesia, dengan kekayaan alamnya yang luar biasa, merupakan surga bagi para pencinta wisata alam. Dari hutan hujan tropis yang tebal hingga gunung-gunung megah, pantai-pantai berpasir putih, dan lautan yang menakjubkan, Indonesia menawarkan berbagai destinasi wisata alam yang tak tertandingi.</p>
+            <p className='mb-6 w-[95%] lg:text-[16px] text-[14px]'>Pulau Bali menawarkan kombinasi indah antara keindahan pantai yang memukau seperti Pantai Kuta dan Pantai Nusa Dua, serta lereng gunung yang subur di daerah Ubud. Sementara itu, Pulau Jawa menampilkan keajaiban alam seperti Gunung Bromo dengan padang pasir dan kawahnya yang menakjubkan.</p>
+            <p className='mb-6 w-[95%] lg:text-[16px] text-[14px]'>Jangan lupakan pula Taman Nasional Komodo yang menjadi rumah bagi hewan langka komodo serta keindahan bawah lautnya yang memesona. Keindahan alam Indonesia juga tercermin dalam Taman Nasional Raja Ampat, dengan pulau-pulau kecil, karang-karang, dan kehidupan bawah laut yang tak tertandingi. Dari Sabang hingga Merauke, setiap sudut Indonesia adalah pesta visual alam yang akan menghipnotis siapa pun yang berkunjung.</p>
           </div>
         </div>
 
-        <div id='daftar' className='relative w-screen h-max pt-4 pl-4 md:pl-12 pb-12'>
+        <div id='daftar' className='relative w-screen h-max pt-4 pl-4 lg:pl-12 pb-12'>
           <img src={Jawa} className='absolute scale-[1.6] top-[-30px] right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
           <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>{detail?.nama === 'Rempah-rempah' ? 'Nusa2 - Cita Rasa Rempah' : detail?.nama === 'Kuliner Nusantara' ? 'Nusa3 - Selera Khas Nusantara' : 'Nusa1 - Wisata Populer Nusantara'}</div>
-          <h2 className='font-bold hidden md:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>{detail?.nama === 'Rempah-rempah' ? 'Aneka Ragam Rempah' : detail?.nama === 'Kuliner Nusantara' ? 'Kuliner Lokal Nusantara' : 'Rekomendasi 6 Wisata Nusantara'}</span></h2>
+          <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>{detail?.nama === 'Rempah-rempah' ? 'Aneka Ragam Rempah' : detail?.nama === 'Kuliner Nusantara' ? 'Kuliner Lokal Nusantara' : 'Rekomendasi 6 Wisata Nusantara'}</span></h2>
           <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
               <div className='w-max flex justify-between items-center mt-12'>
                 {

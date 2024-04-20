@@ -6,7 +6,7 @@ const Navbar = () => {
   const [activeSidebar, setActiveSidebar] = useState(false)
 
   return (
-    <div className='relative w-screen h-[80px] bg-blue-700 text-white px-4 md:px-12 flex items-center border-0'>
+    <div className='relative w-screen h-[80px] bg-blue-700 text-white px-4 lg:px-12 flex items-center border-0'>
         
         {/* Sidebar */}
         <div className={`w-full h-screen z-[2222222222] fixed ${activeSidebar ? 'left-0' : 'left-[-100%]'} duration-200 top-0 bg-white p-6`}>
@@ -33,19 +33,19 @@ const Navbar = () => {
         </div>
         {/* End Sidebar */}
         
-        <div className='w-max md:w-[20%] text-blue-600 rounded-lg flex items-center h-full'>
-            <h2 className='font-[500] text-[24px] md:text-[22px] text-white'>EcoNusantara 🗺️</h2>
+        <div className='w-max lg:w-[20%] text-blue-600 rounded-lg flex items-center h-full'>
+            <h2 className='font-[500] text-[20px] lg:text-[22px] text-white'>EcoNusantara 🗺️</h2>
         </div>
 
         {/* toggle */}
-        <div onClick={() => setActiveSidebar(!activeSidebar)} className='ml-auto w-[42px] h-[42px] flex md:hidden flex-col items-center bg-white justify-center rounded-[6px] p-2'>
+        <div onClick={() => setActiveSidebar(!activeSidebar)} className='ml-auto w-[42px] h-[42px] flex lg:hidden flex-col items-center bg-white justify-center rounded-[6px] p-2'>
           <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
           <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
           <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
         </div>
         {/* toggle */}
         
-        <div className='w-[80%] hidden md:flex items-center justify-end'>
+        <div className='w-[80%] hidden lg:flex items-center justify-end'>
             <ul className='w-max text-[17px] flex items-center'>
                 <a href="#home">
                   <li className='ml-12'>Beranda</li>
