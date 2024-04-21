@@ -6,7 +6,7 @@ const Navbar = () => {
   const [activeSidebar, setActiveSidebar] = useState(false)
 
   return (
-    <div className='relative w-screen h-[80px] bg-blue-700 text-white px-4 lg:px-12 flex items-center border-0'>
+    <div className='relative w-screen h-[80px] bg-blue-900 lg:bg-blue-700 text-white px-4 lg:px-12 flex items-center border-0'>
         
         {/* Sidebar */}
         <div className={`w-full h-screen z-[2222222222] fixed ${activeSidebar ? 'left-0' : 'left-[-100%]'} duration-200 top-0 bg-white p-6`}>
