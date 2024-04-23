@@ -43,8 +43,8 @@ const DetailCard = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="relative w-full overflow-hidden flex h-[100vh]">
-        <div className={`relative w-1/2 pl-10 ${detail?.type === 'Wisata' ? 'bg-blue-600 text-white' : 'bg-white text-slate-800'} border-b-[3px] border-b-slate-300 border-dashed`}>
+      <div className="relative w-full overflow-hidden flex h-max lg:h-[100vh]">
+        <div className={`relative w-full lg:w-1/2 pl-4 lg:pl-10 ${detail?.type === 'Wisata' ? 'bg-blue-600 text-white' : 'bg-white text-slate-800'} border-b-[3px] border-b-slate-200 lg:border-b-slate-300 border-dashed`}>
           {
             detail?.type === 'Wisata' ? (
               <LinesHero2 />
@@ -52,14 +52,14 @@ const DetailCard = () => {
               <LinesHeroBlack />
           }
           <Link to={'/'}>
-            <h1 className="relative top-7 font-bold text-[24px] z-[333]">ecoNusantara 🗺️</h1>
+            <h1 className={`relative top-6 lg:top-7 font-bold text-[24px] z-[333] ${detail?.type !== 'Wisata' ? 'lg:bg-transparent bg-blue-500 w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:left-0 left-[-20px] lg:text-black text-white' : 'lg:bg-transparent bg-white w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:text-white lg:left-0 left-[-20px] text-blue-500'}`}>ecoNusantara 🗺️</h1>
           </Link>
-          <div className="relative text-[6.4em] h-full flex flex-col justify-center font-extrabold mt-[-20px]">
+          <div className="relative text-[3em] lg:py-0 py-16 lg:text-[6.4em] h-full flex flex-col justify-center font-extrabold mt-[-20px]">
             <h2 className={`${detail?.type === 'Wisata' ? 'text-white' : 'text-blue-500'} mb-2 w-[90%]`}>{detail?.nama}</h2>
             <h2 className="mb-2">{detail?.type === 'Rempah' ? 'Rempah Nusantara' : detail?.type === 'Kuliner' ? 'Kuliner' : 'Wisata'}</h2>
           </div>
         </div>
-        <div className={`w-1/2 relative flex justify-center right-0 ${detail?.type === 'Wisata' ? 'border-t-0 border-l-0 border-r-0 border-b-slate-400 border-[2px] border-dashed' : 'border-t-0 border-l-0 border-r-0 border-b-white-400 border-[2px] border-b-dashed'}`}>
+        <div className={`w-full lg:w-1/2 relative hidden md:flex justify-center right-0 ${detail?.type === 'Wisata' ? 'border-t-0 border-l-0 border-r-0 border-b-slate-400 border-[2px] border-dashed' : 'border-t-0 border-l-0 border-r-0 border-b-white-400 border-[2px] border-b-dashed'}`}>
           {
             detail?.type === 'Wisata' ? (
               <img
@@ -98,7 +98,7 @@ const DetailCard = () => {
       <div>
         {
           detail?.type === 'Rempah' ? (
-            <div className="px-10 mt-14 flex gap-3" id="informasi">
+            <div className="px-2 lg:px-10 mt-14 flex gap-3" id="informasi">
               <button onClick={() => setActive('deskripsi')} className={`w-1/3 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Deskripsi
               </button>
@@ -110,7 +110,7 @@ const DetailCard = () => {
               </button>
             </div>
           ): detail?.type === 'Kuliner' ? (
-            <div className="px-10 mt-14 flex gap-3" id="informasi">
+            <div className="px-2 lg:px-10 mt-14 flex gap-3" id="informasi">
               <button onClick={() => setActive('deskripsi')} className={`w-1/2 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Deskripsi
               </button>
@@ -119,7 +119,7 @@ const DetailCard = () => {
               </button>
             </div>
           ):
-            <div className="px-10 mt-14 flex gap-3" id="informasi">
+            <div className="px-2 lg:px-10 mt-14 flex gap-3" id="informasi">
               <button onClick={() => setActive('deskripsi')} className={`w-1/3 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Deskripsi
               </button>
@@ -127,13 +127,13 @@ const DetailCard = () => {
                 Sejarah
               </button>
               <button onClick={() => setActive('biaya')} className={`w-1/3 ${active === 'biaya' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full text-black font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
-                Biaya Akomodasi
+                Biaya <span className="ml-2 lg:flex hidden">Akomodasi</span>
               </button>
             </div>
         }
         {
           active === 'biaya' ? (
-            <table className="relative w-[92%] text-left px-6 oerflow-hidden rounded-lg h-max mx-auto mb-12 mt-16">
+            <table className="relative w-[92%] lg:w-[92%] text-left px-2 lg:px-6 oerflow-hidden rounded-lg h-max mx-auto mb-12 mt-16">
               <thead className="rounded-[16px]">
                 {
                   detail?.header?.map((data, index) => (
@@ -153,21 +153,21 @@ const DetailCard = () => {
               </tbody>
             </table>
           ):  
-            <div className="custom-content px-12 py-14" dangerouslySetInnerHTML={{__html: active === 'sejarah' ? detail?.history : active === 'resep' ? detail?.recept : active === 'build' ? detail?.build : detail?.description }}>
+            <div className="custom-content px-6 lg:px-12 py-14" dangerouslySetInnerHTML={{__html: active === 'sejarah' ? detail?.history : active === 'resep' ? detail?.recept : active === 'build' ? detail?.build : detail?.description }}>
             </div>
         }
       </div>
 
-      <div id='daftar' className='relative w-screen h-max pt-4 mt-12 pl-4 lg:pl-12 pb-0'>
+      <div id='daftar' className='relative w-screen h-max pt-4 lg:mt-12 pl-4 lg:pl-12 pb-0'>
           <img src={Jawa} className='absolute scale-[1.6] top-[-30px] right-0 opacity-[0.1] z-[-1]' alt='Jawa' />
           <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>{detail?.nama === 'Rempah-rempah' ? 'Nusa2 - Cita Rasa Rempah' : detail?.nama === 'Kuliner Nusantara' ? 'Nusa3 - Selera Khas Nusantara' : 'Nusa1 - Wisata Populer Nusantara'}</div>
           <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>{detail?.type === 'Rempah' ? 'Aneka Ragam Rempah' : detail?.type === 'Kuliner' ? 'Kuliner Lokal Nusantara' : 'Rekomendasi 6 Wisata Nusantara'}</span></h2>
-          <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
-              <div className='w-max flex justify-between items-center mt-12'>
+          <div className='w-full lg:pr-6 pb-5 overflow-x-auto items-center'>
+              <div className='w-screen lg:w-max lg:flex lg:justify-between items-center mt-12'>
                 {
                     detail?.type === 'Kuliner' ? (
                         Kuliner?.map((data, index) => (
-                            <div key={index} className='relative w-[140px] h-[300px] mr-12 rounded-full bg-white shadow-lg py-4 before:absolute before:w-full before:h-[80%] before:bg-blue-600 before:bottom-0 before:left-0 before:rounded-tl-full before:rounded-tr-full overflow-hidden before:bg-opacity-[0.2] border-[2px] border-dashed border-blue-400 text-center flex flex-col items-center justify-between'>
+                            <div key={index} className='relative w-[90vw] lg:mb-0 mb-6 lg:w-[140px] h-[300px] lg:mr-12 rounded-[12px] lg:rounded-full bg-white shadow-lg py-4 before:absolute before:w-full before:h-[80%] before:bg-blue-600 before:bottom-0 before:left-0 before:rounded-tl-full before:rounded-tr-full overflow-hidden before:bg-opacity-[0.2] border-[2px] border-dashed border-blue-400 text-center flex flex-col items-center justify-between'>
                                 <div className='relative border border-white w-[60px] h-[60px] bg-white rounded-full overflow-hidden bg-contain'>
                                     <img src={data?.gambar} alt="ikon-kategori"loading='lazy' className='rounded-full h-full' />
                                 </div>
@@ -182,7 +182,7 @@ const DetailCard = () => {
                         ))
                     ):
                       (detail?.type === 'Wisata' ? Wisata : Rempah)?.map((data, index) => (
-                            <div key={index} className='w-[340px] h-[440px] mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
+                            <div key={index} className='w-[92%] lg:w-[340px] h-[440px] lg:mb-0 mb-6 mr-0 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
                                 <div className='relative w-full overflow-hidden h-[50%]'>
                                     <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                         <p>Liburan</p> 
@@ -203,9 +203,11 @@ const DetailCard = () => {
                     }
                 </div>
             </div>
-        </div>
-
+      </div>
+      
+      <div>
         <Footer />
+      </div>
     </div>
   );
 }

@@ -46,7 +46,7 @@ const DetailArtikel = () => {
             </ul>
           </div>
         </div>
-        <div className='relative w-full h-[70vh] overflow-hidden'>
+        <div className='relative w-full h-[60vh] lg:h-[70vh] overflow-hidden'>
           <div className='w-full flex items-center justify-between'>
             <div class="absolute left-0 h-max z-[99999] bottom-32 lg:bottom-10 px-12 py-3 rounded-tr-full rounded-br-full w-max text-slate-900 bg-white border border-gray-100">
               {detail?.nama}
@@ -56,7 +56,7 @@ const DetailArtikel = () => {
             </div>
           </div>
           <div className='absolute left-0 top-0 z-[2222] w-screen h-full bg-black bg-opacity-[0.2]'></div>
-          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-full h-auto relative ${detail?.gambar === '/src/Assets/citarasa.jpeg' ? 'lg:bottom-[109%]' : 'bottom-[0px]'}`} />
+          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-auto lg:w-full h-full lg:h-auto relative ${detail?.gambar === '/src/Assets/citarasa.jpeg' ? 'lg:bottom-[109%]' : 'bottom-[0px]'}`} />
         </div>
 
         <div id='informasi' className='w-full p-4 lg:p-12'>
@@ -81,11 +81,11 @@ const DetailArtikel = () => {
           <div className='rounded-full text-white mb-4 bg-blue-400 w-max py-3 px-6'>{detail?.nama === 'Rempah-rempah' ? 'Nusa2 - Cita Rasa Rempah' : detail?.nama === 'Kuliner Nusantara' ? 'Nusa3 - Selera Khas Nusantara' : 'Nusa1 - Wisata Populer Nusantara'}</div>
           <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>{detail?.nama === 'Rempah-rempah' ? 'Aneka Ragam Rempah' : detail?.nama === 'Kuliner Nusantara' ? 'Kuliner Lokal Nusantara' : 'Rekomendasi 6 Wisata Nusantara'}</span></h2>
           <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
-              <div className='w-max flex justify-between items-center mt-12'>
+              <div className='w-max lg:flex justify-between items-center mt-12'>
                 {
                     detail?.nama === 'Kuliner Nusantara' ? (
                         Kuliner?.map((data, index) => (
-                            <div key={index} className='relative w-[140px] h-[300px] mr-12 rounded-full bg-white shadow-lg py-4 before:absolute before:w-full before:h-[80%] before:bg-blue-600 before:bottom-0 before:left-0 before:rounded-tl-full before:rounded-tr-full overflow-hidden before:bg-opacity-[0.2] border-[2px] border-dashed border-blue-400 text-center flex flex-col items-center justify-between'>
+                            <div key={index} className='relative w-[90vw] lg:mb-0 mb-6 lg:w-[140px] h-[300px] lg:mr-12 rounded-[12px] lg:rounded-full bg-white shadow-lg py-4 before:absolute before:w-full before:h-[80%] before:bg-blue-600 before:bottom-0 before:left-0 before:rounded-tl-full before:rounded-tr-full overflow-hidden before:bg-opacity-[0.2] border-[2px] border-dashed border-blue-400 text-center flex flex-col items-center justify-between'>
                                 <div className='relative border border-white w-[60px] h-[60px] bg-white rounded-full overflow-hidden bg-contain'>
                                     <img src={data?.gambar} alt="ikon-kategori" loading='lazy' className='rounded-full h-full' />
                                 </div>
@@ -100,7 +100,7 @@ const DetailArtikel = () => {
                         ))
                     ):
                       (detail?.nama === 'Wisata Nusantara' ? Wisata : Rempah)?.map((data, index) => (
-                            <div key={index} className='w-[340px] h-[440px] mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
+                             <div key={index} className='w-[90vw] lg:w-[300px] lg:w-[340px] h-[400px] lg:h-[440px] lg:mb-0 mb-6 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
                                 <div className='relative w-full overflow-hidden h-[50%]'>
                                     <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                         <p>Liburan</p> 
