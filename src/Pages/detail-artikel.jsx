@@ -30,7 +30,7 @@ const DetailArtikel = () => {
       <div className='w-screen overflow-x-hidden h-max'>
         <div className='absolute text-white z-[22223] w-full flex items-center justify-between py-7 px-4 lg:px-12'>
           <a href={'/'}>
-            <h2 className='text-[22px] lg:top-0 relative top-1 lg:text-[30px] font-bold'>ecoNusantara 🗺️</h2>
+            <h2 className='text-[22px] lg:top-0 relative top-1 lg:text-[24px] font-bold'>ecoNusantara 🗺️</h2>
           </a>
           <div className='w-max hidden lg:flex items-center'>
             <ul className='flex items-center text-white'>
@@ -68,9 +68,9 @@ const DetailArtikel = () => {
             <small>{detail?.nama}</small>
           </div>
 
-          <h2 className='lg:my-12 my-6 text-[32px] lg:text-[64px] text-slate-800 font-bold'>{detail?.nama}</h2>
+          <h2 className='lg:my-12 my-6 text-[32px] lg:text-[38px] text-slate-800 font-bold'>{detail?.nama}</h2>
           <div className='leading-loose text-slate-600 lg:mt-6 w-full'>
-            <p className='mb-6 w-[95%] lg:text-[16px] text-[14px]'>ndonesia, dengan kekayaan alamnya yang luar biasa, merupakan surga bagi para pencinta wisata alam. Dari hutan hujan tropis yang tebal hingga gunung-gunung megah, pantai-pantai berpasir putih, dan lautan yang menakjubkan, Indonesia menawarkan berbagai destinasi wisata alam yang tak tertandingi.</p>
+            <p className='mb-6 w-[95%] lg:text-[16px] text-[14px]'>Indonesia, dengan kekayaan alamnya yang luar biasa, merupakan surga bagi para pencinta wisata alam. Dari hutan hujan tropis yang tebal hingga gunung-gunung megah, pantai-pantai berpasir putih, dan lautan yang menakjubkan, Indonesia menawarkan berbagai destinasi wisata alam yang tak tertandingi.</p>
             <p className='mb-6 w-[95%] lg:text-[16px] text-[14px]'>Pulau Bali menawarkan kombinasi indah antara keindahan pantai yang memukau seperti Pantai Kuta dan Pantai Nusa Dua, serta lereng gunung yang subur di daerah Ubud. Sementara itu, Pulau Jawa menampilkan keajaiban alam seperti Gunung Bromo dengan padang pasir dan kawahnya yang menakjubkan.</p>
             <p className='mb-6 w-[95%] lg:text-[16px] text-[14px]'>Jangan lupakan pula Taman Nasional Komodo yang menjadi rumah bagi hewan langka komodo serta keindahan bawah lautnya yang memesona. Keindahan alam Indonesia juga tercermin dalam Taman Nasional Raja Ampat, dengan pulau-pulau kecil, karang-karang, dan kehidupan bawah laut yang tak tertandingi. Dari Sabang hingga Merauke, setiap sudut Indonesia adalah pesta visual alam yang akan menghipnotis siapa pun yang berkunjung.</p>
           </div>
