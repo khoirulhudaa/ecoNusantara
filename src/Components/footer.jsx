@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaPaperPlane } from 'react-icons/fa'
-import { GrayFlower, Papua } from '../Assets'
+import { Papua } from '../Assets'
 import { useEmailFormik } from '../Validations/emailValidation'
 import SweetAlert from './SweetAlert'
 
@@ -28,7 +28,6 @@ const Footer = () => {
 
   return (
     <div className='relative'>
-      <img src={GrayFlower} alt="flower" className='w-[400px] right-[10%] top-[-150px] rotate-[-10deg] absolute' />
       <div className='relative w-screen h-max lg:h-[200px] mt-[240px] lg:mt-[180px] lg:py-0 py-12 px-4 lg:px-20 bg-blue-800 lg:flex border-b-[2px] border-b-slate-200 items-center justify-between text-white lg:rounded-tl-[140px]'>
         <p className='relative w-full lg:w-1/2 text-slate-200 lg:text-[16px] text-[14px] leading-loose'>Ikuti kami terus untuk mendapatkan berbagai berita terupdate dari ecoNusantara seputar negeri ini 🇮🇩.</p>
         <div className='relative w-full lg:w-1/2 z-[222] flex items-center lg:justify-end'>

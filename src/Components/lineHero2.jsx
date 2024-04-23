@@ -3,7 +3,7 @@ import React from 'react'
 const LinesHero2 = () => {
   return (
     <>
-        <div className='absolute w-[350px] h-[650px] border-[4px] border-white left-20 lg:left-[-180px] border-opacity-[0.3] border-dashed'>
+        <div className='absolute w-[350px] h-[650px] border-[4px] border-white border-y-0 left-20 lg:left-[-180px] border-opacity-[0.3] border-dashed'>
         </div>
         <div className='absolute w-screen h-[5px] border-[2px] border-white left-[0px] top-[100px] border-opacity-[0.3] border-dashed'>
         </div>
