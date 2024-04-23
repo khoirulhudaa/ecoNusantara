@@ -52,7 +52,7 @@ const DetailCard = () => {
               <LinesHeroBlack />
           }
           <Link to={'/'}>
-            <h1 className={`relative top-6 lg:top-7 font-bold text-[24px] z-[333] ${detail?.type !== 'Wisata' ? 'lg:bg-transparent bg-blue-500 w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:left-0 left-[-20px] lg:text-black text-white' : 'lg:bg-transparent bg-white w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:text-white lg:left-0 left-[-20px] text-blue-500'}`}>ecoNusantara 🗺️</h1>
+            <h1 className={`relative top-6 lg:top-7 font-bold text-[24px] lg:py-0 py-2 z-[333] ${detail?.type !== 'Wisata' ? 'lg:bg-transparent bg-blue-500 w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:left-0 left-[-20px] lg:text-black text-white' : 'lg:bg-transparent bg-white w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:text-white lg:left-0 left-[-20px] text-blue-500'}`}>ecoNusantara 🗺️</h1>
           </Link>
           <div className="relative text-[3em] lg:py-0 py-16 lg:text-[6.4em] h-full flex flex-col justify-center font-extrabold mt-[-20px]">
             <h2 className={`${detail?.type === 'Wisata' ? 'text-white' : 'text-blue-500'} mb-2 w-[90%]`}>{detail?.nama}</h2>
@@ -98,19 +98,16 @@ const DetailCard = () => {
       <div>
         {
           detail?.type === 'Rempah' ? (
-            <div className="px-2 lg:px-10 mt-14 flex gap-3" id="informasi">
-              <button onClick={() => setActive('deskripsi')} className={`w-1/3 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
+            <div className="px-4 lg:px-10 mt-14 flex gap-3" id="informasi">
+              <button onClick={() => setActive('deskripsi')} className={`w-1/2 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Deskripsi
               </button>
-              <button onClick={() => setActive('sejarah')} className={`w-1/3 ${active === 'sejarah' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
-                Sejarah
-              </button>
-              <button onClick={() => setActive('menanam')} className={`w-1/3 ${active === 'menanam' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
-                Cara Menanam
+              <button onClick={() => setActive('menanam')} className={`w-1/2 ${active === 'menanam' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
+                Cara <span className="ml-2 lg:flex hidden">Menanam</span>
               </button>
             </div>
           ): detail?.type === 'Kuliner' ? (
-            <div className="px-2 lg:px-10 mt-14 flex gap-3" id="informasi">
+            <div className="px-4 lg:px-10 mt-14 flex gap-3" id="informasi">
               <button onClick={() => setActive('deskripsi')} className={`w-1/2 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Deskripsi
               </button>
@@ -119,7 +116,7 @@ const DetailCard = () => {
               </button>
             </div>
           ):
-            <div className="px-2 lg:px-10 mt-14 flex gap-3" id="informasi">
+            <div className="px-4 lg:px-10 mt-14 flex gap-3" id="informasi">
               <button onClick={() => setActive('deskripsi')} className={`w-1/3 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Deskripsi
               </button>
@@ -182,7 +179,7 @@ const DetailCard = () => {
                         ))
                     ):
                       (detail?.type === 'Wisata' ? Wisata : Rempah)?.map((data, index) => (
-                            <div key={index} className='w-[92%] lg:w-[340px] h-[440px] lg:mb-0 mb-6 mr-0 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
+                            <div key={index} className='w-[92%] lg:w-[340px] h-[440px] lg:mb-0 mb-6 mr-0 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[12px] lg:rounded-[20px]'>
                                 <div className='relative w-full overflow-hidden h-[50%]'>
                                     <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                         <p>Liburan</p> 

@@ -566,7 +566,7 @@ const Homepage = () => {
     <div className='w-screen h-max overflow-x-hidden'>
         <Navbar />
 
-        <section id='home' className='relative z-[4444444] w-screen h-[64vh] lg:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
+        <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
             <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
             <img src={Jawa} className='absolute scale-[9] lg:scale-[2] top-12 left-0 lg:flex hidden opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
@@ -599,7 +599,7 @@ const Homepage = () => {
                         <CardSkeletonType />    
                     ):
                     JenisKekayaanAlam?.map((data, index) => (
-                        <div key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-12 h-[200px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg:rounded-[20px]'>
+                        <div key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-12 h-[200px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg rounded-[12px]:lg:rounded-[20px]'>
                             <div className='relative w-full lg:flex hidden h-[65%] overflow-hidden'>
                                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                 <p>{data?.label}</p> 
@@ -645,15 +645,15 @@ const Homepage = () => {
         <section id='tour' className='relative w-screen h-max pt-16 pl-4 lg:pl-12 pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white lg:text-[16px] text-[13px] mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
-            <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex hidden mr-2'>🏔️</span> <span className='relative top-1 ml-1 lg:ml-3'>Rekomendasi Wisata Nusantara</span></h2>
+            <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex hidden mr-2'>🏔️</span> <span className='relative top-1 ml-1 lg:ml-3'>Rekomendasi Wisata <span className='lg:flex hidden ml-2'>Nusantara</span></span></h2>
             <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
-                <div className='w-max lg:flex justify-between items-center mt-12'>
+                <div className='w-screen lg:w-max lg:flex lg:justify-between items-center mt-12'>
                     {   
                         loading ? (
                             <CardSkeleton />
                         ):
                         Wisata?.map((data, index) => (
-                            <div key={index} className='w-[90vw] lg:w-[300px] lg:w-[340px] h-[400px] lg:h-[440px] lg:mb-0 mb-6 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
+                            <div key={index} className='w-[90%] lg:w-[300px] lg:w-[340px] h-[400px] lg:h-[440px] lg:mb-0 mb-6 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[12px] lg:rounded-[20px]'>
                                 <div className='relative w-full overflow-hidden h-[50%]'>
                                     <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                         <p>Liburan</p> 
@@ -709,7 +709,7 @@ const Homepage = () => {
 
             {
                 loading ? (
-                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-[528px] mt-12'>
+                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-[528px] mt-12'>
                         <div className='absolute top-4 right-4 items-center flex'>
                             <div className='rounded-full bg-slate-300 px-7 lg:px-12 py-5 ml-4 animate-pulse'></div>
                             <div className='rounded-full bg-slate-300 px-7 lg:px-12 py-5 ml-4 animate-pulse'></div>
@@ -721,7 +721,7 @@ const Homepage = () => {
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
+                    <div className='relative overflow-hidden rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
                     
                     {/* Range Sidebar */}
                     <div className={`absolute z-[3333] w-[31vw] h-screen ${activeRange ? 'left-[0%]' : 'left-[-100%] duration-300'} top-[0px] bg-white shadow-lg p-4 duration-200`}>
@@ -778,13 +778,11 @@ const Homepage = () => {
                     </div>
                     
                     <div className="w-max z-[444] flex items-center h-[68px] py-[14px] pl-4 rounded-bl-[32px] absolute top-0 right-2">
-                    <div className={`w-max ${activeClick ? 'hidden' : 'flex'} items-center top-4 mr-3`}>
-                        <div title='Jarak' onClick={() => setActiveRange(!activeRange)} className={`${activeRange ? 'bg-green-200' : 'bg-white'} mr-4 cursor-pointer hover:bg-green-200 z-[22222] w-max h-max px-4 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 right-0 top-36`}>Jarak <FaRulerCombined className='ml-3' />
-                        </div>
+                    <div className={`w-max flex items-center top-4 mr-3`}>
                         <div title='Kotak area koordinat' onClick={() => setActiveArea(!activeArea)} className={`${activeArea ? 'bg-green-200' : 'bg-white'} cursor-pointer active:scale-[0.98] hover:bg-green-200 z-[22222] w-max h-max px-4 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4 right-4`}>Area titik <FaVectorSquare className="ml-3" /></div>
-                        <div onClick={() => exportToGeoJSON()} className={`bg-white hover:bg-green-200 cursor-pointer active:scale-[0.98] z-[22222] w-max h-max px-4 ml-4 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4`}>GeoJSON <FaFileExport className="ml-3" /></div>
-                        <div title='Bukan google map' className="hidden lg:flex items-center top-4 mr-3">
+                        <div onClick={() => exportToGeoJSON()} className={`bg-white hover:bg-green-200 cursor-pointer active:scale-[0.98] z-[22222] w-max h-max px-4 ml-4 py-2 flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4`}>GeoJSON <FaFileExport className="ml-3" /></div>
                         <div title='Lihat garis antar koordinat' onClick={() => setActiveLineMarker(!activeLineMarker)} className={`${activeLineMarker ? 'bg-green-200' : 'bg-white'} ml-4 cursor-pointer active:scale-[0.98] hover:bg-green-200 z-[22222] w-[45px] h-[45px] px-2 py-2 flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 right-0 top-36`}><FaGripLines /></div>
+                        <div title='Bukan google map' className="hidden lg:flex items-center top-4 mr-3">
                     </div>
 
                     <div title='Ganti ikon marker' onClick={() => setActieMenuIcon(!activeMenuIcon)} className={`overflow-hidden ${activeMenuIcon ? 'bg-green-200' : 'bg-white'} cursor-pointer active:scale-[0.98] hover:bg-green-200 ml-1 z-[22222] w-[45px] h-[45px] px-2 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 right-0 top-52`}><FaIcons /></div>
@@ -860,8 +858,8 @@ const Homepage = () => {
                             allContact?.map((data, index) => (
                                 <div key={index} className='w-[90vw] lg:w-[350px] flex z-[33] flex-col justify-between items-center mt-8 mr-3 lg:mr-6'>
                                 <div className='w-full h-[440px] my-3 border border-blue-600 border-dashed rounded-[12px] bg-white shadow-lg px-5 pt-5'>
-                                <div className='relative w-full h-[60%] rounded-[20px] bg-contain border-b border-b-slate-400 overflow-hidden'>
-                                    <img src={data?.photo} className='rounded-[20px] w-full h-auto' alt="foto-pemandu" />
+                                <div className='relative w-full h-[60%] rounded-[12px] lg:rounded-[20px] bg-contain border-b border-b-slate-400 overflow-hidden'>
+                                    <img src={data?.photo} className='rounded-[12px] lg:rounded-[20px] w-full h-auto' alt="foto-pemandu" />
                                 </div>
                                 <div className='relative w-full h-[40%] flex justify-center flex-col px-4 before:absolute before:w-full before:h-[40%] before:bg-blue-600 before:bottom-0 before:left-0 before:rounded-tl-full before:rounded-tr-full overflow-hidden before:bg-opacity-[0.2]'>
                                         <div className='w-full text-center'>
@@ -939,13 +937,13 @@ const Homepage = () => {
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa2 - Cita Rasa Rempah</div>
             <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🫚 <span className='relative top-1 ml-3'>Aneka Ragam Rempah</span></h2>
             <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
-                <div className='w-max lg:flex justify-between items-center mt-12'>
+                <div className='w-screen lg:w-max lg:flex justify-between items-center mt-12'>
                     {
                         loading ? (
                             <CardSkeleton />
                         ):
                         Rempah?.map((data, index) => (
-                            <div key={index} className='w-[90vw] lg:w-[300px] h-[400px] lg:w-[340px] lg:h-[440px] lg:mb-0 mb-6 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[20px]'>
+                            <div key={index} className='w-[90vw] lg:w-[300px] h-[400px] lg:w-[340px] lg:h-[440px] lg:mb-0 mb-6 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[12px] lg:rounded-[20px]'>
                                 <div className='relative w-full overflow-hidden h-[50%]'>
                                     <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                         <p>Rempah</p> 
@@ -1000,7 +998,7 @@ const Homepage = () => {
             </div>
             {
                  loading ? (
-                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-[528px] mt-12'>
+                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-[528px] mt-12'>
                         <div className='absolute top-4 right-4 items-center flex'>
                             <div className='rounded-full bg-slate-300 px-7 lg:px-12 py-5 ml-4 animate-pulse'></div>
                             <div className='rounded-full bg-slate-300 px-7 lg:px-12 py-5 ml-4 animate-pulse'></div>
@@ -1012,14 +1010,14 @@ const Homepage = () => {
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
+                    <div className='relative overflow-hidden rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
                         
                         <div className="w-max z-[444] flex items-center h-[68px] py-[14px] pl-4 rounded-bl-[32px] absolute top-0 right-2">
-                            <div className={`w-max ${activeClick ? 'hidden' : 'flex'} items-center top-4 mr-3`}>
+                            <div className={`w-max flex items-center top-4 mr-3`}>
                                 <div title='Kotak area koordinat' onClick={() => setActiveAreaSpice(!activeAreaSpice)} className={`${activeAreaSpice ? 'bg-green-200' : 'bg-white'} cursor-pointer active:scale-[0.98] hover:bg-green-200 z-[22222] w-max h-max px-4 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4 right-4`}>Area titik <FaVectorSquare className="ml-3" /></div>
-                                <div onClick={() => exportToGeoJSONSpice()} className={`bg-white hover:bg-green-200 cursor-pointer active:scale-[0.98] z-[22222] w-max h-max px-4 ml-4 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4`}>GeoJSON <FaFileExport className="ml-3" /></div>
+                                <div onClick={() => exportToGeoJSONSpice()} className={`bg-white hover:bg-green-200 cursor-pointer active:scale-[0.98] z-[22222] w-max h-max px-4 ml-4 py-2 flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4`}>GeoJSON <FaFileExport className="ml-3" /></div>
+                                <div title='Lihat garis antar koordinat' onClick={() => setActiveLineMarkerSpice(!activeLineMarkerSpice)} className={`${activeLineMarkerSpice ? 'bg-green-200' : 'bg-white'} ml-4 cursor-pointer active:scale-[0.98] hover:bg-green-200 z-[22222] w-[45px] h-[45px] px-2 py-2 flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 right-0 top-36`}><FaGripLines /></div>
                                 <div title='Bukan google map' className="hidden lg:flex items-center top-4 mr-3">
-                                <div title='Lihat garis antar koordinat' onClick={() => setActiveLineMarkerSpice(!activeLineMarkerSpice)} className={`${activeLineMarker ? 'bg-green-200' : 'bg-white'} ml-4 cursor-pointer active:scale-[0.98] hover:bg-green-200 z-[22222] w-[45px] h-[45px] px-2 py-2 flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 right-0 top-36`}><FaGripLines /></div>
                             </div>
                         </div>
                     </div>
@@ -1159,7 +1157,7 @@ const Homepage = () => {
             </div>
             {
                  loading ? (
-                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[20px] mx-auto w-[90vw] lg:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-[528px] mt-12'>
+                    <div className='relative overflow-hidden bg-slate-200 animate-pulse rounded-[12px] lg:rounded-[20px] mx-auto w-[90vw] lg:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-[528px] mt-12'>
                         <div className='absolute top-4 right-4 items-center flex'>
                             <div className='rounded-full bg-slate-300 px-7 lg:px-12 py-5 ml-4 animate-pulse'></div>
                             <div className='rounded-full bg-slate-300 px-7 lg:px-12 py-5 ml-4 animate-pulse'></div>
@@ -1171,14 +1169,14 @@ const Homepage = () => {
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[20px] mx-auto w-full lg:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
+                    <div className='relative overflow-hidden rounded-[12px] lg:rounded-[20px] mx-auto w-full lg:w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
                         
                         <div className="w-max z-[444] flex items-center h-[68px] py-[14px] pl-4 rounded-bl-[32px] absolute top-0 right-2">
-                            <div className={`w-max ${activeClick ? 'hidden' : 'flex'} items-center top-4 mr-3`}>
+                            <div className={`w-max flex items-center top-4 mr-3`}>
                                 <div title='Kotak area koordinat' onClick={() => setActiveAreaCulinary(!activeAreaCulinary)} className={`${activeAreaCulinary ? 'bg-green-200' : 'bg-white'} cursor-pointer active:scale-[0.98] hover:bg-green-200 z-[22222] w-max h-max px-4 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4 right-4`}>Area titik <FaVectorSquare className="ml-3" /></div>
-                                <div onClick={() => exportToGeoJSONSpice()} className={`bg-white hover:bg-green-200 cursor-pointer active:scale-[0.98] z-[22222] w-max h-max px-4 ml-4 py-2 hidden lg:flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4`}>GeoJSON <FaFileExport className="ml-3" /></div>
-                                <div title='Bukan google map' className="hidden lg:flex items-center top-4 mr-3">
+                                <div onClick={() => exportToGeoJSONCulinary()} className={`bg-white hover:bg-green-200 cursor-pointer active:scale-[0.98] z-[22222] w-max h-max px-4 ml-4 py-2 flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 top-4`}>GeoJSON <FaFileExport className="ml-3" /></div>
                                 <div title='Lihat garis antar koordinat' onClick={() => setActiveLineMarkerCulinary(!activeLineMarkerCulinary)} className={`${activeLineMarkerCulinary ? 'bg-green-200' : 'bg-white'} ml-4 cursor-pointer active:scale-[0.98] hover:bg-green-200 z-[22222] w-[45px] h-[45px] px-2 py-2 flex items-center justify-center text-center rounded-full text-[16px] border border-slate-700 right-0 top-36`}><FaGripLines /></div>
+                                <div title='Bukan google map' className="hidden lg:flex items-center top-4 mr-3">
                             </div>
                         </div>
                     </div>

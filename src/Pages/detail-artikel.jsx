@@ -46,7 +46,7 @@ const DetailArtikel = () => {
             </ul>
           </div>
         </div>
-        <div className='relative w-full h-[60vh] lg:h-[70vh] overflow-hidden'>
+        <div className='relative w-full h-[50vh] lg:h-[70vh] overflow-hidden'>
           <div className='w-full flex items-center justify-between'>
             <div class="absolute left-0 h-max z-[99999] bottom-32 lg:bottom-10 px-12 py-3 rounded-tr-full rounded-br-full w-max text-slate-900 bg-white border border-gray-100">
               {detail?.nama}
@@ -56,7 +56,7 @@ const DetailArtikel = () => {
             </div>
           </div>
           <div className='absolute left-0 top-0 z-[2222] w-screen h-full bg-black bg-opacity-[0.2]'></div>
-          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-auto lg:w-full h-full lg:h-auto relative ${detail?.gambar === '/src/Assets/citarasa.jpeg' ? 'lg:bottom-[109%]' : 'bottom-[0px]'}`} />
+          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-full lg:w-full h-full lg:h-auto relative ${detail?.gambar === '/src/Assets/citarasa.jpeg' ? 'lg:bottom-[109%]' : 'bottom-[0px]'}`} />
         </div>
 
         <div id='informasi' className='w-full p-4 lg:p-12'>
