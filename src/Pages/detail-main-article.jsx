@@ -37,9 +37,10 @@ const DetailMainArtikel = () => {
             </ul>
           </div>
         </div>
-        <div className='relative w-full h-[60vh] overflow-hidden bg-blue-600 flex items-center justify-center'>
+
+        <div className='relative w-full h-[65vh] overflow-hidden bg-blue-600 flex items-center justify-center'>
           <LinesHero />
-          <h1 className='text-[22px] lg:text-[40px] text-white font-[500] text-center w-[94%] text-center mx-auto flex items-center justify-center'>{detail?.name_article}</h1>
+          <h1 className='relative text-[22px] lg:text-[40px] text-white font-[500] text-center w-[94%] text-center mx-auto flex items-center justify-center'>{detail?.name_article}</h1>
         </div>
 
         <div id='informasi' className='w-full px-4 lg:px-12 py-12 pb-0'>

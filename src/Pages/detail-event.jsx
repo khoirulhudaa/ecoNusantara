@@ -35,7 +35,7 @@ const DetailEvent = () => {
           </div>
         </div>
         <div className='relative w-full h-[40vh] lg:h-[60vh] overflow-hidden bg-blue-600 flex items-center justify-center'>
-          <h1 className='text-[22px] lg:text-[40px] text-white font-[500] text-center w-[94%] z-[55555] text-center mx-auto flex items-center justify-center'>{detail?.name_event}</h1>
+          <h1 className='relative lg:top-0 top-3 text-[22px] lg:text-[40px] text-white font-[500] text-center w-[94%] z-[55555] text-center mx-auto flex items-center justify-center'>{detail?.name_event}</h1>
           <div className='w-screen h-full bg-black bg-opacity-[0.7] absolute top-0 left-0 z-[3333]'></div>
           <img src={detail?.thumbnail} alt="thumbnail" className='w-full h-auto absolute left-0 top-0' />
         </div>
