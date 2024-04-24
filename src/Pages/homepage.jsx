@@ -639,7 +639,7 @@ const Homepage = () => {
             </div>
         </section>
 
-        <section id='tour' className='relative w-screen h-max pt-16 px-4 lg:pl-12 pb-12'>
+        <section id='tour' className='relative w-screen h-max pt-16 px-4 lg:pl-12 pb-4 lg:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white lg:text-[16px] text-[13px] mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
             <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex hidden mr-2'>🏔️</span> <span className='relative top-1 flex items-center ml-1 lg:ml-3'>Rekomendasi Wisata <span className='lg:flex hidden ml-2'>Nusantara</span></span></h2>
@@ -673,7 +673,7 @@ const Homepage = () => {
             </div>
         </section>
 
-        <section id='map' className='relative w-screen h-max p-4 lg:p-12'>
+        <section id='map' className='relative w-screen h-max p-4 lg:px-12'>
             <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.1] lg:opacity-[0.2] z-[-1]' alt='Kalimatan' />
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Geospasial - 5 Pulau Nusantara</div>
             <div className='w-full lg:flex items-center justify-between'>
@@ -842,7 +842,7 @@ const Homepage = () => {
         </section>
 
         <section id='contact' className='relative w-screen h-max lg:pt-14 pt-16 p-4 lg:p-12'>
-            <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
+            <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1] lg:flex hidden' alt='Sumatera' />
             <div className='rounded-full text-white lg:mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
             <h2 className='font-bold flex items-center text-[20px] lg:mt-0 mt-6 lg:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
             <div className='w-full flex items-center overflow-x-auto'>
@@ -929,7 +929,7 @@ const Homepage = () => {
             </div>
         </section>
 
-        <div id='spice' className='relative w-screen h-max pt-12 lg:pt-16 px-4 lg:pl-12 pb-8 lg:pb-12'>
+        <div id='spice' className='relative w-screen h-max pt-12 lg:pt-16 px-4 lg:pl-12 pb-0 lg:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa2 - Cita Rasa Rempah</div>
             <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🫚 <span className='relative top-1 ml-3'>Aneka Ragam Rempah</span></h2>
@@ -1094,7 +1094,7 @@ const Homepage = () => {
             </div>
         </section>
 
-        <section id='culinary' className='relative w-screen h-max pt-14 lg:pt-16 pl-6 lg:pl-12 pb-12'>
+        <section id='culinary' className='relative w-screen h-max pt-14 lg:pt-16 pl-6 lg:pl-12 pb-7 lg:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kuliner Lokal Nusantara</div>
             <div className='w-full overflow-x-auto mt-10'>
