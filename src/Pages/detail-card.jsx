@@ -102,7 +102,7 @@ const DetailCard = () => {
                 Deskripsi
               </button>
               <button onClick={() => setActive('menanam')} className={`w-1/2 ${active === 'menanam' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
-                Cara <span className="ml-2 lg:flex hidden">Menanam</span>
+              <span className="mr-2 lg:flex hidden">Cara</span> Menanam
               </button>
             </div>
           ): detail?.type === 'Kuliner' ? (
