@@ -7,17 +7,18 @@ import markerShadowUrl from 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { FaArrowRight, FaFileExport, FaGripLines, FaIcons, FaMicrophone, FaPlaneDeparture, FaRulerCombined, FaTimes, FaVectorSquare, FaWhatsapp } from 'react-icons/fa';
+import { FaArrowRight, FaFileExport, FaGripLines, FaIcons, FaMicrophone, FaPlaneDeparture, FaTimes, FaVectorSquare, FaWhatsapp } from 'react-icons/fa';
 import { MapContainer, Marker, Polygon, Polyline, Popup, TileLayer, Tooltip, useMapEvent } from 'react-leaflet';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { BLueFlower, FoodBg, GrayFlower, Jawa, Kalimantan, Papua, People1, People2, RempahBg, Sumatera } from '../Assets';
+import { BLueFlower, FoodBg, Jawa, Kalimantan, Papua, People1, People2, RempahBg, Sumatera } from '../Assets';
 import Api from '../Components/api';
 import Articles from '../Components/articles';
 import CardSkeleton from '../Components/cardSkeleton';
 import CardSkeletonArticle from '../Components/cardSkeletonArticle';
 import CardSkeletonContact from '../Components/cardSkeletonContact';
 import CardSkeletonCulinary from '../Components/cardSkeletonCulinary';
+import CardSkeletonEvent from '../Components/cardSkeletonEvent';
 import CardSkeletonType from '../Components/cardSkeletonType';
 import Footer from '../Components/footer';
 import Navbar from '../Components/navbar';
@@ -27,7 +28,6 @@ import Rempah from '../Data/rempah';
 import Wisata from '../Data/wisata.json';
 import API from '../Services/service';
 import { clearInformation, getDetail, getEvent, getInformation } from '../Store/informationSlice';
-import CardSkeletonEvent from '../Components/cardSkeletonEvent';
 
 const Homepage = () => {
 
@@ -639,18 +639,18 @@ const Homepage = () => {
             </div>
         </section>
 
-        <section id='tour' className='relative w-screen h-max pt-16 pl-4 lg:pl-12 pb-12'>
+        <section id='tour' className='relative w-screen h-max pt-16 px-4 lg:pl-12 pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white lg:text-[16px] text-[13px] mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
             <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex hidden mr-2'>🏔️</span> <span className='relative top-1 flex items-center ml-1 lg:ml-3'>Rekomendasi Wisata <span className='lg:flex hidden ml-2'>Nusantara</span></span></h2>
-            <div className='w-full pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
-                <div className='w-screen lg:w-max lg:flex lg:justify-between items-center mt-12'>
+            <div className='w-full lg:pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
+                <div className='w-full lg:w-max lg:flex lg:justify-between items-center mt-12'>
                     {   
                         loading ? (
                             <CardSkeleton />
                         ):
                         Wisata?.map((data, index) => (
-                            <div key={index} className='w-[90%] lg:w-[300px] lg:w-[340px] h-[400px] lg:h-[440px] lg:mb-0 mb-6 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[12px] lg:rounded-[20px]'>
+                            <div key={index} className='w-[100%] lg:w-[340px] h-[400px] lg:h-[440px] lg:mb-0 mb-6 mr-0 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[12px] lg:rounded-[20px]'>
                                 <div className='relative w-full overflow-hidden h-[50%]'>
                                     <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                         <p>Liburan</p> 
@@ -929,18 +929,18 @@ const Homepage = () => {
             </div>
         </section>
 
-        <div id='spice' className='relative w-screen h-max pt-12 lg:pt-16 pl-4 lg:pl-12 pb-8 lg:pb-12'>
+        <div id='spice' className='relative w-screen h-max pt-12 lg:pt-16 px-4 lg:pl-12 pb-8 lg:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa2 - Cita Rasa Rempah</div>
             <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🫚 <span className='relative top-1 ml-3'>Aneka Ragam Rempah</span></h2>
-            <div className='w-full pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
-                <div className='w-screen lg:w-max lg:flex justify-between items-center mt-12'>
+            <div className='w-full pr-0 lg:pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
+                <div className='w-full lg:w-max lg:flex lg:justify-between items-center mt-12'>
                     {
                         loading ? (
                             <CardSkeleton />
                         ):
                         Rempah?.map((data, index) => (
-                            <div key={index} className='w-[90vw] lg:w-[300px] h-[400px] lg:w-[340px] lg:h-[440px] lg:mb-0 mb-6 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[12px] lg:rounded-[20px]'>
+                            <div key={index} className='w-[100%] h-[400px] lg:w-[340px] lg:h-[440px] lg:mb-0 mb-6 mr-0 lg:mr-6 bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[12px] lg:rounded-[20px]'>
                                 <div className='relative w-full overflow-hidden h-[50%]'>
                                     <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                         <p>Rempah</p> 
@@ -1059,7 +1059,7 @@ const Homepage = () => {
                 </div>
                 <div className='relative w-full h-max lg:h-full overflow-hidden text-white flex p-4 lg:p-14 flex-col justify-between text-left'>
                     <img src={Jawa} className='absolute scale-[3] lg:bottom-[20%] left-[30%] opacity-[0.3] z-[-1]' alt='Sumatera' />
-                    <h2 className='text-[32px] lg:text-[50px] w-[90%] lg:w-1/2'>JunkFood? Makanan Khas <b>Daerah</b> Aja! 🍲</h2>
+                    <h2 className='text-[32px] lg:ml-0 ml-2 lg:text-[50px] w-[90%] lg:w-1/2'>JunkFood? Makanan Khas <b>Daerah</b> Aja! 🍲</h2>
                     <div className='w-fll lg:w-1/2 hidden lg:flex flex-wrap mt-6'>
                         <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Nasi Goreng</p>
