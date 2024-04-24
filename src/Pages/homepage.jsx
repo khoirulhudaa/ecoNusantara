@@ -563,7 +563,7 @@ const Homepage = () => {
     <div className='w-screen h-max overflow-x-hidden'>
         <Navbar />
 
-        <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[80vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
+        <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[85vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
             <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
             <img src={Jawa} className='absolute scale-[9] lg:scale-[2] top-12 left-0 lg:flex hidden opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
@@ -841,7 +841,7 @@ const Homepage = () => {
             }
         </section>
 
-        <section id='contact' className='relative w-screen h-max lg:pt-0 pt-16 p-4 lg:p-12'>
+        <section id='contact' className='relative w-screen h-max lg:pt-14 pt-16 p-4 lg:p-12'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white lg:mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
             <h2 className='font-bold flex items-center text-[20px] lg:mt-0 mt-6 lg:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
