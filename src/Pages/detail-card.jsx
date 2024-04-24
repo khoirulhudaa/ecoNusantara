@@ -149,7 +149,7 @@ const DetailCard = () => {
               </tbody>
             </table>
           ):  
-            <div className="custom-content px-6 lg:px-12 py-14" dangerouslySetInnerHTML={{__html: active === 'sejarah' ? detail?.history : active === 'resep' ? detail?.recept : active === 'build' ? detail?.build : detail?.description }}>
+            <div className="custom-content px-6 lg:px-12 py-14" dangerouslySetInnerHTML={{__html: active === 'sejarah' ? detail?.history : active === 'resep' ? detail?.recept : active === 'menanam' ? detail?.build : detail?.description }}>
             </div>
         }
       </div>

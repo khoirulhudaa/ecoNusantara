@@ -1097,7 +1097,7 @@ const Homepage = () => {
         <section id='culinary' className='relative w-screen h-max pt-14 lg:pt-16 pl-6 lg:pl-12 pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kuliner Lokal Nusantara</div>
-            <div className='w-full overflow-x-hidden lg:overflow-x-auto mt-10'>
+            <div className='w-full overflow-x-auto mt-10'>
                 <div className='w-max pr-6 pb-6 flex items-center'>
                    {
                         loading ? (
@@ -1105,7 +1105,7 @@ const Homepage = () => {
                         ):
                         Kuliner?.map((data, index) => (
                             <div key={index} className='relative w-[140px] h-[300px] mr-12 rounded-full bg-white shadow-lg py-4 before:absolute before:w-full before:h-[80%] before:bg-blue-600 before:bottom-0 before:left-0 before:rounded-tl-full before:rounded-tr-full overflow-hidden before:bg-opacity-[0.2] border-[2px] border-dashed border-blue-400 text-center flex flex-col items-center justify-between'>
-                                <div className='relative border border-white w-[60px] h-[60px] bg-white rounded-full overflow-hidden bg-contain'>
+                                <div className='relative border border-white w-[70px] lg:w-[60px] h-[70px] lg:h-[60px] bg-white rounded-full overflow-hidden bg-contain'>
                                     <img src={data?.gambar} alt="ikon-kategori" loading='lazy' className='rounded-full h-full' />
                                 </div>
                                 <div>
