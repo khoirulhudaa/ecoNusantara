@@ -17,7 +17,6 @@ import '../article.css';
 const DetailCard = () => {
 
   const detailData = store.getState().Information.information
-  console.log(detailData)
 
   const navigate = useNavigate()
   const dispatch = useDispatch()

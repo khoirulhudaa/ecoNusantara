@@ -91,7 +91,6 @@ const Homepage = () => {
             setAllSpice(resultSpice.data.data)
             
             const resultEvent = await API.getEvet()
-            console.log('event:',resultEvent)
             setAllEvent(resultEvent.data.data)
             setLoading(false)
         })()
@@ -461,8 +460,6 @@ const Homepage = () => {
           setStartPointPoly([allTour[startPoint].lat, allTour[startPoint].long]);
           setEndPointPoly([allTour[endPoint].lat, allTour[endPoint].long]);
     
-          console.log('startPOintPOly', [allTour[startPoint].lat, allTour[startPoint].long])
-          console.log('endPOintPOly', [allTour[endPoint].lat, allTour[endPoint].long])
         }
     }, [startPoint, endPoint]);
 
@@ -599,7 +596,7 @@ const Homepage = () => {
                         <CardSkeletonType />    
                     ):
                     JenisKekayaanAlam?.map((data, index) => (
-                        <div key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-12 h-[200px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg rounded-[12px]:lg:rounded-[20px]'>
+                        <div key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-6 h-[200px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg rounded-[12px]:lg:rounded-[20px]'>
                             <div className='relative w-full lg:flex hidden h-[65%] overflow-hidden'>
                                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                 <p>{data?.label}</p> 
@@ -637,7 +634,7 @@ const Homepage = () => {
                     <p className='w-max mt-12 hidden lg:flex items-center bg-white rounded-full px-4 py-2 text-blue-600'><b className='mr-2'>Australia, China, Singapura, Malaysia,</b> (mayoritas) </p>
                 </div>
                 <div className='w-full lg:w-1/2 h-1/2 lg:h-full flex border border-slate-300 bg-white justify-center border-dashed lg:border-y-[2px] rounded-none lg:border-r-[2px] lg:border-y-blue-500 border-r-blue-500 items-center'>
-                    <img src={People1} alt="people" className='w-auto h-full lg:scale-[1.2] relative top-16' />
+                    <img src={People1} alt="people" className='w-auto h-full lg:scale-[1.2] relative top-8 lg:top-16' />
                 </div>
             </div>
         </section>
@@ -646,7 +643,7 @@ const Homepage = () => {
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white lg:text-[16px] text-[13px] mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
             <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex hidden mr-2'>🏔️</span> <span className='relative top-1 flex items-center ml-1 lg:ml-3'>Rekomendasi Wisata <span className='lg:flex hidden ml-2'>Nusantara</span></span></h2>
-            <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
+            <div className='w-full pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
                 <div className='w-screen lg:w-max lg:flex lg:justify-between items-center mt-12'>
                     {   
                         loading ? (
@@ -936,7 +933,7 @@ const Homepage = () => {
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa2 - Cita Rasa Rempah</div>
             <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🫚 <span className='relative top-1 ml-3'>Aneka Ragam Rempah</span></h2>
-            <div className='w-full pr-6 pb-5 overflow-x-auto items-center'>
+            <div className='w-full pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
                 <div className='w-screen lg:w-max lg:flex justify-between items-center mt-12'>
                     {
                         loading ? (
@@ -1100,7 +1097,7 @@ const Homepage = () => {
         <section id='culinary' className='relative w-screen h-max pt-14 lg:pt-16 pl-6 lg:pl-12 pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
             <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kuliner Lokal Nusantara</div>
-            <div className='w-full overflow-x-auto mt-10'>
+            <div className='w-full overflow-x-hidden lg:overflow-x-auto mt-10'>
                 <div className='w-max pr-6 pb-6 flex items-center'>
                    {
                         loading ? (
