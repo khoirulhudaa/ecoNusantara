@@ -52,7 +52,7 @@ const Footer = () => {
           <img src={Papua} alt="Papua" className='absolute right-0 scale-[1.4] bottom-0 opacity-[0.6]' />
           <div className='w-full lg:w-[30%] h-full z-[33]'>
               <h2 className='font-bold text-[28px] my-6'>ecoNusantara 🗺️</h2>
-              <p className='font-normal text-slate-200 leading-loose text-[14px]'>Website informasi Nusantara seputar wisata, rempah dan kulinar nya yang beraneka ragam.</p>
+              <p className='font-normal text-slate-200 leading-loose text-[14px]'>Website informasi Nusantara seputar wisata, rempah dan kuliner nya yang beraneka ragam.</p>
           </div>
           <div className='relative z-[444] w-full lg:w-[70%] h-full justify-end lg:flex items-center'>
             <div className='w-full lg:mt-0 mt-8 lg:pt-0 pt-8 lg:border-0 border-t-white border-t lg:w-[40%] w-full z-[33]'>

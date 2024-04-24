@@ -15,7 +15,7 @@ const Data = [
     },
     {
         "nama": "Kuliner Nusantara",
-        "deskripsi": "Kenikmatan yang menggugah selera yang khas Nusantara",
+        "deskripsi": "Kenikmatan yang menggugah selera khas Nusantara",
         "gambar": Culinary,
         "label": "Selera"
     }

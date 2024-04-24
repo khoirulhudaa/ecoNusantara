@@ -625,7 +625,7 @@ const Homepage = () => {
                 <div className='relative w-full lg:w-1/2 h-1/2 lg:h-full text-white flex p-6 lg:p-14 flex-col justify-between text-left lg:overflow-visible overflow-hidden'>
                     <div className='relative lg:border-l-[2px] h-max lg:h-[30%] lg:pl-12 mb-4 mt-4 flex justify-center flex-col lg:border-l-white'>
                         <h2 className='font-[600] text-[50px] lg:text-[74px] mb-2'>11, 67 <span className='text-[50px] lg:text-[74px]'>Juta</span></h2>
-                        <p className='tex-slate-500 leading-loose'>Wisataman Mancanegara</p>
+                        <p className='tex-slate-500 leading-loose'>Wisatawan Mancanegara</p>
                     </div>
                     <div className='relative lg:pl-12 lg:border-l-[2px] h-max lg:h-[30%] lg:mb-0 mb-6 flex flex-col justify-end lg:border-l-white'>
                         <h2 className='font-[600] text-[50px] lg:text-[74px] flex items-center mb-2'>732,8 <span className='text-[50px] lg:text-[74px] ml-4 relative'>Juta</span></h2>
@@ -841,20 +841,20 @@ const Homepage = () => {
             }
         </section>
 
-        <section id='contact' className='relative w-screen h-max lg:pt-0 pt-16 p-4 lg:p-12 lg:block hidden'>
+        <section id='contact' className='relative w-screen h-max lg:pt-0 pt-16 p-4 lg:p-12'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
             <div className='rounded-full text-white lg:mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
             <h2 className='font-bold flex items-center text-[20px] lg:mt-0 mt-6 lg:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
             <div className='w-full flex items-center overflow-x-auto'>
-                <div className='w-max flex items-center pb-3'>
+                <div className='w-max flex lg:pl-0 pl-1 items-center pb-3'>
                     {
                         loading ? (
                             <CardSkeletonContact />
                         ):
                         allContact && allContact?.length > 0 ? (
                             allContact?.map((data, index) => (
-                                <div key={index} className='w-[90vw] lg:w-[350px] flex z-[33] flex-col justify-between items-center mt-8 mr-3 lg:mr-6'>
-                                <div className='w-full h-[440px] my-3 border border-blue-600 border-dashed rounded-[12px] bg-white shadow-lg px-5 pt-5'>
+                                <div key={index} className='w-[80vw] lg:w-[350px] flex z-[33] flex-col justify-between items-center mt-8 mr-3 lg:mr-6'>
+                                <div className='w-full h-[400px] lg:h-[440px] my-3 border border-blue-600 border-dashed rounded-[12px] bg-white shadow-lg px-5 pt-5'>
                                 <div className='relative w-full h-[60%] rounded-[12px] lg:rounded-[20px] bg-contain border-b border-b-slate-400 overflow-hidden'>
                                     <img src={data?.photo} className='rounded-[12px] lg:rounded-[20px] w-full h-auto' alt="foto-pemandu" />
                                 </div>

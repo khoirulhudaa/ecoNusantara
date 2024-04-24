@@ -305,7 +305,7 @@ const Api = () => {
 
 
   return (
-    <section id='API' className='relative overflow-hidden w-screen bg-blue-700 h-max pt-14 lg:pt-20 pb-16 lg:pb-28 my-12 px-4 lg:px-16'>
+    <section id='API' className='relative overflow-hidden w-screen bg-blue-700 h-max pt-14 lg:pt-20 pb-16 z-[99999999] lg:pb-28 my-12 px-4 lg:px-16'>
         <input value="https://be-geospasial.vercel.app/v2/api/contact" className='absolute opacity-0' disabled type="text" ref={textRefMain} />
         <input value="https://be-geospasial.vercel.app/v2/api/tour" className='absolute opacity-0' disabled type="text" ref={textRef} />
         <input value="https://be-geospasial.vercel.app/v2/api/spice" className='absolute opacity-0' disabled type="text" ref={textRef2} />
@@ -409,7 +409,7 @@ const Api = () => {
                             <div onClick={() => setActiveAPI(false)} className='ml-auto bg-red-500 flex items-center justify-center cursor-pointer hover:brightness-[90%] active:scale-[0.98] w-[40px] h-[40px] ml-2 text-[14px] rounded-lg text-white'><FaTimes /></div>
                         </div>
                         <div className='w-full lg:w-[42vw] mx-auto pt-10'>
-                            <pre className='w-[90%] mx-auto p-6 rounded-[20px] border border-blue-200 text-[11px] lg:text-[16px] h-max'>
+                            <pre className='w-[90%] mx-auto p-6 rounded-[20px] border border-blue-200 text-[10px] lg:text-[16px] h-max'>
                                 {
                                 selectAPI === 'pemandu' ? (
                                     JSON.stringify(yourJsonObjectPemandu, null, 2)

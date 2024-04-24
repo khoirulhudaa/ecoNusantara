@@ -44,7 +44,7 @@ const DetailEvent = () => {
               <small className='text-blue-700 cursor-pointer underlined'>Beranda</small>
             </Link>
             <FaChevronRight className='mx-4 text-[12px] text-slate-500' />
-            <small className='w-[80%] overflow-hidden overflow-ellipsis whitespace-nowrap'>{detail?.name_event}</small>
+            <small className='w-[65%] lg:w-[80%] overflow-hidden overflow-ellipsis whitespace-nowrap'>{detail?.name_event}</small>
           </div>
 
           <div className='leading-loose text-slate-600 mt-12 w-full'>
