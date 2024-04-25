@@ -76,6 +76,10 @@ import BLueFlower from './blueFlower.svg'
 import YellowFlower from './yellowFlower.svg'
 import GrayFlower from './grayFlower.svg'
 import Event from './event.jpeg'
+import KayuManis1 from './kayu1.jpeg'
+import KayuManis2 from './kayu2.jpeg'
+import Pala1 from './pala1.jpeg'
+import Pala2 from './pala2.jpeg'
 
 
 export {
@@ -155,5 +159,9 @@ export {
     BLueFlower,
     YellowFlower,
     GrayFlower,
-    Event
+    Event,
+    KayuManis1,
+    KayuManis2,
+    Pala1,
+    Pala2
 }

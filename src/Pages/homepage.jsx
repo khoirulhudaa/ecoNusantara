@@ -582,7 +582,7 @@ const Homepage = () => {
             <div className='lg:flex hidden lg:w-[500px] lg:flex hidden lg:h-[500px] right-[200px] bottom-[-100px] rounded-full opacity-[0.7] border border-slate-100 absolute'>
             </div>
 
-            <img src={Papua} alt="flower" className='absolute left-[0px] bottom-[100px] opacity-[0.4]' />
+            {/* <img src={Papua} alt="flower" className='absolute left-[0px] flex bottom-[100px] opacity-[0.4]' /> */}
             <img src={People2} alt="flower" className='absolute right-[-100px] bottom-[-60px] opacity-[0.4] lg:hidden flex' />
         </section>
 
@@ -1086,7 +1086,7 @@ const Homepage = () => {
                             <p>Sate Lilit</p>
                         </div>
                     </div>
-                    <p className='w-max mt-6 lg:mt-12 flex items-center bg-white rounded-full lg:text-[16px] text-[12px] px-4 py-2 text-blue-600'><b className='mr-1'>Rendang</b> <span className='hidden lg:flex ml-2'>adalah</span> makanan terenak didunia!</p>
+                    <p className='w-max mt-6 lg:mt-12 flex items-center bg-white rounded-full lg:text-[16px] text-[12px] px-4 py-2 text-blue-600'><b>Rendang</b> <span className='hidden lg:flex mx-2'>adalah</span> makanan terenak didunia!</p>
                 </div>
                 <div className='absolute right-0 w-1/2 h-full hidden lg:flex items-center'>
                     <img src={FoodBg} alt="people" className='scale-[0.95] right-[-30px] relative bottom-5 rotate-[20deg]' />

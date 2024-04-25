@@ -1,4 +1,4 @@
-import { Cabai1, Jahe, Kemiri1, Kunyit, Sereh1 } from "../Assets"
+import { Cabai1, Jahe, KayuManis1, Kemiri1, Kunyit, Pala1, Sereh1 } from "../Assets"
 
 const Data = [
     {
@@ -16,6 +16,22 @@ const Data = [
         "description": "<h2>Deskripsi Kunyit 😀</h2><br /><p>Kunyit adalah tumbuhan umbi-umbian yang berasal dari Asia Tenggara dan telah lama digunakan dalam kuliner tradisional dan pengobatan herbal. Kunyit dikenal karena warna kuning cerahnya yang khas dan rasa rempahnya yang hangat.</p><br /><p>Deskripsi Kunyit juga mencakup manfaat kesehatannya yang melimpah, termasuk kemampuannya untuk meredakan peradangan, meningkatkan pencernaan, dan memperkuat sistem kekebalan tubuh. Kunyit juga sering digunakan sebagai bahan dalam minuman herbal dan ramuan tradisional untuk menjaga kesehatan dan meningkatkan kualitas hidup.</p><br /><p>Kunyit memiliki sejarah yang panjang sebagai bahan penting dalam masakan dan pengobatan tradisional di Asia Tenggara. Penggunaannya telah tercatat dalam berbagai sumber sejarah, menunjukkan nilai dan keberagaman penggunaannya dalam berbagai budaya.</p>",
         "build": "<h2>Cara Menanam Kunyit 😀</h2><br /><p>Kunyit dapat ditanam di halaman belakang rumah atau di kebun dengan mudah. Berikut adalah langkah-langkah umum untuk menanam kunyit:</p><br /><ol><li>Pilih umbi kunyit yang sehat dan bebas dari kerusakan.</li><li>Siapkan tanah yang kaya akan bahan organik dan memiliki drainase yang baik.</li><li>Tanam umbi kunyit dengan bagian tunas menghadap ke atas dan tutupi dengan lapisan tanah setebal beberapa sentimeter.</li><li>Siram tanaman secara teratur, namun hindari genangan air yang berlebihan.</li><li>Kunyit dapat dipanen setelah sekitar 8-10 bulan.</li></ol>",
         "gambar": Kunyit
+    },
+    {
+        "nama": "Pala",
+        "lokasi": "Maluku, Papua",
+        "type": "Rempah",
+        "description": "<h2>Deskripsi Pala 😀</h2><br /><p>Pala, rempah yang berasal dari biji buah pala, dikenal dengan aroma kuatnya yang khas dan rasa yang hangat serta sedikit manis. Bentuknya yang kecil dan cenderung oval membuatnya tampak seperti biji buah yang dilindungi oleh lapisan berwarna merah cerah.</p><br /><p>Tidak hanya memberikan cita rasa yang unik pada masakan, pala juga digunakan dalam industri parfum dan pengobatan tradisional karena aroma dan sifatnya yang menyegarkan. Pengolahan pala membutuhkan proses khusus untuk menghasilkan kualitas terbaik, mulai dari pengupasan kulit luar hingga pengeringan bijinya.</p><br /><p>Di Indonesia, pala tumbuh subur di beberapa daerah tropis, terutama di Maluku dan Papua, yang terkenal dengan pala berkualitas tinggi.</p>",
+        "build": "<h2>Cara Menanam Pala 😀</h2><br /><p>Menanam pohon pala dapat dilakukan dengan langkah-langkah berikut:</p><br /><ol><li>Pilih bibit pala yang berasal dari tanaman yang sehat dan berkualitas.</li><li>Siapkan lahan yang subur, berdrainase baik, dan terkena sinar matahari yang cukup.</li><li>Tanam bibit pala dengan kedalaman yang tepat dan jarak antar bibit yang sesuai.</li><li>Rawat tanaman dengan menyirami secara teratur dan memberikan pupuk yang sesuai dengan kebutuhan tanaman.</li><li>Panen buah pala ketika sudah matang secara bertahap untuk memperoleh hasil terbaik.</li></ol>",
+        "gambar": Pala1
+    },    
+    {
+        "nama": "Kayu Manis",
+        "lokasi": "Jawa, Bali, Sumatera",
+        "type": "Rempah",
+        "description": "<h2>Deskripsi Kayu Manis 😀</h2><br /><p>Kayu manis, rempah yang diperoleh dari kulit pohon kayu manis, memiliki aroma manis dan hangat yang unik. Kulit pohonnya dikupas, dikeringkan, dan digulung menjadi tabung-tipis yang kemudian digunakan dalam berbagai masakan dan minuman tradisional Indonesia.</p><br /><p>Selain itu, kayu manis juga dikenal karena sifat antimikroba dan antiinflamasi, sering digunakan dalam pengobatan herbal. Di Indonesia, kayu manis umumnya ditemukan tumbuh subur di daerah tropis seperti Jawa, Bali, dan Sumatera, yang menyediakan kondisi lingkungan yang ideal bagi pertumbuhannya.</p>",
+        "build": "<h2>Cara Menanam Kayu Manis 😀</h2><br /><p>Menanam pohon kayu manis dapat dilakukan dengan langkah-langkah berikut:</p><br /><ol><li>Pilih bibit kayu manis yang sehat dan berkualitas.</li><li>Siapkan lahan yang mendapat paparan sinar matahari yang cukup dan memiliki drainase yang baik.</li><li>Tanam bibit kayu manis dengan kedalaman yang tepat dan berikan jarak yang cukup antar tanaman.</li><li>Rawat tanaman dengan menyirami secara teratur dan memberikan pupuk yang sesuai dengan kebutuhan.</li><li>Setelah beberapa tahun, kulit pohon kayu manis dapat dikupas dan diproses sesuai dengan kebutuhan.</li></ol>",
+        "gambar": KayuManis1
     },
     {
         "nama": "Cabai",

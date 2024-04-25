@@ -101,7 +101,7 @@ const DetailCard = () => {
               <button onClick={() => setActive('deskripsi')} className={`w-1/2 ${active === 'deskripsi' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-s-full h-max py-4 font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Deskripsi
               </button>
-              <button onClick={() => setActive('menanam')} className={`w-1/2 ${active === 'menanam' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
+              <button onClick={() => setActive('menanam')} className={`w-1/2 flex items-center justify-center ${active === 'menanam' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
               <span className="mr-2 lg:flex hidden">Cara</span> Menanam
               </button>
             </div>

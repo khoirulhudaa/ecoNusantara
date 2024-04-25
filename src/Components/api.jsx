@@ -312,7 +312,7 @@ const Api = () => {
         <input value="https://be-geospasial.vercel.app/v2/api/culinary" className='absolute opacity-0' disabled type="text" ref={textRef3} />
         
         <h2 className='text-[22px] mb-8 lg:mb-0 lg:text-[36px] text-white font-normal text-center'>API ecoNusantara 2024 💻</h2>
-        <p className='text-slate-200 lg:block hidden mt-4 mb-10 text-center'>Dapatkan Data Geospasial Kabupaten Cirebon Secara Terbukan, Gratis dan Mudah.</p>    
+        <p className='text-slate-200 lg:block hidden mt-4 mb-10 text-center'>Dapatkan Data Geospasial Kabupaten Cirebon Secara Terbuka, Gratis dan Mudah.</p>    
         <div className='relative w-full z-[444] px-4 lg:px-12 pt-6 lg:pt-[80px] pb-6 lg:pb-20 flex mx-auto rounded-[16px] bg-white border-[2px] h-max lg:min-h-[680px] border-blue-500 border-dashed'>
             <div className='w-full lg:w-1/2 h-max lg:h-[500px] flex justify-between flex-col'>
                 <label htmlFor="api-dinas" className='font-[500] lg:flex items-center'>
