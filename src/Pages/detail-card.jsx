@@ -122,7 +122,7 @@ const DetailCard = () => {
               <button onClick={() => setActive('sejarah')} className={`w-1/3 ${active === 'sejarah' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 text-black font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Sejarah
               </button>
-              <button onClick={() => setActive('biaya')} className={`w-1/3 flex items-center ${active === 'biaya' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full text-black font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
+              <button onClick={() => setActive('biaya')} className={`w-1/3 flex items-center justify-center text-center ${active === 'biaya' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-slate-500'} border-0 outline-0 rounded-r-full text-black font-normal cursor-pointer hover:brightness-[90%] active:scale-[0.98]`}>
                 Biaya <span className="ml-2 lg:flex hidden">Akomodasi</span>
               </button>
             </div>
