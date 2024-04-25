@@ -596,7 +596,7 @@ const Homepage = () => {
                         <CardSkeletonType />    
                     ):
                     JenisKekayaanAlam?.map((data, index) => (
-                        <div key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-6 h-[200px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg rounded-[12px]:lg:rounded-[20px]'>
+                        <div key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-6 h-[220px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg rounded-[12px]:lg:rounded-[20px]'>
                             <div className='relative w-full lg:flex hidden h-[65%] overflow-hidden'>
                                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                 <p>{data?.label}</p> 

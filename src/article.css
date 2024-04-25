@@ -87,19 +87,22 @@ tr:hover {
 
 @media screen and (max-width: 400px) {
     .custom-content h1 {
-        font-size: 28px;
+        font-size: 22px;
+        margin-bottom: 16px;
         color: rgb(82, 82, 82);
         font-weight: 600;
     }
 
     .custom-content h2 {
-        font-size: 24px;
+        font-size: 20px;
+        margin-bottom: 16px;
         font-weight: 600;
         color: rgb(82, 82, 82);
     }
-
+    
     .custom-content h3 {
-        font-size: 14px;
+        font-size: 18px;
+        margin-bottom: 16px;
         font-weight: 600;
         margin-bottom: 12px;
         color: rgb(82, 82, 82);
