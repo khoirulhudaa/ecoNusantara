@@ -305,7 +305,7 @@ const Api = () => {
 
 
   return (
-    <section id='API' className='relative overflow-hidden w-screen bg-blue-700 h-max pt-14 lg:pt-20 pb-16 z-[99999999] lg:pb-28 my-12 px-4 lg:px-16'>
+    <section id='API' className='relative overflow-hidden w-screen bg-blue-700 h-max pt-14 lg:pt-20 pb-16 z-[999] lg:pb-28 my-12 px-4 lg:px-16'>
         <input value="https://be-geospasial.vercel.app/v2/api/contact" className='absolute opacity-0' disabled type="text" ref={textRefMain} />
         <input value="https://be-geospasial.vercel.app/v2/api/tour" className='absolute opacity-0' disabled type="text" ref={textRef} />
         <input value="https://be-geospasial.vercel.app/v2/api/spice" className='absolute opacity-0' disabled type="text" ref={textRef2} />
@@ -316,7 +316,7 @@ const Api = () => {
         <div className='relative w-full z-[444] px-4 lg:px-12 pt-6 lg:pt-[80px] pb-6 lg:pb-20 flex mx-auto rounded-[16px] bg-white border-[2px] h-max lg:min-h-[680px] border-blue-500 border-dashed'>
             <div className='w-full lg:w-1/2 h-max lg:h-[500px] flex justify-between flex-col'>
                 <label htmlFor="api-dinas" className='font-[500] lg:flex items-center'>
-                    Data Sebaran Wisata  
+                    Data Pemandu Wisata  
                     <div className="w-max mt-3 lg:mt-0 lg:ml-auto flex items-center">
                         <div className='w-max bg-green-400 mr-4 px-3 py-2 w-max h-max text-[10px] rounded-md text-white'>
                             (GET)

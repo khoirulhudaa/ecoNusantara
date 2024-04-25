@@ -39,7 +39,7 @@ const Footer = () => {
           null
       }
       <div className='relative w-screen h-max lg:h-[200px] mt-[80px] lg:mt-[100px] lg:py-0 py-12 px-4 lg:px-20 bg-blue-800 lg:flex border-b-[2px] border-b-slate-200 items-center justify-between text-white lg:rounded-tl-[140px]'>
-        <p className='relative w-full lg:w-1/2 text-slate-200 lg:text-[16px] text-[14px] leading-loose'>Ikuti kami terus untuk mendapatkan berbagai berita terupdate dari ecoNusantara seputar negeri ini 🇮🇩.</p>
+        <p className='relative w-full lg:w-1/2 text-slate-200 lg:text-[16px] text-[14px] leading-loose'>Ikuti kami terus untuk mendapatkan berbagai berita terbaru dari ecoNusantara seputar negeri ini 🇮🇩.</p>
         <div className='relative w-full lg:w-1/2 z-[222] flex items-center lg:justify-end'>
           <div className='w-[98%] lg:w-[70%] lg:mt-0 mt-6 bg-white rounded-[12px] overflow-hidden flex justify-between items-center py-2 px-6'>
             <input type="text" placeholder='Masukan email anda...' name='email' value={emailFormik.values.email} onChange={emailFormik.handleChange} className='outline-0 border-slate-200 h-[44px] text-slate-500 w-[90%]' />

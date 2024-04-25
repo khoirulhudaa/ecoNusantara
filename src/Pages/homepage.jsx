@@ -11,7 +11,7 @@ import { FaArrowRight, FaFileExport, FaGripLines, FaIcons, FaMicrophone, FaPlane
 import { MapContainer, Marker, Polygon, Polyline, Popup, TileLayer, Tooltip, useMapEvent } from 'react-leaflet';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { BLueFlower, FoodBg, Jawa, Kalimantan, Papua, People1, People2, RempahBg, Sumatera } from '../Assets';
+import { BLueFlower, FoodBg, HeroMan, Jawa, Kalimantan, Papua, People1, People2, RempahBg, Sumatera } from '../Assets';
 import Api from '../Components/api';
 import Articles from '../Components/articles';
 import CardSkeleton from '../Components/cardSkeleton';
@@ -583,7 +583,7 @@ const Homepage = () => {
             </div>
 
             <img src={Papua} alt="flower" className='absolute left-[0px] bottom-[100px] opacity-[0.4]' />
-            <img src={BLueFlower} alt="flower" className='absolute right-[-100px] bottom-[-60px] lg:hidden flex' />
+            <img src={People2} alt="flower" className='absolute right-[-100px] bottom-[-60px] opacity-[0.4] lg:hidden flex' />
         </section>
 
         <section id='start' className='relative w-screen h-max pt-12 lg:pt-14 lg:p-12 p-4'>
@@ -843,7 +843,7 @@ const Homepage = () => {
 
         <section id='contact' className='relative w-screen h-max lg:pt-14 pt-16 p-4 lg:p-12'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1] lg:flex hidden' alt='Sumatera' />
-            <div className='rounded-full text-white lg:mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
+            <div className='rounded-full text-white lg:mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
             <h2 className='font-bold flex items-center text-[20px] lg:mt-0 mt-6 lg:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
             <div className='w-full flex items-center overflow-x-auto'>
                 <div className='w-max flex lg:pl-0 pl-1 items-center pb-3'>

@@ -53,8 +53,8 @@ const DetailCard = () => {
           <Link to={'/'}>
             <h1 className={`relative top-6 lg:top-7 font-bold text-[24px] lg:py-0 py-2 z-[333] ${detail?.type !== 'Wisata' ? 'lg:bg-transparent bg-blue-500 w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:left-0 left-[-20px] lg:text-black text-white' : 'lg:bg-transparent bg-white w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:text-white lg:left-0 left-[-20px] text-blue-500'}`}>ecoNusantara 🗺️</h1>
           </Link>
-          <div className="relative text-[3em] lg:py-0 py-16 lg:text-[6.4em] h-full flex flex-col justify-center font-extrabold mt-[-20px]">
-            <h2 className={`${detail?.type === 'Wisata' ? 'text-white' : 'text-blue-500'} mb-2 w-[90%]`}>{detail?.nama}</h2>
+          <div className="relative text-[3em] lg:py-0 py-16 lg:text-[6em] h-full flex flex-col justify-center font-normal mt-[-20px]">
+            <h2 className={`${detail?.type === 'Wisata' ? 'text-white' : 'text-blue-500'} mb-2 w-[90%] relative before:absolute before:w-[100%] before:h-[3px] before:bg-white before:bottom-0 before:left-0`}>{detail?.nama}.</h2>
             <h2 className="mb-2">{detail?.type === 'Rempah' ? 'Rempah Nusantara' : detail?.type === 'Kuliner' ? 'Kuliner' : 'Wisata'}</h2>
           </div>
         </div>
@@ -88,7 +88,7 @@ const DetailCard = () => {
           <div className="flex absolute top-1/2 transform translate-y-[-50%] w-full px-16 justify-around items-center">
             {
               data?.[0]?.[detail?.nama]?.map((data, index) => (
-                <img key={index} className="object-cover w-[26%] h-[140px] border-dashed border-2 rounded-lg" src={data} alt="image" />
+                <img key={index} className="cursor-pointer hover:brightness-[70%] duration-300 object-cover w-[26%] h-[140px] border-dashed border-2 rounded-lg" src={data} alt="image" />
               ))
             }
           </div>
