@@ -80,7 +80,8 @@ import KayuManis1 from './kayu1.jpeg'
 import KayuManis2 from './kayu2.jpeg'
 import Pala1 from './pala1.jpeg'
 import Pala2 from './pala2.jpeg'
-
+import DanaBg from './dana.jpeg'
+import Qrcode from './qrcode.png'
 
 export {
     HeroMan,
@@ -163,5 +164,7 @@ export {
     KayuManis1,
     KayuManis2,
     Pala1,
-    Pala2
+    Pala2,
+    DanaBg,
+    Qrcode
 }

@@ -28,6 +28,7 @@ import Rempah from '../Data/rempah';
 import Wisata from '../Data/wisata.json';
 import API from '../Services/service';
 import { clearInformation, getDetail, getEvent, getInformation } from '../Store/informationSlice';
+import Dana from '../Components/dana';
 
 const Homepage = () => {
 
@@ -1220,12 +1221,15 @@ const Homepage = () => {
                 <Articles />
         }
 
+        {/* Dana */}
+        <Dana />
+
         {/* Events */}
         {
             loading ? (
                 <CardSkeletonEvent />
             ):
-                <section className='relative w-screen h-max text-left pt-12 lg:pt-14 lg:p-12 px-4 lg:px-12'>
+                <section className='relative w-screen h-max text-left pt-12 lg:pt-12 lg:p-12 px-4 lg:px-12'>
                     <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
                     <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kegiatan - Kita Nusantara</div>
                     <h2 className='font-bold hidden lg:flex items-center text-[24px] lg:text-[36px]'>📌 <span className='relative top-1 ml-3'>Acara Nusantara {new Date().getFullYear()}</span></h2>
