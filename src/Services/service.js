@@ -43,6 +43,11 @@ const API = {
         return api.get('/event')
     },
 
+    // Get Donation
+    getDonation: () => {
+        return api.get('/donation')
+    },
+
     // Post email
     sendEmail: (body) => {
         return api.post('/email', body)
