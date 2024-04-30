@@ -52,7 +52,7 @@ const Footer = () => {
           <img src={Papua} alt="Papua" className='absolute right-0 scale-[1.4] bottom-0 opacity-[0.6]' />
           <div className='relative top-0 lg:top-[-35px] w-full lg:w-[30%] h-full z-[33]'>
               <h2 className='font-bold text-[28px] my-6'>ecoNusantara 🗺️</h2>
-              <p className='font-normal text-slate-200 leading-loose text-[16px] lg:text-[14px]'>Website informasi Nusantara seputar wisata, rempah dan kuliner nya yang beraneka ragam.</p>
+              <p className='font-normal text-slate-200 leading-loose text-[14px] lg:text-[16px]'>Website informasi Nusantara seputar wisata, rempah dan kuliner nya yang beraneka ragam.</p>
           </div>
           {
             window.location.pathname === '/' ? (

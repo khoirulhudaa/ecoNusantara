@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className='relative w-screen h-[80px] bg-blue-900 lg:bg-blue-700 text-white px-4 lg:px-12 flex items-center border-0'>
         
         {/* Sidebar */}
-        <div className={`w-[80vw] h-screen border-r-[2px] border-dashed border-r-blue-600 z-[2222222222] fixed ${activeSidebar ? 'left-0' : 'left-[-100%]'} duration-200 top-0 bg-white p-6`}>
+        <div className={`w-[80vw] h-screen z-[2222222222] fixed ${activeSidebar ? 'left-0' : 'left-[-100%]'} duration-200 top-0 bg-white p-6`}>
           <ul className='w-full text-[17px] mt-10'>
               <a href="#home">
                 <li className='text-black border-t border-t-slate-300 py-8'>Beranda</li>
@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* toggle */}
         {
           activeSidebar ? (
-            <div onClick={() => setActiveSidebar(!activeSidebar)} className={`ml-auto relative ${activeSidebar ? 'right-[0px]' : 'right-[-70px]'} duration-200 w-[42px] h-[42px] flex lg:hidden flex-col items-center bg-white justify-center text-red-500 rounded-[6px] text-[20px]`}>
+            <div onClick={() => setActiveSidebar(!activeSidebar)} className={`ml-auto relative ${activeSidebar ? 'right-[0px]' : 'right-[-70px]'} duration-200 w-[42px] h-[42px] flex lg:hidden flex-col items-center justify-center text-white bg-red-500 rounded-[6px] text-[20px]`}>
               <FaTimes />
             </div>
           ):
