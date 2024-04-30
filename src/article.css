@@ -147,7 +147,7 @@ tr:hover {
     background-color: rgb(241, 241, 241);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 920px) {
     .custom-content h1 {
         font-size: 22px;
         margin-bottom: 16px;
@@ -183,5 +183,31 @@ tr:hover {
         border-radius: 6px;
         margin: 4px 2px;
         background-color: rgb(5, 90, 248);
+    }
+
+    .custom-content2 h1 {
+        font-size: 22px;
+        margin-bottom: 16px;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+    }
+
+    .custom-content2 h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        color: rgb(255, 234, 234);
+    }
+    
+    .custom-content2 h3 {
+        font-size: 16px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: rgb(255, 255, 255);
+    }
+
+    .custom-content2 p {
+        font-size: 13px;
     }
 }

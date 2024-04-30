@@ -25,14 +25,14 @@ const Dana = () => {
           <div className='w-full lg:flex h-full items-center py-2 lg:py-0'>
             <div className='relative flex flex-col justify-center px-4 lg:px-14 py-6 lg:py-20 lg:w-1/2 h-full z-[444]'>
               <a href='/' target='__blank' className='text-white'>
-                <h2 className='text-white border-b underline cursor-pointer border-b-white pb-6 text-[22px] lg:text-[36px] mb-6'>{donation?.name_donation}</h2>
+                <h2 className='text-white border-b underline cursor-pointer border-b-white pb-6 text-[20px] lg:text-[36px] mb-6'>{donation?.name_donation}</h2>
               </a>
               <div className='w-full mb-3'>
                 <div className='custom-content2 leading-loose text-white' dangerouslySetInnerHTML={{ __html: donation?.content }}></div>
               </div>
             </div>
-            <div className='relative w-full lg:w-1/2 flex lg:pb-0 pb-10 items-center justify-center z-[33] h-full'>
-              <img src={donation?.thumbnail} alt="qrcode" className='w-[90%] lg:w-[65%] rounded-[12px]' />
+            <div className='relative w-full lg:w-1/2 flex lg:pb-0 pb-10 items-center lg:pl-0 pl-4 lg:justify-center z-[33] h-full'>
+              <img src={donation?.thumbnail} alt="qrcode" className='w-[60%] lg:w-[90%] lg:w-[65%] rounded-[12px]' />
             </div>
           </div>
       </div>
