@@ -52,13 +52,13 @@ const Footer = () => {
           <img src={Papua} alt="Papua" className='absolute right-0 scale-[1.4] bottom-0 opacity-[0.6]' />
           <div className='relative top-0 lg:top-[-35px] w-full lg:w-[30%] h-full z-[33]'>
               <h2 className='font-bold text-[28px] my-6'>ecoNusantara 🗺️</h2>
-              <p className='font-normal text-slate-200 leading-loose text-[14px]'>Website informasi Nusantara seputar wisata, rempah dan kuliner nya yang beraneka ragam.</p>
+              <p className='font-normal text-slate-200 leading-loose text-[16px] lg:text-[14px]'>Website informasi Nusantara seputar wisata, rempah dan kuliner nya yang beraneka ragam.</p>
           </div>
           {
             window.location.pathname === '/' ? (
               <div className='relative z-[444] w-full lg:w-[70%] h-full justify-end lg:flex items-center top-0 lg:top-[-16px]'>
                 <div className='w-full lg:mt-0 mt-8 lg:pt-0 pt-8 lg:border-0 border-t-white border-t lg:w-[40%] w-full z-[33]'>
-                  <ul>
+                  <ul className='lg:text-[15px] text-[14px]'>
                     <a href="#home">
                       <li className='cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-8'>Beranda</li>
                     </a>
@@ -74,7 +74,7 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className='w-full lg:w-[40%] lg:mt-0 mt-8 lg:mb-0 mb-8 h-full z-[33]'>
-                  <ul>
+                  <ul className='lg:text-[15px] text-[14px]'>
                     <a href="#article">
                       <li className='cursor-pointer active:scale-[0.98] hover:brightness-[90%] mb-8'>Artikel Nusantara</li>
                     </a>

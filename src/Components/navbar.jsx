@@ -10,9 +10,6 @@ const Navbar = () => {
         
         {/* Sidebar */}
         <div className={`w-[80vw] h-screen border-r-[2px] border-dashed border-r-blue-600 z-[2222222222] fixed ${activeSidebar ? 'left-0' : 'left-[-100%]'} duration-200 top-0 bg-white p-6`}>
-          <div onClick={() => setActiveSidebar(!activeSidebar)} className='relative top-1 ml-auto right-3 cursor-pointer active:scale-[0.98] flex items-center justify-center w-[50px] h-[50px] p-2 bg-red-500 text-white rounded-[10px]'>
-            <FaTimes />
-          </div>
           <ul className='w-full text-[17px] mt-10'>
               <a href="#home">
                 <li className='text-black border-t border-t-slate-300 py-8'>Beranda</li>
@@ -38,11 +35,18 @@ const Navbar = () => {
         </div>
 
         {/* toggle */}
-        <div onClick={() => setActiveSidebar(!activeSidebar)} className='ml-auto w-[42px] h-[42px] flex lg:hidden flex-col items-center bg-white justify-center rounded-[6px] p-2'>
-          <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
-          <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
-          <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
-        </div>
+        {
+          activeSidebar ? (
+            <div onClick={() => setActiveSidebar(!activeSidebar)} className={`ml-auto relative ${activeSidebar ? 'right-[0px]' : 'right-[-70px]'} duration-200 w-[42px] h-[42px] flex lg:hidden flex-col items-center bg-white justify-center text-red-500 rounded-[6px] text-[20px]`}>
+              <FaTimes />
+            </div>
+          ):
+            <div onClick={() => setActiveSidebar(!activeSidebar)} className={`ml-auto relative ${activeSidebar ? 'right-[-70px]' : 'right-[0px]'} w-[42px] h-[42px] flex lg:hidden flex-col items-center bg-white justify-center rounded-[6px] p-2`}>
+              <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
+              <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
+              <div className='my-1 w-full h-[2px] rounded-full bg-slate-400'></div>
+            </div>
+        }
         {/* toggle */}
         
         <div className='w-[80%] hidden lg:flex items-center justify-end'>
