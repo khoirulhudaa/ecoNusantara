@@ -590,7 +590,7 @@ const Homepage = () => {
         <section id='start' className='relative w-screen h-max pt-12 lg:pt-14 lg:p-12 p-4'>
             <img src={Kalimantan} className='absolute scale-[1.6] top-0 right-0 opacity-[0.1] lg:opacity-[0.2] z-[-1]' alt='Kalimatan' />
             <div className='rounded-full lg:text-[16px] text-[13px] text-white mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kategori - Wisata, Rempah dan Kuliner</div>
-            <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex mr-2 hidden'>🏔️</span> <span className='relative top-1 ml-1 lg:ml-3'>Ragam Kekayaan Nusantara</span></h2>
+            <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex mr-2 hidden'>✨</span> <span className='relative top-1 ml-1 lg:ml-3'>Ragam Kekayaan Nusantara</span></h2>
             <div className='w-full lg:flex justify-between items-center mt-12'>
                 {
                     loading ? (

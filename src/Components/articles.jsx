@@ -36,7 +36,7 @@ const Articles = () => {
             ):
             <>
                 <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-400 w-max py-3 px-6'>Informasi Menarik Untuk Kamu</div>
-                <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>Artikel Seputar Nusantara</span></h2>
+                <h2 className='font-bold hidden lg:flex items-center text-[36px]'>📰 <span className='relative top-1 ml-3'>Artikel Seputar Nusantara</span></h2>
             </>
         }
         <div className='w-full flex z-[33] flex-col justify-between items-center mt-8'>

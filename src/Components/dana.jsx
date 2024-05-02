@@ -19,7 +19,7 @@ const Dana = () => {
     <div className='relative'>
       <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Sumatera' />
       <div className='ml-4 lg:ml-14 rounded-full mt-10 text-white mb-4 lg:text-[16px] text-[13px] bg-blue-400 w-max py-3 px-6'>BantuNusantaraBangkit</div>
-      <h2 className='ml-14 font-bold hidden lg:flex items-center text-[36px]'>🏔️ <span className='relative top-1 ml-3'>Membantu Alam Nusantara</span></h2>
+      <h2 className='ml-14 font-bold hidden lg:flex items-center text-[36px]'>🎗️ <span className='relative top-1 ml-3'>Membantu Alam Nusantara</span></h2>
       <div className='relative w-screen h-max bg-blue-700 mt-10 mb-4 lg:my-14 overflow-hidden'>
           <img src={DanaBg} alt="bg-dana" className='absolute left-0 lg:flex hidden top-0 w-full h-auto opacity-[0.1]' />
           <div className='w-full lg:flex h-full items-center py-2 lg:py-0'>
