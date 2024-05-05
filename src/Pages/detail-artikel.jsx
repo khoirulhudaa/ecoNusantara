@@ -55,8 +55,8 @@ const DetailArtikel = () => {
               EcoNusantara
             </div>
           </div>
-          <div className='absolute left-0 top-0 z-[2222] w-screen h-full bg-black bg-opacity-[0.2]'></div>
-          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-full lg:w-full h-full lg:h-auto relative ${detail?.gambar === '/src/Assets/citarasa.jpeg' ? 'lg:bottom-[109%]' : 'bottom-[0px]'}`} />
+          <div className='absolute left-0 top-0 z-[2222] w-screen h-full bg-black bg-opacity-[0.2] lg:bg-opacity-[0.4]'></div>
+          <img src={detail?.gambar === '/src/Assets/rajaampat.jpeg' ? RajaEmpat : detail?.gambar} alt="hero-img" className={`w-full lg:w-full h-full lg:h-full object-cover grayscale-[25%] relative top-0`} />
         </div>
 
         <div id='informasi' className='w-full p-4 lg:p-12'>

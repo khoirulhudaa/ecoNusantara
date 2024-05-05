@@ -82,6 +82,7 @@ import Pala1 from './pala1.jpeg'
 import Pala2 from './pala2.jpeg'
 import DanaBg from './dana.jpeg'
 import Qrcode from './qrcode.png'
+import Map from './map.svg'
 
 export {
     HeroMan,
@@ -166,5 +167,6 @@ export {
     Pala1,
     Pala2,
     DanaBg,
-    Qrcode
+    Qrcode,
+    Map
 }

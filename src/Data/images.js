@@ -2,7 +2,7 @@ import { Bakso1, Bakso2, Batagor1, Batagor2, Betawi1, Betawi2, Bromo1, Bromo2, C
 
 const data = [
     {
-        "Derawan Islands": [
+        "Kepulauan Derawan": [
             Derawan1,
             Derawan2,
             Derawan1

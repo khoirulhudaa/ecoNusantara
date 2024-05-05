@@ -53,7 +53,7 @@ const DetailCard = () => {
           <Link to={'/'}>
             <h1 className={`relative top-6 lg:top-7 font-bold text-[24px] lg:py-0 py-2 z-[333] ${detail?.type !== 'Wisata' ? 'lg:bg-transparent bg-blue-500 w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:left-0 left-[-20px] lg:text-black text-white' : 'lg:bg-transparent bg-white w-max px-4 lg:px-0 lg:rounded-0 rounded-r-full lg:text-white lg:left-0 left-[-20px] text-blue-500'}`}>ecoNusantara 🗺️</h1>
           </Link>
-          <div className="relative text-[3em] lg:py-0 py-16 lg:text-[6em] h-full flex flex-col justify-center font-normal mt-[-20px]">
+          <div className="relative text-[3em] lg:py-0 py-16 lg:text-[5.7em] h-full flex flex-col justify-center font-normal mt-[-20px]">
             <h2 className={`${detail?.type === 'Wisata' ? 'text-white' : 'text-blue-500'} mb-2 w-[90%] relative before:absolute before:w-[100%] before:h-[3px] before:bg-white before:bottom-0 before:left-0`}>{detail?.nama}.</h2>
             <h2 className="mb-2">{detail?.type === 'Rempah' ? 'Rempah Nusantara' : detail?.type === 'Kuliner' ? 'Kuliner' : 'Wisata'}</h2>
           </div>

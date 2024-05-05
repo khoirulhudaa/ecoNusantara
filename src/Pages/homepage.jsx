@@ -11,7 +11,7 @@ import { FaArrowRight, FaFileExport, FaGripLines, FaIcons, FaMicrophone, FaPlane
 import { MapContainer, Marker, Polygon, Polyline, Popup, TileLayer, Tooltip, useMapEvent } from 'react-leaflet';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { BLueFlower, FoodBg, HeroMan, Jawa, Kalimantan, Papua, People1, People2, RempahBg, Sumatera } from '../Assets';
+import { FoodBg, Jawa, Kalimantan, Papua, People1, People2, RempahBg, Sumatera } from '../Assets';
 import Api from '../Components/api';
 import Articles from '../Components/articles';
 import CardSkeleton from '../Components/cardSkeleton';
@@ -20,6 +20,7 @@ import CardSkeletonContact from '../Components/cardSkeletonContact';
 import CardSkeletonCulinary from '../Components/cardSkeletonCulinary';
 import CardSkeletonEvent from '../Components/cardSkeletonEvent';
 import CardSkeletonType from '../Components/cardSkeletonType';
+import Dana from '../Components/dana';
 import Footer from '../Components/footer';
 import Navbar from '../Components/navbar';
 import JenisKekayaanAlam from '../Data/jenisKekayaanAlam';
@@ -28,7 +29,6 @@ import Rempah from '../Data/rempah';
 import Wisata from '../Data/wisata.json';
 import API from '../Services/service';
 import { clearInformation, getDetail, getEvent, getInformation } from '../Store/informationSlice';
-import Dana from '../Components/dana';
 
 const Homepage = () => {
 
