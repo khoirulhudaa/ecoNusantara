@@ -314,10 +314,10 @@ const Api = () => {
 
   return (
     <section id='API' className='relative overflow-hidden w-screen bg-blue-700 h-max pt-14 lg:pt-20 pb-16 z-[999] lg:pb-28 my-12 px-4 lg:px-16'>
-        <input value="https://be-geospasial.vercel.app/v2/api/contact" className='absolute opacity-0' disabled type="text" ref={textRefMain} />
-        <input value="https://be-geospasial.vercel.app/v2/api/tour" className='absolute opacity-0' disabled type="text" ref={textRef} />
-        <input value="https://be-geospasial.vercel.app/v2/api/spice" className='absolute opacity-0' disabled type="text" ref={textRef2} />
-        <input value="https://be-geospasial.vercel.app/v2/api/culinary" className='absolute opacity-0' disabled type="text" ref={textRef3} />
+        <input value="https://be-econusantara.vercel.app/v1/api/contact" className='absolute opacity-0' disabled type="text" ref={textRefMain} />
+        <input value="https://be-econusantara.vercel.app/v1/api/tour" className='absolute opacity-0' disabled type="text" ref={textRef} />
+        <input value="https://be-econusantara.vercel.app/v1/api/spice" className='absolute opacity-0' disabled type="text" ref={textRef2} />
+        <input value="https://be-econusantara.vercel.app/v1/api/culinary" className='absolute opacity-0' disabled type="text" ref={textRef3} />
         
         <h2 data-aos="zoom-in" className='text-[22px] mb-8 lg:mb-0 lg:text-[36px] text-white font-normal text-center'>API ecoNusantara 2024 💻</h2>
         <p className='text-slate-200 lg:block hidden mt-4 mb-10 text-center'>Dapatkan Data Geospasial Kabupaten Cirebon Secara Terbuka, Gratis dan Mudah.</p>    
