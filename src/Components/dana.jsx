@@ -35,7 +35,7 @@ const Dana = () => {
               </div>
             </div>
             <div className='relative w-full lg:w-1/2 flex lg:pb-0 pb-10 items-center lg:pl-0 pl-4 lg:justify-center z-[33] h-full'>
-              <img data-aos="zooupm-in" src={donation?.thumbnail} alt="qrcode-image" className='w-[60%] lg:w-[70%] lg:w-[65%] rounded-[12px]' />
+              <img data-aos="zoom-in" src={donation?.thumbnail} alt="qrcode-image" className='w-[60%] lg:w-[70%] lg:w-[65%] rounded-[12px]' />
             </div>
           </div>
       </div>
