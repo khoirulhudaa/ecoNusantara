@@ -565,16 +565,16 @@ const Homepage = () => {
         <Navbar />
 
         <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[85vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
-            <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
+            <img data-aos="zoom-in" data-aos-duration="1000" className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
             <img src={Jawa} className='absolute scale-[9] lg:scale-[2] top-0 lg:top-12 hidden lg:flex left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <img src={Kalimantan} className='absolute scale-[3] lg:scale-[2] top-[0px] lg:top-12 flex lg:hidden left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
             
             <div className='relative w-[100vw] lg:w-[80vw] p-4 lg:p-12 mt-[-40px] text-left z-[55555]'>
-                <h1 className='font-bold text-[26px] lg:text-[60px] mb-4 text-white w-full'>Eksplorasi Nusantara <br /> dalam Perjalanan <br /> Gastronomi 🗺️</h1>
-                <p className='text-normal w-full text-slate-100 text-[16px] leading-loose lg:flex hidden'>Perluasa Wawasan Kamu Tentang Kekayaan Bumi Nusantara</p>
+                <h1 data-aos="fade-right" className='font-bold text-[26px] lg:text-[60px] mb-4 text-white w-full'>Eksplorasi Nusantara <br /> dalam Perjalanan <br /> Gastronomi 🗺️</h1>
+                <p data-aos="fade-right" data-aos-duration="1000" className='text-normal w-full text-slate-100 text-[16px] leading-loose lg:flex hidden'>Perluasa Wawasan Kamu Tentang Kekayaan Bumi Nusantara</p>
                 <a href="#start">
-                    <div className='outline-0 border-slate-300 flex items-center py-4 px-10 lg:px-10 cursor-pointer hover:brightness-[90%] active:scale-[0.98] overflow-hidden rounded-full mt-8 bg-white w-max lg:text-[16px] text-[14px] text-blue-600'>
+                    <div data-aos="fade-right" data-aos-duration="1000" className='outline-0 border-slate-300 flex items-center py-4 px-10 lg:px-10 cursor-pointer hover:brightness-[90%] active:scale-[0.98] overflow-hidden rounded-full mt-8 bg-white w-max lg:text-[16px] text-[14px] text-blue-600'>
                         Mulai Petualangan <FaPlaneDeparture className='ml-3' />
                     </div>
                 </a>
@@ -584,7 +584,7 @@ const Homepage = () => {
             <div className='lg:flex hidden lg:w-[500px] lg:flex hidden lg:h-[500px] right-[200px] bottom-[-100px] rounded-full opacity-[0.7] border border-slate-100 absolute'>
             </div>
 
-            <img src={People2} alt="flower" className='absolute right-[-100px] bottom-[-60px] opacity-[0.4] lg:z-[0] z-[22] lg:hidden flex' />
+            <img src={People2} alt="people" className='absolute right-[-100px] bottom-[-60px] opacity-[0.4] lg:z-[0] z-[22] lg:hidden flex' />
         </section>
 
         <section id='start' className='relative w-screen h-max pt-12 lg:pt-14 lg:p-12 p-4'>
@@ -597,7 +597,7 @@ const Homepage = () => {
                         <CardSkeletonType />    
                     ):
                     JenisKekayaanAlam?.map((data, index) => (
-                        <div key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-6 h-[220px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg rounded-[12px]:lg:rounded-[20px]'>
+                        <div data-aos="fade-up" data-aos-duration={index === 0 ? "1000" : index === 1 ? "2000" : "3000"} key={index} className='w-[100%] lg:w-[30%] lg:mb-0 mb-6 h-[220px] lg:h-[600px] bg-white overflow-hidden border border-slate-300 shadow-lg rounded-[14px] lg rounded-[12px]:lg:rounded-[20px]'>
                             <div className='relative w-full lg:flex hidden h-[65%] overflow-hidden'>
                                 <div className='absolute z-[9999] rounded-full top-4 right-4 bg-white text-blue-600 border border-white px-5 py-2 w-max h-max text-[14px] flex items-center justify-center'>
                                 <p>{data?.label}</p> 
@@ -625,12 +625,12 @@ const Homepage = () => {
             <div className='relative w-full lg:flex z-[33] justify-between bg-blue-600 h-max lg:h-[600px] lg:rounded-[16px] items-center border border-slate-300 mt-8'>
                 <div className='relative w-full lg:w-1/2 h-1/2 lg:h-full text-white flex p-6 lg:p-14 flex-col justify-between text-left lg:overflow-visible overflow-hidden'>
                     <div className='relative lg:border-l-[2px] h-max lg:h-[30%] lg:pl-12 mb-4 mt-4 flex justify-center flex-col lg:border-l-white'>
-                        <h2 className='font-[600] text-[50px] lg:text-[74px] mb-2'>11, 67 <span className='text-[50px] lg:text-[74px]'>Juta</span></h2>
-                        <p className='tex-slate-500 leading-loose'>Wisatawan Mancanegara</p>
+                        <h2 data-aos="fade-right" className='font-[600] text-[50px] lg:text-[74px] mb-2'>11, 67 <span className='text-[50px] lg:text-[74px]'>Juta</span></h2>
+                        <p data-aos="fade-left" className='tex-slate-500 leading-loose'>Wisatawan Mancanegara</p>
                     </div>
                     <div className='relative lg:pl-12 lg:border-l-[2px] h-max lg:h-[30%] lg:mb-0 mb-6 flex flex-col justify-end lg:border-l-white'>
-                        <h2 className='font-[600] text-[50px] lg:text-[74px] flex items-center mb-2'>732,8 <span className='text-[50px] lg:text-[74px] ml-4 relative'>Juta</span></h2>
-                        <p className='tex-slate-500 leading-loose'>Wisatawan Nusantara</p>
+                        <h2 data-aos="fade-right" className='font-[600] text-[50px] lg:text-[74px] flex items-center mb-2'>732,8 <span className='text-[50px] lg:text-[74px] ml-4 relative'>Juta</span></h2>
+                        <p data-aos="fade-left" className='tex-slate-500 leading-loose'>Wisatawan Nusantara</p>
                     </div>
                     <p className='w-max mt-12 hidden lg:flex items-center bg-white rounded-full px-4 py-2 text-blue-600'><b className='mr-2'>Australia, China, Singapura, Malaysia,</b> (mayoritas) </p>
                 </div>
@@ -642,10 +642,10 @@ const Homepage = () => {
 
         <section id='tour' className='relative w-screen h-max pt-16 px-4 lg:pl-12 pb-4 lg:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1]' alt='Jawa' />
-            <div className='rounded-full text-white lg:text-[16px] text-[13px] mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
-            <h2 className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex hidden mr-2'>🏔️</span> <span className='relative top-1 flex items-center ml-1 lg:ml-3'>Rekomendasi Wisata <span className='lg:flex hidden ml-2'>Nusantara</span></span></h2>
+            <div data-aos="fade-right" className='rounded-full text-white lg:text-[16px] text-[13px] mb-4 bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa1 - Wisata Populer Nusantara</div>
+            <h2 data-aos="fade-right" className='font-bold flex items-center text-[20px] lg:text-[36px]'><span className='lg:flex hidden mr-2'>🏔️</span> <span className='relative top-1 flex items-center ml-1 lg:ml-3'>Rekomendasi Wisata <span className='lg:flex hidden ml-2'>Nusantara</span></span></h2>
             <div className='w-full lg:pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
-                <div className='w-full lg:w-max lg:flex lg:justify-between items-center mt-12'>
+                <div data-aos="fade-up" data-aos-duration="1000" className='w-full lg:w-max lg:flex lg:justify-between items-center mt-12'>
                     {   
                         loading ? (
                             <CardSkeleton />
@@ -676,9 +676,9 @@ const Homepage = () => {
 
         <section id='map' className='relative w-screen h-max p-4 lg:px-12'>
             <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.1] lg:opacity-[0.2] z-[-1]' alt='Kalimatan' />
-            <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Geospasial - 5 Pulau Nusantara</div>
+            <div data-aos="fade-right" className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Geospasial - 5 Pulau Nusantara</div>
             <div className='w-full lg:flex items-center justify-between'>
-                <h2 className='font-bold hidden lg:flex items-center text-[24px] lg:text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Wisata Nusantara</span></h2>
+                <h2 data-aos="fade-right" className='font-bold hidden lg:flex items-center text-[24px] lg:text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Wisata Nusantara</span></h2>
                 <div className="relative w-full lg:w-[45%] flex lg:mr-5 items-center">
                     <div className="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg className="w-4 h-4 text-gray-500 dark:text-gray-400lg:top-0 relative top-3 lg:top-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -719,7 +719,7 @@ const Homepage = () => {
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
+                    <div data-aos="fade-up" data-aos-duration="1000" className='relative overflow-hidden rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
                     
                     {/* Range Sidebar */}
                     <div className={`absolute z-[3333] w-[31vw] h-screen ${activeRange ? 'left-[0%]' : 'left-[-100%] duration-300'} top-[0px] bg-white shadow-lg p-4 duration-200`}>
@@ -844,9 +844,9 @@ const Homepage = () => {
 
         <section id='contact' className='relative w-screen h-max lg:pt-14 pt-16 p-4 lg:p-12'>
             <img src={Sumatera} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2] z-[-1] lg:flex hidden' alt='Sumatera' />
-            <div className='rounded-full text-white lg:mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
-            <h2 className='font-bold flex items-center text-[20px] lg:mt-0 mt-6 lg:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
-            <div className='w-full flex items-center overflow-x-auto'>
+            <div data-aos="fade-right" className='rounded-full text-white lg:mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Pemandu Nusantara - Profesional</div>
+            <h2 data-aos="fade-right" className='font-bold flex items-center text-[20px] lg:mt-0 mt-6 lg:text-[36px]'>☎️ <span className='relative top-1 ml-3'>Kontak Pemandu Wisata</span></h2>
+            <div data-aos="fade-up" data-aos-duration="1000" className='w-full flex items-center overflow-x-auto'>
                 <div className='w-max flex lg:pl-0 pl-1 items-center pb-3'>
                     {
                         loading ? (
@@ -889,40 +889,40 @@ const Homepage = () => {
                 </div>
                 <div className='relative w-full h-max lg:h-full overflow-hidden text-white flex p-6 lg:p-14 flex-col justify-between text-left'>
                     <img src={Jawa} className='absolute scale-[3] bottom-[20%] left-[30%] opacity-[0.3] z-[-1]' alt='Sumatera' />
-                    <h2 className='text-[32px] lg:text-[50px] w-[96%] lg:w-1/2'>Lebih dari <b>100+</b> Jenis Rempah, Nusantara</h2>
+                    <h2 data-aos="fade-right" className='text-[32px] lg:text-[50px] w-[96%] lg:w-1/2'>Lebih dari <b>100+</b> Jenis Rempah, Nusantara</h2>
                     <div className='w-[100%] lg:w-1/2 lg:mt-0 mt-6 hidden lg:flex flex-wrap'>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Kunyit</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Kayu Manis</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Lengkuas</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Jahe</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Kapulaga</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Cengkeh</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Pala</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Lada</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Andaliman</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-2 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Vanili</p>
                         </div>
                     </div>
-                    <p className='w-max mt-6 lg:mt-12 lg:text-[16px] text-[12px] flex items-center bg-white rounded-full px-4 py-2 text-blue-600'><b className='mr-1 lg:flex hidden'>Indonesia</b> penghasil rempah terbesar ke-4 dunia!</p>
+                    <p data-aos="fade-right" className='w-max mt-6 lg:mt-12 lg:text-[16px] text-[12px] flex items-center bg-white rounded-full px-4 py-2 text-blue-600'><b className='mr-1 lg:flex hidden'>Indonesia</b> penghasil rempah terbesar ke-4 dunia!</p>
                 </div>
                 <div className='relative lg:absolute lg:flex hidden right-0 w-full lg:w-1/2 lg:mb-0 mb-12 h-full flex items-center'>
                     <img src={RempahBg} alt="people" className='scale-[1.1] relative bottom-1' />
@@ -932,9 +932,9 @@ const Homepage = () => {
 
         <div id='spice' className='relative w-screen h-max pt-12 lg:pt-16 px-4 lg:pl-12 pb-0 lg:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
-            <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa2 - Cita Rasa Rempah</div>
-            <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🫚 <span className='relative top-1 ml-3'>Aneka Ragam Rempah</span></h2>
-            <div className='w-full pr-0 lg:pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
+            <div data-aos="fade-right" className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Nusa2 - Cita Rasa Rempah</div>
+            <h2 data-aos="fade-right" className='font-bold hidden lg:flex items-center text-[36px]'>🫚 <span className='relative top-1 ml-3'>Aneka Ragam Rempah</span></h2>
+            <div data-aos="fade-up" data-aos-duration="1000" className='w-full pr-0 lg:pr-6 pb-5 overflow-x-hidden lg:overflow-x-auto items-center'>
                 <div className='w-full lg:w-max lg:flex lg:justify-between items-center mt-12'>
                     {
                         loading ? (
@@ -966,9 +966,9 @@ const Homepage = () => {
 
         <section className='relative w-screen h-max p-4 lg:p-12 lg:mt-0 mt-4'>
             <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
-            <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Geospasial - Rempah Nusantara</div>
+            <div data-aos="fade-right" className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Geospasial - Rempah Nusantara</div>
             <div className='w-full flex items-center justify-between'>
-                <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Rempah Nusantara</span></h2>
+                <h2 data-aos="fade-right" className='font-bold hidden lg:flex items-center text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Rempah Nusantara</span></h2>
                 <div className="relative w-full lg:w-[45%] flex lg:mr-5 items-center">
                     <div className="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg className="w-4 h-4 text-gray-500 dark:text-gray-400lg:top-0 relative top-3 lg:top-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -1008,7 +1008,7 @@ const Homepage = () => {
                         </div>
                     </div>
                 ):
-                    <div className='relative overflow-hidden rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
+                    <div data-aos="fade-up" data-aos-duration="1000" className='relative overflow-hidden rounded-[12px] lg:rounded-[20px] mx-auto w-[92vw] border-[2px] border-blue-400 overflow-hidden h-[400px] lg:h-max mt-12'>
                         
                         <div className="w-max z-[444] flex items-center h-[68px] py-[14px] pl-4 rounded-bl-[32px] absolute top-0 right-2">
                             <div className={`w-max flex items-center top-4 mr-3`}>
@@ -1060,34 +1060,34 @@ const Homepage = () => {
                 </div>
                 <div className='relative w-full h-max lg:h-full overflow-hidden text-white flex p-4 lg:p-14 flex-col justify-between text-left'>
                     <img src={Jawa} className='absolute scale-[3] lg:bottom-[20%] left-[30%] opacity-[0.3] z-[-1]' alt='Sumatera' />
-                    <h2 className='text-[32px] lg:ml-0 ml-2 lg:text-[50px] w-[90%] lg:w-1/2'>JunkFood? Makanan Khas <b>Daerah</b> Aja! 🍲</h2>
+                    <h2 data-aos="fade-right" className='text-[32px] lg:ml-0 ml-2 lg:text-[50px] w-[90%] lg:w-1/2'>JunkFood? Makanan Khas <b>Daerah</b> Aja! 🍲</h2>
                     <div className='w-fll lg:w-1/2 hidden lg:flex flex-wrap mt-6'>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Nasi Goreng</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Bakso Malang</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Gado-gado</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Rendang</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Batagor</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Tahu Gejrot</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Soto Betawi</p>
                         </div>
-                        <div className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
+                        <div data-aos="zoom-in" data-aos-duration="1000" className='w-max h-max rounded-full px-5 lg:px-7 py-2 lg:text-[16px] text-[12px] border border-white flex items-center justify-center mr-3 lg:mr-4 mb-6 bg-white text-blue-600'>
                             <p>Sate Lilit</p>
                         </div>
                     </div>
-                    <p className='w-max mt-6 lg:mt-12 flex items-center bg-white rounded-full lg:text-[16px] text-[12px] px-4 py-2 text-blue-600'><b>Rendang</b> <span className='hidden lg:flex mx-2'>adalah</span> makanan terenak didunia!</p>
+                    <p data-aos="fade-right" className='w-max mt-6 lg:mt-12 flex items-center bg-white rounded-full lg:text-[16px] text-[12px] px-4 py-2 text-blue-600'><b>Rendang</b> <span className='hidden lg:flex mx-2'>adalah</span> makanan terenak didunia!</p>
                 </div>
                 <div className='absolute right-0 w-1/2 h-full hidden lg:flex items-center'>
                     <img src={FoodBg} alt="people" className='scale-[0.95] right-[-30px] relative bottom-5 rotate-[20deg]' />
@@ -1097,8 +1097,8 @@ const Homepage = () => {
 
         <section id='culinary' className='relative w-screen h-max pt-14 lg:pt-16 pl-6 lg:pl-12 pb-7 lg:pb-12'>
             <img src={Jawa} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Jawa' />
-            <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kuliner Lokal Nusantara</div>
-            <div className='w-full overflow-x-auto mt-10'>
+            <div data-aos="fade-right" className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kuliner Lokal Nusantara</div>
+            <div data-aos="fade-up" data-aos-duration="1000" className='w-full overflow-x-auto mt-10'>
                 <div className='w-max pr-6 pb-6 flex items-center'>
                    {
                         loading ? (
@@ -1125,9 +1125,9 @@ const Homepage = () => {
 
         <div className='relative w-screen h-max p-6 lg:p-12'>
             <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
-            <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Geospasial - Kuliner Nusantara</div>
+            <div data-aos="fade-right" className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Geospasial - Kuliner Nusantara</div>
             <div className='w-full flex items-center justify-between'>
-                <h2 className='font-bold hidden lg:flex items-center text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Kuliner Nusantara</span></h2>
+                <h2 data-aos="fade-right" className='font-bold hidden lg:flex items-center text-[36px]'>🗺️ <span className='relative top-1 ml-3'>Peta Kuliner Nusantara</span></h2>
                 <div className="relative w-full lg:w-[45%] flex lg:mr-5 items-center">
                     <div className="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none">
                         <svg className="w-4 h-4 text-gray-500 dark:text-gray-400lg:top-0 relative top-3 lg:top-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -1231,9 +1231,9 @@ const Homepage = () => {
             ):
                 <section className='relative w-screen h-max text-left pt-12 lg:pt-12 lg:p-12 px-4 lg:px-12'>
                     <img src={Papua} className='absolute scale-[1.6] top-0 right-0 opacity-[0.2]  z-[-1]' alt='Kalimatan' />
-                    <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kegiatan - Kita Nusantara</div>
-                    <h2 className='font-bold hidden lg:flex items-center text-[24px] lg:text-[36px]'>📌 <span className='relative top-1 ml-3'>Acara Nusantara {new Date().getFullYear()}</span></h2>
-                    <div className='relative w-full min-h-[220px] lg:h-[600px] border-dashed border-[2px] border-blue-400 overflow-hidden rounded-[16px] mt-12'>
+                    <div data-aos="fade-right" className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-900 lg:bg-blue-400 w-max py-3 px-6'>Kegiatan - Kita Nusantara</div>
+                    <h2 data-aos="fade-right" className='font-bold hidden lg:flex items-center text-[24px] lg:text-[36px]'>📌 <span className='relative top-1 ml-3'>Acara Nusantara {new Date().getFullYear()}</span></h2>
+                    <div data-aos="fade-up" data-aos-duration="1000" className='relative w-full min-h-[220px] lg:h-[600px] border-dashed border-[2px] border-blue-400 overflow-hidden rounded-[16px] mt-12'>
                         <div className='absolute z-[999999] left-5 lg:left-12 bottom-5 lg:bottom-12 h-max w-max text-white'>
                             <h2 className='text-[16px] overflow-hidden overflow-ellipsis whitespace-nowrap w-[80vw] lg:text-[36px] font-[500] mb-2'>{allEvent[0]?.name_event}</h2>
                             <p className='w-[80%] lg:w-[80%] lg:text-[16px] text-[12px] overflow-hidden overflow-ellipsis whitespace-nowrap'>{allEvent[0]?.description}</p>

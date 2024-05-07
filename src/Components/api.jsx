@@ -1,13 +1,21 @@
-import React, { useRef, useState } from 'react'
-import { FaCopy, FaTimes } from 'react-icons/fa'
-import { Kalimantan } from '../Assets'
-import SweetAlert from '../Components/SweetAlert'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import copy from "copy-to-clipboard";
+import React, { useEffect, useRef, useState } from 'react';
+import { FaCopy, FaTimes } from 'react-icons/fa';
+import { Kalimantan } from '../Assets';
+import SweetAlert from '../Components/SweetAlert';
 
 const Api = () => {
 
     const [activeAPI, setActiveAPI] = useState(false)
     const [selectAPI, setSelectAPI] = useState(false)
+
+    useEffect(() => {
+        (async () => {
+            AOS.init()
+        })()
+    }, [])
 
     const yourJsonObjectPemandu = {
         status: 200,
@@ -311,7 +319,7 @@ const Api = () => {
         <input value="https://be-geospasial.vercel.app/v2/api/spice" className='absolute opacity-0' disabled type="text" ref={textRef2} />
         <input value="https://be-geospasial.vercel.app/v2/api/culinary" className='absolute opacity-0' disabled type="text" ref={textRef3} />
         
-        <h2 className='text-[22px] mb-8 lg:mb-0 lg:text-[36px] text-white font-normal text-center'>API ecoNusantara 2024 💻</h2>
+        <h2 data-aos="zoom-in" className='text-[22px] mb-8 lg:mb-0 lg:text-[36px] text-white font-normal text-center'>API ecoNusantara 2024 💻</h2>
         <p className='text-slate-200 lg:block hidden mt-4 mb-10 text-center'>Dapatkan Data Geospasial Kabupaten Cirebon Secara Terbuka, Gratis dan Mudah.</p>    
         <div className='relative w-full z-[444] px-4 lg:px-12 pt-6 lg:pt-[80px] pb-6 lg:pb-20 flex mx-auto rounded-[16px] bg-white border-[2px] h-max lg:min-h-[680px] border-blue-500 border-dashed'>
             <div className='w-full lg:w-1/2 h-max lg:h-[500px] flex justify-between flex-col'>
@@ -329,7 +337,7 @@ const Api = () => {
                         Lihat Respon
                     </p>
                 </label>
-                <div className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
+                <div data-aos="fade-right" className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
                     <code className="w-[86%] overflow-hidden overflow-ellipsis whitespace-nowrap">https://be-econusantara.vercel.app/v1/api/contact</code>
                     <div onClick={() => copyToClipboardMain()} className='absolute right-1 z-[444] scale-[0.9] z-[999] rounded-[10px] shadow-lg w-[50px] h-[50px] bg-blue-500 flex items-center justify-center cursor-pointer hover:brightness-[90%] active:p-2 duration-200 text-white'>
                         <FaCopy />
@@ -349,7 +357,7 @@ const Api = () => {
                         Lihat Respon
                     </p>
                 </label>
-                <div className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
+                <div data-aos="fade-right" className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
                     <code className="w-[86%] overflow-hidden overflow-ellipsis whitespace-nowrap">https://be-econusantara.vercel.app/v1/api/tour</code>
                     <div onClick={() => copyToClipboard1()} className='absolute right-1 z-[444] scale-[0.9] z-[999] rounded-[10px] shadow-lg w-[50px] h-[50px] bg-blue-500 flex items-center justify-center cursor-pointer hover:brightness-[90%] active:p-2 duration-200 text-white'>
                         <FaCopy />
@@ -369,7 +377,7 @@ const Api = () => {
                         Lihat Respon
                     </p>
                 </label>
-                <div className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
+                <div data-aos="fade-right" className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
                     <code className='w-[86%] overflow-hidden overflow-ellipsis whitespace-nowrap'>
                         https://be-econusantara.vercel.app/v1/api/spice
                     </code>
@@ -391,7 +399,7 @@ const Api = () => {
                         Lihat Respon
                     </p>
                 </label>
-                <div className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
+                <div data-aos="fade-right" className='relative rounded-[10px] bg-blue-200 text-blue-700 w-[100%] p-4 flex items-center my-6'>
                     <code className='w-[86%] overflow-hidden overflow-ellipsis whitespace-nowrap'>
                         https://be-econusantara.vercel.app/v1/api/culinary
                     </code>
@@ -427,7 +435,7 @@ const Api = () => {
                 </div>
             </div>
             <div className='relative w-1/2 h-[500px] hidden lg:flex flex-col justify-center items-center overflow-hidden'>
-                <img src={Kalimantan} alt="ilustration developer" title='Image by freepik' className='w-[100%] right-[-30px] top-2 relative' />
+                <img data-aos="zoom-in" src={Kalimantan} alt="ilustration developer" title='Image by freepik' className='w-[100%] right-[-30px] top-2 relative' />
             </div>
         </div>
     </section>

@@ -1,10 +1,12 @@
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import React, { useEffect, useState } from 'react'
 import { FaBuilding, FaCalendarAlt } from 'react-icons/fa'
 import { useDispatch } from 'react-redux'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Kalimantan } from '../Assets'
 import API from '../Services/service'
 import { getDetailArticle } from '../Store/informationSlice'
-import { useLocation, useNavigate } from 'react-router-dom'
 
 const Articles = () => {
 
@@ -15,7 +17,8 @@ const Articles = () => {
   const location = useLocation();
 
   useEffect(() => {
-    (async () => {
+      (async () => {
+        AOS.init()
         const response = await API.getAllArticle()
         setArticles(response?.data?.data)
         console.log(response?.data?.data)
@@ -35,15 +38,15 @@ const Articles = () => {
                 null
             ):
             <>
-                <div className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-400 w-max py-3 px-6'>Informasi Menarik Untuk Kamu</div>
-                <h2 className='font-bold hidden lg:flex items-center text-[36px]'>📰 <span className='relative top-1 ml-3'>Artikel Seputar Nusantara</span></h2>
+                <div data-aos="fade-right" className='rounded-full text-white mb-4 lg:text-[16px] text-[13px] bg-blue-400 w-max py-3 px-6'>Informasi Menarik Untuk Kamu</div>
+                <h2 data-aos="fade-right" className='font-bold hidden lg:flex items-center text-[36px]'>📰 <span className='relative top-1 ml-3'>Artikel Seputar Nusantara</span></h2>
             </>
         }
         <div className='w-full flex z-[33] flex-col justify-between items-center mt-8'>
             {
                 articles && articles?.length > 0 ? (
                     articles?.map((data, index) => (
-                        <div key={index} className='w-full min-h-[180px] my-3 border border-blue-600 border-dashed rounded-[12px] bg-white shadow-lg p-5'>
+                        <div data-aos="fade-right" key={index} className='w-full min-h-[180px] my-3 border border-blue-600 border-dashed rounded-[12px] bg-white shadow-lg p-5'>
                             <div className='w-full h-[50%] flex items-center justify-between overflow-hidden text-left rounded-[8px]'>
                                 <h3 onClick={() => handleClick(data)} className='text-[16px] lg:text-[20px] cursor-pointer hover:text-blue-600 active:scale-[0.99] underline font-[500]'>
                                     {data?.name_article}
