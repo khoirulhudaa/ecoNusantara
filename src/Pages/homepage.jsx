@@ -565,7 +565,7 @@ const Homepage = () => {
         <Navbar />
 
         <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[85vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
-            <img className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
+            <img data-aos="fade-up-left" data-aos-duration='1000' className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
             <img src={Jawa} className='absolute scale-[9] lg:scale-[2] top-0 lg:top-12 hidden lg:flex left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <img src={Kalimantan} className='absolute scale-[3] lg:scale-[2] top-[0px] lg:top-12 flex lg:hidden left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
