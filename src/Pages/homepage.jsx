@@ -572,7 +572,7 @@ const Homepage = () => {
             
             <div className='relative w-[100vw] lg:w-[80vw] p-4 lg:p-12 mt-[-40px] text-left z-[55555]'>
                 <h1 data-aos="fade-right" className='font-bold text-[26px] lg:text-[60px] mb-4 text-white w-full'>Eksplorasi Nusantara <br /> dalam Perjalanan <br /> Gastronomi 🗺️</h1>
-                <p data-aos="fade-right" data-aos-duration="1000" className='text-normal w-full text-slate-100 text-[16px] leading-loose lg:flex hidden'>Perluasa Wawasan Kamu Tentang Kekayaan Bumi Nusantara</p>
+                <p data-aos="fade-right" data-aos-duration="1000" className='text-normal w-full text-slate-100 text-[16px] leading-loose lg:flex hidden'>Perluas Wawasan Kamu Tentang Kekayaan Bumi Nusantara</p>
                 <a href="#start">
                     <div data-aos="fade-right" data-aos-duration="1000" className='outline-0 border-slate-300 flex items-center py-4 px-10 lg:px-10 cursor-pointer hover:brightness-[90%] active:scale-[0.98] overflow-hidden rounded-full mt-8 bg-white w-max lg:text-[16px] text-[14px] text-blue-600'>
                         Mulai Petualangan <FaPlaneDeparture className='ml-3' />
