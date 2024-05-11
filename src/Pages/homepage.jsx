@@ -74,11 +74,13 @@ const Homepage = () => {
     const [activeRangeCustomIcon, setActiveRangeCustomIcon] = useState(false);
     const [loading, setLoading] = useState(false);
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+	const [active, setActive] = useState(false);
    
     useEffect(() => {
         AOS.init();
         (async () => {
             setLoading(true)
+            setActive(true)
             const resultTour = await API.getAllTour()
             setAllTour(resultTour.data.data)
             
@@ -93,6 +95,7 @@ const Homepage = () => {
             
             const resultEvent = await API.getEvet()
             setAllEvent(resultEvent.data.data)
+            setActive(false)
             setLoading(false)
         })()
     }, [])
@@ -565,7 +568,7 @@ const Homepage = () => {
         <Navbar />
 
         <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[85vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
-            <img data-aos="fade-up-left" data-aos-duration='1000' className='absolute z-[2222] w-[45%] right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
+            <img data-aos="fade-up-left" data-aos-duration="1000" className='absolute z-[2222] w-[45%] opacity-1 right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
             <img src={Jawa} className='absolute scale-[9] lg:scale-[2] top-0 lg:top-12 hidden lg:flex left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <img src={Kalimantan} className='absolute scale-[3] lg:scale-[2] top-[0px] lg:top-12 flex lg:hidden left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
@@ -663,7 +666,7 @@ const Homepage = () => {
                                         <h2 className='font-bold text-[22px] mb-2'>{data?.nama}</h2>
                                         <p className='leading-loose text-slate-500 text-[14px]'>{data?.lokasi}</p>
                                     </div>
-                                    <div id='btn-ecoNusantara' onClick={() => handleClick(data)} className='w-full flex items-center text-center justify-center py-5 bg-blue-600 text-white cursor-pointer hover:brightness-[90%] duration-300'>
+                                    <div id='btn-ecoNusantara' onClick={() => handleClick(data)} className='w-full flex items-center text-center justify-center py-6 bg-blue-600 text-white cursor-pointer hover:brightness-[90%] duration-300'>
                                         Lihat Selengkapnya
                                     </div>
                                 </div>
@@ -864,7 +867,7 @@ const Homepage = () => {
                                             <h2 className='text-[20px]'>{data?.name_contact}</h2>
                                             <small>Indonesia</small>
                                             <a href={`https://wa.me/${data?.number}`} target='__blank'>
-                                                <div className='w-[55px] h-[55px] z-[222] relative mx-auto bg-blue-600 text-white flex items-center justify-center p-1 rounded-full my-3 cursor-pointer hover:brightness-[90%] active:scale-[0.98]'>
+                                                <div className='w-[55px] h-[55px] z-[222] relative mx-auto bg-green-500 text-[24px] text-white flex items-center justify-center rounded-full my-3 cursor-pointer hover:brightness-[90%] active:scale-[0.98]'>
                                                     <FaWhatsapp />
                                                 </div>
                                             </a>
@@ -953,7 +956,7 @@ const Homepage = () => {
                                         <h2 className='font-bold text-[22px] mb-2'>{data?.nama}</h2>
                                         <p className='leading-loose text-slate-500 text-[14px]'>{data?.lokasi}</p>
                                     </div>
-                                    <div onClick={() => handleClick(data)} className='w-full flex items-center text-center justify-center py-5 bg-blue-600 text-white cursor-pointer hover:brightness-[90%] duration-200'>
+                                    <div id='btn-ecoNusantara' onClick={() => handleClick(data)} className='w-full flex items-center text-center justify-center py-6 bg-blue-600 text-white cursor-pointer hover:brightness-[90%] duration-200'>
                                         Lihat Selengkapnya
                                     </div>
                                 </div>
@@ -1113,7 +1116,7 @@ const Homepage = () => {
                                     <p>{data?.nama}</p>
                                     <small>{data?.lokasi}</small>
                                 </div>
-                                <div onClick={() => handleClick(data)} className='relative w-[60px] h-[60px] bg-blue-600 rounded-full text-white flex items-center justify-center cursor-pointer active:scale-[0.98] hoveer:brightness-[90%]'>
+                                <div onClick={() => handleClick(data)} className='relative w-[60px] h-[60px] bg-blue-600 rounded-full text-white flex items-center justify-center cursor-pointer active:scale-[0.98] hover:brightness-[90%] hover:border hover:border-white'>
                                     <FaArrowRight />
                                 </div>
                             </div>
