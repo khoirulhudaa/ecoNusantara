@@ -78,7 +78,6 @@ const Homepage = () => {
     useEffect(() => {
         AOS.init();
         (async () => {
-            setLoading(false)
             const resultTour = await API.getAllTour()
             setAllTour(resultTour.data.data)
             
@@ -87,6 +86,7 @@ const Homepage = () => {
             
             const resultCulinary = await API.getAllCulinary()
             setAllCulinary(resultCulinary.data.data)
+            setLoading(false)
             
             const resultSpice = await API.getAllSpice()
             setAllSpice(resultSpice.data.data)
