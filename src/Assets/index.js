@@ -1,6 +1,6 @@
 import HeroMan from './hero.svg'
 import People1 from './people1.svg'
-import People2 from './people2.png'
+import People2 from './people2.svg'
 import Tour from './rajaampat.jpeg'
 import Spice from './rempah.jpeg'
 import Culinary from './citarasa.jpeg'

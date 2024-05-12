@@ -7,7 +7,7 @@ import markerShadowUrl from 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/leaflet.css';
 import React, { useEffect, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { FaArrowRight, FaFileExport, FaGripLines, FaIcons, FaMicrophone, FaPlaneDeparture, FaSpinner, FaTimes, FaVectorSquare, FaWhatsapp } from 'react-icons/fa';
+import { FaArrowRight, FaFileExport, FaGripLines, FaIcons, FaMicrophone, FaPlaneDeparture, FaTimes, FaVectorSquare, FaWhatsapp } from 'react-icons/fa';
 import { MapContainer, Marker, Polygon, Polyline, Popup, TileLayer, Tooltip, useMapEvent } from 'react-leaflet';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -72,13 +72,12 @@ const Homepage = () => {
     const [currentPositionSpice, setCurrentPositionSpice] = useState(null);
     const [currentPositionCulinary, setCurrentPositionCulinary] = useState(null);
     const [activeRangeCustomIcon, setActiveRangeCustomIcon] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
    
     useEffect(() => {
         AOS.init();
         (async () => {
-            setLoading(true)
             const resultTour = await API.getAllTour()
             setAllTour(resultTour.data.data)
             
@@ -565,7 +564,10 @@ const Homepage = () => {
         <Navbar />
 
         <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[85vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
-            <img data-aos="fade-up-left" data-aos-duration="1000" className='absolute z-[2222] w-[45%] opacity-1 right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
+            <>
+                <img data-aos="fade-up-left" data-aos-duration="1000" className='absolute z-[2222] w-[45%] opacity-1 right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
+                <img className='absolute w-max opacity-[0.8] right-[10%] bottom-[52%] lg:flex hidden text-white' src={''} alt="Gambar tidak muncul?...refresh web" />
+            </>
             <img src={Jawa} className='absolute scale-[9] lg:scale-[2] top-0 lg:top-12 hidden lg:flex left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <img src={Kalimantan} className='absolute scale-[3] lg:scale-[2] top-[0px] lg:top-12 flex lg:hidden left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
             <div className='absolute w-[700px] h-[700px] rounded-full bg-blue-900 bottom-[-650px] left-[-100px] blur-[180px]'></div>
