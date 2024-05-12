@@ -565,7 +565,7 @@ const Homepage = () => {
 
         <section id='home' className='relative z-[4444444] w-screen h-[50vh] lg:h-[85vh] border-b-[10px] border-b-blue-300 bg-blue-900 lg:bg-blue-700 overflow-hidden flex flex-col justify-center lg:rounded-br-[200px]'>
             <>
-                <img data-aos="fade-up-left" data-aos-duration="1000" className='absolute z-[2222] w-[45%] opacity-1 right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
+                <img className='absolute z-[2222] w-[45%] opacity-1 right-0 bottom-[-100px] lg:flex hidden' src={People2} alt="Seorang penjelajah" />
                 <img className='absolute w-max opacity-[0.8] right-[10%] bottom-[52%] lg:flex hidden text-white' src={''} alt="Gambar tidak muncul?...refresh web" />
             </>
             <img src={Jawa} className='absolute scale-[9] lg:scale-[2] top-0 lg:top-12 hidden lg:flex left-0 opacity-[0.2] lg:opacity-[1] z-[-1]' alt='Jawa' />
@@ -581,9 +581,9 @@ const Homepage = () => {
                     </div>
                 </a>
             </div>
-            <div className='lg:flex hidden lg:w-[500px] lg:flex hidden lg:h-[500px] right-0 rounded-full border border-slate-100 absolute'>
+            <div data-aos="fade-up-left" data-aos-duration="3000" className='lg:flex hidden lg:w-[500px] lg:flex hidden lg:h-[500px] right-0 rounded-full border border-slate-100 absolute'>
             </div>
-            <div className='lg:flex hidden lg:w-[500px] lg:flex hidden lg:h-[500px] right-[200px] bottom-[-100px] rounded-full opacity-[0.7] border border-slate-100 absolute'>
+            <div data-aos="fade-up-left" data-aos-duration="1000" className='lg:flex hidden lg:w-[500px] lg:flex hidden lg:h-[500px] right-[200px] bottom-[-100px] rounded-full opacity-[0.7] border border-slate-100 absolute'>
             </div>
 
             <img src={People2} alt="people" className='absolute right-[-100px] bottom-[-60px] opacity-[0.4] lg:z-[0] z-[22] lg:hidden flex' />
