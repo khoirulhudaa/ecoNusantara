@@ -78,6 +78,7 @@ const Homepage = () => {
     useEffect(() => {
         AOS.init();
         (async () => {
+            setLoading(false)
             const resultTour = await API.getAllTour()
             setAllTour(resultTour.data.data)
             
@@ -92,7 +93,6 @@ const Homepage = () => {
             
             const resultEvent = await API.getEvet()
             setAllEvent(resultEvent.data.data)
-            setLoading(false)
         })()
     }, [])
 
