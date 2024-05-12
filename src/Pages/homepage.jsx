@@ -80,6 +80,7 @@ const Homepage = () => {
         (async () => {
             const resultTour = await API.getAllTour()
             setAllTour(resultTour.data.data)
+            setLoading(false)
             
             const resultContact = await API.getAllContact()
             setAllContact(resultContact.data.data)
@@ -92,7 +93,6 @@ const Homepage = () => {
             
             const resultEvent = await API.getEvet()
             setAllEvent(resultEvent.data.data)
-            setLoading(false)
         })()
     }, [])
 
